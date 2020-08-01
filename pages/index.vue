@@ -3,6 +3,7 @@
     <h1>{{ personalInfo.firstName }}</h1>
     <h3>{{ personalInfo.lastName }}</h3>
     <h6>{{ personalInfo.age }}</h6>
+    <h1>Ivan</h1>
   </div>
 </template>
 
