@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
   getPersonalInfo() {
     return apiClient.get("/personalInfo");
+  },
+  getAboutMe() {
+    return apiClient.get("/aboutMe");
   }
 };
