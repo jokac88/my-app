@@ -12,7 +12,7 @@ export const mutations = {
 
 export const actions = {
   fetchAboutMe({ commit }) {
-    return axios.aboutMe().then(({ data }) => {
+    return axios.getAboutMe().then(({ data }) => {
       commit("SET_ABOUT_ME", data);
     });
   }
