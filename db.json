@@ -5,5 +5,8 @@
     "age": "31",
     "city": "Kragujevac",
     "address": "Smederevska 15"
+  },
+  "aboutMe": {
+    "text": "I started learning web development about three and half years ago. I enjoy building websites and I am eager to learn new skills every day. I take challenges as inspirations and always looking for improvements. Very persistant and hardworking. Good at working both individually and in a team. I always complete every task."
   }
 }
