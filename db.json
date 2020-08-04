@@ -2,6 +2,7 @@
   "personalInfo": {
     "firstName": "Ivan",
     "lastName": "Jovkovic",
-    "age": "31"
+    "age": "31",
+    "city": "Kragujevac"
   }
 }
