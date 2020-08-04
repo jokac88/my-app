@@ -3,6 +3,7 @@
     "firstName": "Ivan",
     "lastName": "Jovkovic",
     "age": "31",
-    "city": "Kragujevac"
+    "city": "Kragujevac",
+    "address": "Smederevska 15"
   }
 }

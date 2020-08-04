@@ -2,7 +2,7 @@
   <div>
     <h1>{{ personalInfo.firstName }}</h1>
     <h3>{{ personalInfo.lastName }}</h3>
-    <h6>{{ personalInfo.age }}</h6>
+    <h6>{{ personalInfo.address }}</h6>
   </div>
 </template>
 
