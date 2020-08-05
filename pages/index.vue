@@ -3,7 +3,6 @@
     <h1>{{ personalInfo.firstName }}</h1>
     <h3>{{ personalInfo.lastName }}</h3>
     <h6>{{ personalInfo.address }}</h6>
-    <div>{{ aboutMe.text }}</div>
   </div>
 </template>
 
