@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ data.name }}</h1>
+    <h1>{{ data.ime }}</h1>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import { mapState } from "vuex";
 export default {
   async fetch({ store, error }) {
     try {
-      await store.dispatch("store/fetchData", "/en");
+      await store.dispatch("store/fetchData", "/rs");
     } catch (e) {
       error({
         message: "Error",

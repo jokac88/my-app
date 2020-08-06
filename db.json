@@ -1,11 +1,11 @@
 {
-  "personalInfo": {
-    "firstName": "Ivan",
-    "lastName": "Jovkovic",
-    "age": "31",
-    "city": "Kragujevac"
+  "en": {
+    "name": "Ivan Jovkovic",
+    "personalInfo": {
+      "age": 32
+    }
   },
-  "aboutMe": {
-    "text": "I started learning web development about three and half years ago. I enjoy building websites and I am eager to learn new skills every day. I take challenges as inspirations and always looking for improvements. Very persistant and hardworking. Good at working both individually and in a team. I always complete every task."
+  "rs": {
+    "ime": "Ivan Jovkovic"
   }
 }
