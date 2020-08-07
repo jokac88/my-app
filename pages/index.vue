@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ data.name }}</h1>
+    <h1>{{ data }}</h1>
   </div>
 </template>
 
@@ -13,9 +13,17 @@ export default {
       await store.dispatch("store/fetchData", "/en");
     } catch (e) {
       error({
-        message: "Error",
+        message: "Not loading page",
       });
     }
+  },
+  async mounted() {
+    await this.localStorage();
+  },
+  methods: {
+    localStorage() {
+      localStorage.setItem("data", JSON.stringify(this.data));
+    },
   },
   computed: mapState({
     data: (state) => state.store.data,

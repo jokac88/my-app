@@ -17,18 +17,38 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Ivan Jovkovic | Front-End Developer",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "author", content: "Ivan Jovkovic" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: "Ivan Jovkovic - Front-End Developer"
+      },
+      {
+        name: "keywords",
+        content:
+          "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap, Vue.js, React, React Native, WordPress, Photoshop, Laravel, MySQL"
+      },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#007db3" },
+      { name: "msapplication-navbutton-color", content: "#007db3" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "#007db3" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "favicon.ico" },
+      {
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        href: "favicon.ico"
+      }
+    ]
   },
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#007db3" },
   /*
    ** Global CSS
    */
@@ -51,6 +71,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    // Doc: https://bootstrap-vue.js.org
+    "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios"
   ],

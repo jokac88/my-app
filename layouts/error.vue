@@ -1,9 +1,10 @@
 <template>
-  <h1>{{ message }}</h1>
+  <div>{{ message }}</div>
 </template>
 
 <script>
 export default {
+  layout: "error-layout",
   props: {
     error: {
       type: Object,
