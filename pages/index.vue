@@ -8,13 +8,6 @@
 import { mapState } from "vuex";
 
 export default {
-  head: {
-    meta: [
-      { name: "theme-color", content: "#007db3" },
-      { name: "msapplication-navbutton-color", content: "#007db3" },
-      { name: "apple-mobile-web-app-status-bar-style", content: "#007db3" },
-    ],
-  },
   async fetch({ store, error }) {
     try {
       await store.dispatch("store/fetchData", "/b/5f2d9a046f8e4e3faf2d7584");
