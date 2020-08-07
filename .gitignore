@@ -88,4 +88,5 @@ sw.*
 
 # Vim swap files
 *.swp
-ivan.json
+db.json
+.gitignore
