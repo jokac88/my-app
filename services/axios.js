@@ -2,16 +2,17 @@ import axios from "axios";
 
 const apiClient = axios.create({
   // baseURL: `http://localhost:3000`,
-  baseURL: `http://my-json-server.typicode.com/jokac88/my-app`,
+  baseURL: `https://api.jsonbin.io/`,
   withCredentials: false,
   headers: {
     Accept: "application/json",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "secret-key": "$2b$10$9wES/sgT03yQcQYjzuoCb.QKxzdPfbmri1BsmV.clil6FDEjPJXIe"
   }
 });
 
 export default {
-  getData(lang) {
-    return apiClient.get(lang);
+  getData(id) {
+    return apiClient.get(id);
   }
 };

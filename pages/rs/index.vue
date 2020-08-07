@@ -10,15 +10,15 @@ import { mapState } from "vuex";
 export default {
   async fetch({ store, error }) {
     try {
-      await store.dispatch("store/fetchData", "/rs");
+      await store.dispatch("store/fetchData", "/b/5f2d9a36dddf413f95bf2958");
     } catch (e) {
       error({
         message: "Greška",
       });
     }
   },
-  async mounted() {
-    await this.localStorage();
+  mounted() {
+    this.localStorage();
   },
   methods: {
     localStorage() {
