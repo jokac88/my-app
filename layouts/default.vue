@@ -1,7 +1,7 @@
 <template>
   <b-container class="p-0">
-    <!-- <Loading v-if="loading" /> -->
-    <section>
+    <Loading v-if="loading" />
+    <section v-else>
       <NavBar />
       <Nuxt />
     </section>
@@ -10,13 +10,13 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-// import Loading from "@/components/Loading.vue";
+import Loading from "@/components/Loading.vue";
 import { mapState } from "vuex";
 
 export default {
-  // components: {
-  //   Loading,
-  // },
+  components: {
+    Loading,
+  },
   computed: mapState({
     loading: (state) => state.store.loading,
   }),
