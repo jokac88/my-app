@@ -10,13 +10,13 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import Loading from "@/components/Loading.vue";
+// import Loading from "@/components/Loading.vue";
 import { mapState } from "vuex";
 
 export default {
-  components: {
-    Loading,
-  },
+  // components: {
+  //   Loading,
+  // },
   computed: mapState({
     loading: (state) => state.store.loading,
   }),
