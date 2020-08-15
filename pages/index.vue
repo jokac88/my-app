@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <h1>{{ data }}</h1>
-  </div>
+  <Page :data="data" />
 </template>
 
 <script>
+import Page from "@/components/Page.vue";
 import { mapState } from "vuex";
 
 export default {
+  components: {
+    Page,
+  },
   async fetch({ store, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f2d9a046f8e4e3faf2d7584");
+      await store.dispatch("store/fetchData", "/b/5f385b35af209d1016bc35e6");
+      // await store.dispatch("store/fetchData", "/en");
     } catch (e) {
       error({
         message: "Not loading page",
       });
     }
   },
-  mounted() {
-    this.localStorage(this.data);
+  async mounted() {
+    await this.localStorage(this.data);
   },
   methods: {
     localStorage() {
@@ -26,7 +29,7 @@ export default {
     },
   },
   computed: mapState({
-    data: (state) => state.store.data,
+    data: (state) => state.store.data.en,
   }),
 };
 </script>
