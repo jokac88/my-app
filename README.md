@@ -1,4 +1,4 @@
-# my-app
+# ivan-jovkovic
 
 ## Build Setup
 

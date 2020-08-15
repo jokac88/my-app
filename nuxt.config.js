@@ -10,49 +10,39 @@ export default {
    */
   target: "static",
   router: {
-    base: "/my-app/"
+    base: "/ivan-jovkovic/"
   },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: "Ivan Jovkovic | Front-End Developer",
+    title: process.env.npm_package_name || "",
     meta: [
       { charset: "utf-8" },
-      { name: "author", content: "Ivan Jovkovic" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Ivan Jovkovic - Front-End Developer"
-      },
-      {
-        name: "keywords",
-        content:
-          "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap, Vue.js, React, React Native, WordPress, Photoshop, Laravel, MySQL"
-      },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#007db3" },
-      { name: "msapplication-navbutton-color", content: "#007db3" },
-      { name: "apple-mobile-web-app-status-bar-style", content: "#007db3" }
+        content: process.env.npm_package_description || ""
+      }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        rel: "shortcut icon",
-        type: "image/x-icon",
-        href: "favicon.ico"
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
       }
     ]
   },
   /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: "#007db3" },
-  /*
    ** Global CSS
    */
-  css: [],
+  css: ["@/assets/css/circle.css"],
+  styleResources: {
+    scss: ["@/assets/scss/variables.scss", "@/assets/scss/base.scss"]
+  },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -74,7 +64,9 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/style-resources"
   ],
   /*
    ** Axios module configuration

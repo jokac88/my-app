@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <h1>{{ data }}</h1>
-  </div>
+  <!-- <Page :data="data" /> -->
 </template>
 
 <script>
+import Page from "@/components/Page.vue";
 import { mapState } from "vuex";
 
 export default {
+  components: {
+    Page,
+  },
   async fetch({ store, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f2d9a36dddf413f95bf2958");
+      await store.dispatch("store/fetchData", "/b/5f385b944d93991036158b16");
+      // await store.dispatch("store/fetchData", "/rs");
     } catch (e) {
       error({
         message: "Greška",
       });
     }
   },
-  mounted() {
-    this.localStorage();
+  async mounted() {
+    await this.localStorage();
   },
   methods: {
     localStorage() {
@@ -26,7 +29,7 @@ export default {
     },
   },
   computed: mapState({
-    data: (state) => state.store.data,
+    data: (state) => state.store.data.rs,
   }),
 };
 </script>

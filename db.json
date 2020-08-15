@@ -70,7 +70,7 @@
         "image": "logo/spa.svg"
       }
     ],
-    "hobby": [
+    "hobbies": [
       "Movie",
       "Photography",
       "Travel",
@@ -198,75 +198,75 @@
     "technicalSkills": [
       {
         "technology": "HTML5",
-        "image": "",
+        "class": "html",
         "color": "#f0652a",
-        "level": 100
+        "percentage": "100"
       },
       {
         "technology": "CSS3",
-        "image": "",
+        "class": "css",
         "color": "#33a9dc",
-        "level": 100
+        "percentage": "100"
       },
       {
         "technology": "JavaScript",
-        "image": "",
+        "class": "javascript",
         "color": "#f0db4f",
-        "level": 75
+        "percentage": "75"
       },
       {
         "technology": "jQuery",
-        "image": "",
+        "class": "jquery",
         "color": "#0769ad",
-        "level": 75
+        "percentage": "75"
       },
       {
         "technology": "SASS",
-        "image": "",
+        "class": "sass",
         "color": "#cc6699",
-        "level": 75
+        "percentage": "75"
       },
       {
         "technology": "Bootstrap 4",
-        "image": "",
+        "class": "bootstrap",
         "color": "#593f7f ",
-        "level": 75
+        "percentage": "75"
       },
       {
         "technology": "Vue.js",
-        "image": "",
+        "class": "vue-js",
         "color": "#41b883 ",
-        "level": 75
+        "percentage": "75"
       },
       {
         "technology": "Nuxt.js",
-        "image": "",
+        "class": "nuxt-js",
         "color": "#41b883 ",
-        "level": 50
+        "percentage": "50"
       },
       {
-        "technology": "Pohotoshop",
-        "image": "",
+        "technology": "Photoshop",
+        "class": "photoshop",
         "color": "#18163f ",
-        "level": 50
+        "percentage": "50"
       },
       {
         "technology": "React/Native",
-        "image": "",
+        "class": "react-native",
         "color": "#61dafb ",
-        "level": 25
+        "percentage": "25"
       },
       {
         "technology": "WordPress",
-        "image": "",
+        "class": "wordpress",
         "color": "#21759b",
-        "level": 25
+        "percentage": "25"
       },
       {
         "technology": "Laravel",
-        "image": "",
+        "class": "laravel",
         "color": "#f55247",
-        "level": 25
+        "percentage": "25"
       }
     ]
   },
@@ -469,75 +469,75 @@
     "tehničkeVeštine": [
       {
         "tehnologija": "HTML5",
-        "slika": "",
+        "klasa": "html",
         "boja": "#f0652a",
-        "nivo": 100
+        "procenat": "100"
       },
       {
         "tehnologija": "CSS3",
-        "slika": "",
+        "klasa": "css",
         "boja": "#33a9dc",
-        "nivo": 100
+        "procenat": "100"
       },
       {
         "tehnologija": "JavaScript",
-        "slika": "",
+        "klasa": "javascript",
         "boja": "#f0db4f",
-        "nivo": 75
+        "procenat": "75"
       },
       {
         "tehnologija": "jQuery",
-        "slika": "",
+        "klasa": "jquery",
         "boja": "#0769ad",
-        "nivo": 75
+        "procenat": "75"
       },
       {
         "tehnologija": "SASS",
-        "slika": "",
+        "klasa": "sass",
         "boja": "#cc6699",
-        "nivo": 75
+        "procenat": "75"
       },
       {
         "tehnologija": "Bootstrap 4",
-        "slika": "",
+        "klasa": "bootstrap",
         "boja": "#593f7f ",
-        "nivo": 75
+        "procenat": "75"
       },
       {
         "tehnologija": "Vue.js",
-        "slika": "",
+        "klasa": "vue-js",
         "boja": "#41b883 ",
-        "nivo": 75
+        "procenat": "75"
       },
       {
         "tehnologija": "Nuxt.js",
-        "slika": "",
+        "klasa": "nuxt-js",
         "boja": "#41b883 ",
-        "nivo": 50
+        "procenat": "50"
       },
       {
-        "tehnologija": "Pohotoshop",
-        "slika": "",
+        "tehnologija": "Photoshop",
+        "klasa": "photoshop",
         "boja": "#18163f ",
-        "nivo": 50
+        "procenat": "50"
       },
       {
         "tehnologija": "React/Native",
-        "slika": "",
+        "klasa": "react-native",
         "boja": "#61dafb ",
-        "nivo": 25
+        "procenat": "25"
       },
       {
         "tehnologija": "WordPress",
-        "slika": "",
+        "klasa": "wordpress",
         "boja": "#21759b",
-        "nivo": 25
+        "procenat": "25"
       },
       {
         "tehnologija": "Laravel",
-        "slika": "",
+        "klasa": "laravel",
         "boja": "#f55247",
-        "nivo": 25
+        "procenat": "25"
       }
     ]
   }

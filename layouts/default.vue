@@ -1,8 +1,31 @@
 <template>
-  <div>
-    <router-link :to="{ name: 'index' }" exact>EN</router-link>
-    <router-link :to="{ name: 'rs' }">RS</router-link>
-    <Nuxt />
-  </div>
+  <b-container class="p-0">
+    <Loading v-if="loading" />
+    <section v-else>
+      <NavBar />
+      <Nuxt />
+    </section>
+  </b-container>
 </template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+import Loading from "@/components/Loading.vue";
+import { mapState } from "vuex";
+
+export default {
+  components: {
+    Loading,
+  },
+  computed: mapState({
+    loading: (state) => state.store.loading,
+  }),
+};
+</script>
+
+<style lang="scss">
+.container {
+  overflow: hidden;
+}
+</style>
 
