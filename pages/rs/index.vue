@@ -1,19 +1,19 @@
 <template>
-  <!-- <Page :data="data" /> -->
+  <Page :data="data" />
 </template>
 
 <script>
-import Page from "@/components/Page.vue";
+import Page from "@/components/Page-rs.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
     Page,
   },
-  async fetch({ store, error }) {
+  async fetch({ store, params, error }) {
     try {
       await store.dispatch("store/fetchData", "/b/5f385b944d93991036158b16");
-      // await store.dispatch("store/fetchData", "/rs");
+      // await store.dispatch("store/fetchData", params.lang);
     } catch (e) {
       error({
         message: "Greška",

@@ -1,7 +1,7 @@
 {
   "en": {
     "name": "Ivan Jovkovic",
-    "headline": "-Front-End Developer-",
+    "headline": "- Front-End Developer -",
     "personalInfo": {
       "dateOfBirth": "September 2<sup>nd</sup> 1988",
       "city": "Kragujevac",
@@ -272,7 +272,7 @@
   },
   "rs": {
     "ime": "Ivan Jovkovic",
-    "naslov": "-Front-End Developer-",
+    "naslov": "- Front-End Developer -",
     "ličniPodaci": {
       "datumRođenja": "02.09.1988. godine",
       "grad": "Kragujevac",

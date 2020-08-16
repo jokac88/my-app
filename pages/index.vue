@@ -10,10 +10,10 @@ export default {
   components: {
     Page,
   },
-  async fetch({ store, error }) {
+  async fetch({ store, params, error }) {
     try {
       await store.dispatch("store/fetchData", "/b/5f385b35af209d1016bc35e6");
-      // await store.dispatch("store/fetchData", "/en");
+      // await store.dispatch("store/fetchData", params.lang || "/en");
     } catch (e) {
       error({
         message: "Not loading page",

@@ -1,9 +1,9 @@
 <template>
   <div class="nav-bar">
-    <router-link :to="{ name: 'index' }" exact @click.native="loading">
+    <router-link :to="{ name: 'index', params: { lang: '/en' } }" exact @click.native="loading">
       <img src="~/assets/flags/gb.png" alt="~/assets/flags/gb.png" title="English language" />
     </router-link>
-    <router-link :to="{ name: 'rs' }" @click.native="loading">
+    <router-link :to="{ name: 'rs', params: { lang: '/rs' } }" @click.native="loading">
       <img src="~/assets/flags/rs.png" alt="~/assets/flags/rs.png" title="Serbian language" />
     </router-link>
   </div>
