@@ -1,7 +1,7 @@
 <template>
-  <b-col class="page p-0" cols="10">
+  <b-col lg="10" class="page px-0">
     <b-row no-gutters>
-      <b-col cols="4" class="left">
+      <b-col md="5" lg="4" class="left">
         <!-- Picture -->
         <section class="picture py-4 text-center">
           <div id="lightgallery" lg-uid="lg0">
@@ -84,7 +84,7 @@
           </ul>
         </section>
       </b-col>
-      <b-col cols="8">
+      <b-col md="7" lg="8" class="p-4">
         <section>
           <h1>O Meni</h1>
           <div>{{ data.oMeni }}</div>

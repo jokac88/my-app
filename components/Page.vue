@@ -1,7 +1,7 @@
 <template>
-  <b-col class="page p-0" cols="10">
+  <b-col lg="10" class="page px-0">
     <b-row no-gutters>
-      <b-col cols="4" class="left">
+      <b-col md="5" lg="4" class="left">
         <!-- Picture -->
         <section class="picture py-4 text-center">
           <div id="lightgallery" lg-uid="lg0">
@@ -38,53 +38,94 @@
         <!-- Personal Info -->
         <section>
           <div class="header">
-            <img src="~/assets/icon/personal-info.png" alt="~/assets/icon/personal-info.png" />
-            <h4 class="mb-0">Personal Info</h4>
+            <div class="heading">
+              <img
+                src="~/assets/icon/personal-info.png"
+                alt="~/assets/icon/personal-info.png"
+                title="Personal Info"
+              />
+              <h4 class="mb-0">Personal Info</h4>
+            </div>
+            <div class="btn-collapse">
+              <b-button class="switch" v-b-toggle.personalInfo title="Hide">
+                <span class="slider"></span>
+              </b-button>
+            </div>
           </div>
-          <p class="property">Date of birth</p>
-          <p class="value" v-html="data.personalInfo.dateOfBirth"></p>
-          <p class="property">City</p>
-          <p class="value">{{ data.personalInfo.city }}</p>
-          <p class="property">Nationality</p>
-          <p class="value">{{ data.personalInfo.nationality }}</p>
-          <p class="property">Residence</p>
-          <p class="value">{{ data.personalInfo.residence }}</p>
-          <p class="property">Mobile</p>
-          <p class="value">{{ data.personalInfo.mobile }}</p>
-          <p class="property">E-mail</p>
-          <p class="value">{{ data.personalInfo.email }}</p>
-          <p class="property">Website</p>
-          <p class="value">{{ data.personalInfo.website }}</p>
-          <p class="property">LinkedIn</p>
-          <p class="value">{{ data.personalInfo.linkedin }}</p>
-          <p class="property">GitHub</p>
-          <p class="value">{{ data.personalInfo.github }}</p>
-          <p class="property">Skype</p>
-          <p class="value">{{ data.personalInfo.skype }}</p>
+          <b-collapse id="personalInfo" visible>
+            <p class="property">Date of birth</p>
+            <p class="value" v-html="data.personalInfo.dateOfBirth"></p>
+            <p class="property">City</p>
+            <p class="value">{{ data.personalInfo.city }}</p>
+            <p class="property">Nationality</p>
+            <p class="value">{{ data.personalInfo.nationality }}</p>
+            <p class="property">Residence</p>
+            <p class="value">{{ data.personalInfo.residence }}</p>
+            <p class="property">Mobile</p>
+            <p class="value">{{ data.personalInfo.mobile }}</p>
+            <p class="property">E-mail</p>
+            <p class="value">{{ data.personalInfo.email }}</p>
+            <p class="property">Website</p>
+            <p class="value">{{ data.personalInfo.website }}</p>
+            <p class="property">LinkedIn</p>
+            <p class="value">{{ data.personalInfo.linkedin }}</p>
+            <p class="property">GitHub</p>
+            <p class="value">{{ data.personalInfo.github }}</p>
+            <p class="property">Skype</p>
+            <p class="value">{{ data.personalInfo.skype }}</p>
+          </b-collapse>
         </section>
 
         <!-- Languages -->
         <section>
-          <h1>Languages</h1>
-          <ul>
-            <li v-for="language in data.languages" :key="language.language">
-              <p>{{ language.language }}</p>
-              <p>{{ language.level }}</p>
-            </li>
-          </ul>
+          <div class="header">
+            <div class="heading">
+              <img
+                src="~/assets/icon/languages.png"
+                alt="~/assets/icon/languages.png"
+                title="Languages"
+              />
+              <h4 class="mb-0">Languages</h4>
+            </div>
+            <div class="btn-collapse">
+              <b-button class="switch" v-b-toggle.languages title="Hide">
+                <span class="slider"></span>
+              </b-button>
+            </div>
+          </div>
+          <b-collapse id="languages" visible>
+            <ul>
+              <li v-for="language in data.languages" :key="language.language">
+                <p>{{ language.language }}</p>
+                <p>{{ language.level }}</p>
+              </li>
+            </ul>
+          </b-collapse>
         </section>
 
         <!-- Hobbies -->
         <section>
-          <h1>Hobbies</h1>
-          <ul>
-            <li v-for="hobby in data.hobbies" :key="hobby">
-              <a>{{ hobby }}</a>
-            </li>
-          </ul>
+          <div class="header">
+            <div class="heading">
+              <img src="~/assets/icon/hobbies.png" alt="~/assets/icon/hobbies.png" title="Hobbies" />
+              <h4 class="mb-0">Hobbies</h4>
+            </div>
+            <div class="btn-collapse">
+              <b-button class="switch" v-b-toggle.hobbies title="Hide">
+                <span class="slider"></span>
+              </b-button>
+            </div>
+          </div>
+          <b-collapse id="hobbies" visible>
+            <ul>
+              <li v-for="hobby in data.hobbies" :key="hobby">
+                <a>{{ hobby }}</a>
+              </li>
+            </ul>
+          </b-collapse>
         </section>
       </b-col>
-      <b-col cols="8">
+      <b-col md="7" lg="8" class="p-4">
         <section>
           <h1>About Me</h1>
           <div>{{ data.aboutMe }}</div>
@@ -137,16 +178,14 @@ export default {
 
 <style lang="scss">
 .page {
-  // background-color: blue;
   margin: 15px auto;
-  // background-color: #ffffff;
-  // border: 3px double $blue-dark;
-  border: 3px double black;
+  background-color: #ffffff;
+  border: 3px double $blue-dark;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   position: relative;
-  // transition: $transition-2;
+  transition: $transition-2;
   z-index: 1;
 
   &.active {
@@ -154,27 +193,94 @@ export default {
   }
 }
 .left {
-  background-color: #007db3;
-  color: #ffffff;
+  background-color: $blue-light;
+  color: $white;
 }
 .header {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 20px;
   background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
   -moz-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
   -webkit-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  margin-bottom: 20px;
 
-  img {
-    margin: 8px 0 8px 20px;
-    width: 35px;
+  .heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  h4 {
+  img {
+    width: 35px;
+    margin-right: 15px;
+  }
+}
+#personalInfo {
+  padding: 0 30px;
+}
+.btn-collapse {
+  width: 32px;
+  height: 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.switch {
+  position: relative;
+  width: 32px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 33px;
+  background-color: transparent !important;
+
+  &[aria-expanded="false"] {
+    .slider {
+      background-image: $r-gradient;
+      -moz-background-image: $r-gradient;
+      -webkit-background-image: $r-gradient;
+
+      &:before {
+        -webkit-transform: translateX(13px);
+        -ms-transform: translateX(13px);
+        transform: translateX(13px);
+        background-image: none;
+        -moz-background-image: none;
+        -webkit-background-image: none;
+      }
+    }
+  }
+
+  .slider {
     position: absolute;
-    line-height: 0;
-    top: 50%;
-    left: 70px;
-    transform: translate(0, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 33px;
+    background-color: #f2f2f2;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 13px;
+      width: 13px;
+      left: 3px;
+      bottom: 3px;
+      background-color: $white;
+      background-image: $r-gradient;
+      -moz-background-image: $r-gradient;
+      -webkit-background-image: $r-gradient;
+      border-radius: 33px;
+      transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+    }
   }
 }
 .property {
@@ -201,7 +307,7 @@ export default {
   -webkit-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
   letter-spacing: 3px;
   font-weight: bold;
-  padding: 8px 0;
+  padding: 10px 15px;
 }
 .headline {
   padding: 10px 0 15px;
@@ -213,7 +319,7 @@ export default {
   margin-bottom: 20px;
 
   .btn-portfolio {
-    // background-image: $r-gradient;
+    background-image: $r-gradient;
     color: $white;
     font-weight: bold;
     letter-spacing: 1px;
@@ -221,8 +327,8 @@ export default {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    // -webkit-transition: $transition-2;
-    // transition: $transition-2;
+    -webkit-transition: $transition-2;
+    transition: $transition-2;
     z-index: 1;
 
     &:hover {
@@ -238,9 +344,9 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      // background-image: $l-gradient;
-      // -webkit-transition: $transition-2;
-      // transition: $transition-2;
+      background-image: $l-gradient;
+      -webkit-transition: $transition-2;
+      transition: $transition-2;
       border-radius: 5px;
       opacity: 0;
       z-index: -1;
