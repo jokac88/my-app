@@ -1,19 +1,19 @@
 <template>
-  <Page :data="data" />
+  <Stranica :data="data" />
 </template>
 
 <script>
-import Page from "@/components/Page-rs.vue";
+import Stranica from "@/components/rs/Stranica.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
-    Page,
+    Stranica,
   },
   async fetch({ store, params, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f385b944d93991036158b16");
-      // await store.dispatch("store/fetchData", params.lang);
+      // await store.dispatch("store/fetchData", "/b/5f385b944d93991036158b16");
+      await store.dispatch("store/fetchData", params.lang || "/rs");
     } catch (e) {
       error({
         message: "Greška",
@@ -29,7 +29,7 @@ export default {
     },
   },
   computed: mapState({
-    data: (state) => state.store.data.rs,
+    data: (state) => state.store.data,
   }),
 };
 </script>

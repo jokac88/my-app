@@ -23,7 +23,7 @@
 
         <!-- QR Code -->
         <section class="qr-code">
-          <img src="~/assets/qr-code.png" alt="~/assets/qr-code.png" title="QR Code" />
+          <img src="~/assets/qr-code.svg" alt="~/assets/qr-code.svg" title="QR Code" />
         </section>
 
         <!-- Portfolio -->
@@ -251,7 +251,7 @@ export default {
   text-align: center;
   margin-bottom: 20px;
   img {
-    width: 120px;
+    width: 100px;
   }
 }
 .technical-skills-text {

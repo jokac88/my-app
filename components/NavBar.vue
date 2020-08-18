@@ -41,6 +41,7 @@ export default {
     }
   }
 }
+
 .nuxt {
   &-link {
     &-active {

@@ -37,7 +37,11 @@ export default {
    */
   css: ["@/assets/css/circle.css"],
   styleResources: {
-    scss: ["@/assets/scss/variables.scss", "@/assets/scss/base.scss"]
+    scss: [
+      "@/node_modules/bootstrap/scss/bootstrap.scss",
+      "@/assets/scss/_variables.scss",
+      "@/assets/scss/_base.scss"
+    ]
   },
   /*
    ** Plugins to load before mounting the App
@@ -64,6 +68,10 @@ export default {
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources"
   ],
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
+  },
   pwa: {
     icon: {
       targetDir: "static"
