@@ -19,12 +19,6 @@ a {
   text-decoration: none !important;
   color: $white !important;
   display: inline-block;
-  border-bottom: 1px solid transparent;
-  transition: $transition;
-
-  &:hover {
-    border-color: $white;
-  }
 }
 
 img {

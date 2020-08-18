@@ -23,6 +23,9 @@
         <!-- Languages -->
         <Languages :data="data" />
 
+        <!-- Projects -->
+        <Projects :data="data" />
+
         <!-- Hobbies -->
         <Hobbies :data="data" />
 
@@ -79,6 +82,7 @@ import QrCode from "@/components/Qr-code.vue";
 import Portfolio from "@/components/Portfolio.vue";
 import PersonalInfo from "@/components/PersonalInfo.vue";
 import Languages from "@/components/Languages.vue";
+import Projects from "@/components/Projects.vue";
 import Hobbies from "@/components/Hobbies.vue";
 import DrivingLicense from "@/components/DrivingLicense.vue";
 
@@ -94,6 +98,7 @@ export default {
     Portfolio,
     PersonalInfo,
     Languages,
+    Projects,
     Hobbies,
     DrivingLicense,
   },

@@ -71,25 +71,31 @@ export default {
 </script>
 
 <style lang="scss">
-.personalInfo {
-  #personalInfo {
-    .wrapper {
-      padding: 0 30px 20px;
+#personalInfo {
+  .wrapper {
+    padding: 0 30px 20px;
+  }
+
+  .property {
+    font-weight: bold;
+  }
+
+  .value {
+    padding-bottom: 10px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  a {
+    border-bottom: 1px solid transparent;
+    transition: $transition;
+
+    &:hover {
+      border-color: $white;
     }
 
-    .property {
-      font-weight: bold;
-    }
-
-    .value {
-      padding-bottom: 10px;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-
-    .link {
+    &.link {
       margin-bottom: 10px;
       padding-bottom: 0;
     }

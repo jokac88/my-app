@@ -35,7 +35,7 @@ export default {
 <style lang="scss">
 #drivingLicense {
   .wrapper {
-    padding: 20px 30px;
+    padding: 0 30px 20px;
   }
 }
 </style>

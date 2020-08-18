@@ -17,57 +17,70 @@
     "languages": [
       {
         "language": "Serbian language",
-        "level": "Native"
+        "level": "Native",
+        "percentage": "100"
       },
       {
         "language": "English language",
-        "level": "Intermediate level"
+        "level": "Intermediate level",
+        "percentage": "50"
       }
     ],
     "projects": [
       {
-        "project": "Eder",
-        "image": "logo/eder.svg"
+        "project": "Eder Hotel",
+        "image": "eder-hotel.svg",
+        "url": "https://www.hoteleder.com/en/request"
       },
       {
         "project": "Formosa",
-        "image": "logo/formosa.svg"
+        "image": "formosa.png",
+        "url": "https://formosa.webtory.rs/"
       },
       {
         "project": "The Stock Trader",
-        "image": "logo/vue-js.svg"
+        "image": "vue-js.png",
+        "url": "http://vuejs-deploy-jokac88.s3-website.us-east-2.amazonaws.com/"
       },
       {
         "project": "Monster Game",
-        "image": "logo/vue-js.svg"
+        "image": "vue-js.png",
+        "url": "https://jokac88.github.io/projects/monster-game/"
       },
       {
         "project": "Wonderful Quotes",
-        "image": "logo/vue-js.svg"
+        "image": "vue-js.png",
+        "url": "http://wonderful-quotes.s3-website.eu-central-1.amazonaws.com/"
       },
       {
         "project": "Basket Top",
-        "image": "logo/basket-top.svg"
+        "image": "basket-top.png",
+        "url": "http://baskettop.rs/"
       },
       {
-        "project": "Hair Sallon",
-        "image": "logo/hair-sallon.svg"
+        "project": "Hair Saloon",
+        "image": "hair-saloon.png",
+        "url": "https://jokac88.github.io/projects/hair/"
       },
       {
         "project": "Real<strong>Estate</strong>",
-        "image": "logo/real-estate.svg"
+        "image": "real-estate.png",
+        "url": "https://jokac88.github.io/projects/real_estate/"
       },
       {
         "project": "Spotter",
-        "image": "logo/spotter.svg"
+        "image": "spotter.png",
+        "url": "https://lubar.ch/"
       },
       {
         "project": "Car Parts",
-        "image": "logo/car-parts.svg"
+        "image": "car-parts.png",
+        "url": "https://jokac88.github.io/projects/car/"
       },
       {
         "project": "Spa",
-        "image": "logo/spa.svg"
+        "image": "spa.png",
+        "url": "https://jokac88.github.io/projects/spa/"
       }
     ],
     "hobbies": [
@@ -346,6 +359,7 @@
       "Film",
       "Fotografija",
       "Putovanja",
+      "Planinarenje",
       "Trening"
     ],
     "vozačkaDozvola": "Vozačka dozvola <strong>B</strong> (aktivni vozač od 2009. godine)",
