@@ -1,22 +1,7 @@
 <template>
   <section class="personalInfo">
-    <div class="header">
-      <div class="heading">
-        <img
-          src="~/assets/icon/personal-info.png"
-          class="icon"
-          alt="~/assets/icon/personal-info.png"
-          title="Personal Info"
-        />
-        <h4 class="mb-0">Personal Info</h4>
-      </div>
-      <div class="btn-collapse">
-        <b-button class="switch" v-b-toggle.personalInfo title="Hide">
-          <span class="slider"></span>
-        </b-button>
-      </div>
-    </div>
-    <b-collapse id="personalInfo" visible>
+    <Header heading="Personal Info" property="personal-info" />
+    <b-collapse id="personal-info" visible>
       <div class="wrapper">
         <p class="property">Date of birth</p>
         <p class="value" v-html="data.personalInfo.dateOfBirth"></p>
@@ -63,15 +48,20 @@
 </template>
 
 <script>
+import Header from "@/components/left/Header.vue";
+
 export default {
   props: {
     data: Object,
+  },
+  components: {
+    Header,
   },
 };
 </script>
 
 <style lang="scss">
-#personalInfo {
+#personal-info {
   .wrapper {
     padding: 0 30px 20px;
   }

@@ -14,9 +14,9 @@ export default {
 
 <style lang="scss">
 .name {
-  background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -moz-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -webkit-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
+  background-image: $gradient-right;
+  -moz-background-image: $gradient-right;
+  -webkit-background-image: $gradient-right;
   letter-spacing: 3px;
   font-weight: bold;
   padding: 10px 15px;

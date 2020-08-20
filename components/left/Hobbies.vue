@@ -1,21 +1,6 @@
 <template>
   <section class="hobbies">
-    <div class="header">
-      <div class="heading">
-        <img
-          src="~/assets/icon/hobbies.png"
-          class="icon"
-          alt="~/assets/icon/hobbies.png"
-          title="Hobbies"
-        />
-        <h4 class="mb-0">Hobbies</h4>
-      </div>
-      <div class="btn-collapse">
-        <b-button class="switch" v-b-toggle.hobbies title="Hide">
-          <span class="slider"></span>
-        </b-button>
-      </div>
-    </div>
+    <Header heading="Hobbies" property="hobbies" />
     <b-collapse id="hobbies" visible>
       <div class="wrapper">
         <ul>
@@ -27,9 +12,14 @@
 </template>
 
 <script>
+import Header from "@/components/left/Header.vue";
+
 export default {
   props: {
     data: Object,
+  },
+  components: {
+    Header,
   },
 };
 </script>

@@ -1,21 +1,6 @@
 <template>
   <section class="projects">
-    <div class="header">
-      <div class="heading">
-        <img
-          src="~/assets/icon/projects.png"
-          class="icon"
-          alt="~/assets/icon/projects.png"
-          title="Projects"
-        />
-        <h4 class="mb-0">Projects</h4>
-      </div>
-      <div class="btn-collapse">
-        <b-button class="switch" v-b-toggle.projects title="Hide">
-          <span class="slider"></span>
-        </b-button>
-      </div>
-    </div>
+    <Header heading="Projects" property="projects" />
     <b-collapse id="projects" visible>
       <div class="wrapper">
         <b-row>
@@ -29,9 +14,9 @@
               <h6 v-html="project.project" class="mb-3"></h6>
               <img
                 :src="require('~/assets/logo/' + project.image)"
-                :title="project.project"
-                :alt="require('~/assets/logo/' + project.image)"
                 class="icon"
+                :alt="require('~/assets/logo/' + project.image)"
+                :title="project.project"
               />
             </a>
           </b-col>
@@ -42,9 +27,14 @@
 </template>
 
 <script>
+import Header from "@/components/left/Header.vue";
+
 export default {
   props: {
     data: Object,
+  },
+  components: {
+    Header,
   },
 };
 </script>
@@ -64,14 +54,13 @@ export default {
     }
 
     .link {
-      height: 100%;
-      display: block;
       position: relative;
       bottom: 0;
+      display: block;
+      height: 100%;
       padding: 10px;
-      opacity: 0.4;
+      opacity: 0.5;
       transition: $transition;
-      border-radius: 3px;
 
       &:hover {
         opacity: 1;

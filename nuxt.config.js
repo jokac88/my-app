@@ -35,13 +35,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["@/assets/css/circle.css"],
+  css: ["~assets/scss/_base.scss", "~assets/css/circle.css"],
   styleResources: {
-    scss: [
-      "@/node_modules/bootstrap/scss/bootstrap.scss",
-      "@/assets/scss/_variables.scss",
-      "@/assets/scss/_base.scss"
-    ]
+    scss: ["~assets/scss/_variables.scss"]
   },
   /*
    ** Plugins to load before mounting the App

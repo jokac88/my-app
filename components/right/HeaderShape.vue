@@ -1,0 +1,76 @@
+<template>
+  <section class="header-shape">
+    <div class="shape">
+      <div class="heading">
+        <img
+          :src="require('~/assets/icon/' + property + '.png')"
+          class="icon"
+          :alt="require('~/assets/icon/' + property + '.png')"
+          :title="heading"
+        />
+        <h3>{{ heading }}</h3>
+      </div>
+    </div>
+    <ButtonToggle :property="property" />
+  </section>
+</template>
+
+<script>
+import ButtonToggle from "@/components/ButtonToggle.vue";
+
+export default {
+  components: {
+    ButtonToggle,
+  },
+  props: {
+    heading: String,
+    property: String,
+  },
+};
+</script>
+
+<style lang="scss">
+.header {
+  &-shape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid transparent;
+    -moz-border-image: $gradient-right;
+    -webkit-border-image: $gradient-right;
+    border-image: $gradient-right;
+    border-image-slice: 1;
+
+    .shape {
+      margin-left: 15px;
+      transform: skew(-30deg);
+      -webkit-transform: skew(-30deg);
+      -moz-transform: skew(-30deg);
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background-image: $gradient-right;
+      -moz-background-image: $gradient-right;
+      -webkit-background-image: $gradient-right;
+
+      .heading {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 20px;
+        -webkit-transform: skew(30deg);
+        -moz-transform: skew(30deg);
+        transform: skew(30deg);
+        color: $white;
+
+        .icon {
+          width: 40px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+</style>

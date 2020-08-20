@@ -27,7 +27,7 @@ export default {
   img {
     width: 150px;
     height: 180px;
-    border: 3px double $blue-dark;
+    border: 3px double $orient;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;

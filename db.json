@@ -312,47 +312,47 @@
     "projekti": [
       {
         "projekat": "Eder",
-        "slika": "logo/eder.svg"
+        "slika": "eder.svg"
       },
       {
         "projekat": "Formosa",
-        "slika": "logo/formosa.svg"
+        "slika": "formosa.png"
       },
       {
         "projekat": "The Stock Trader",
-        "slika": "logo/vue-js.svg"
+        "slika": "vue-js.png"
       },
       {
         "projekat": "Monster Game",
-        "slika": "logo/vue-js.svg"
+        "slika": "vue-js.png"
       },
       {
         "projekat": "Wonderful Quotes",
-        "slika": "logo/vue-js.svg"
+        "slika": "vue-js.png"
       },
       {
         "projekat": "Basket Top",
-        "slika": "logo/basket-top.svg"
+        "slika": "basket-top.png"
       },
       {
-        "projekat": "Hair Sallon",
-        "slika": "logo/hair-sallon.svg"
+        "projekat": "Hair Saloon",
+        "slika": "hair-saloon.png"
       },
       {
         "projekat": "Real<strong>Estate</strong>",
-        "slika": "logo/real-estate.svg"
+        "slika": "real-estate.png"
       },
       {
         "projekat": "Spotter",
-        "slika": "logo/spotter.svg"
+        "slika": "spotter.png"
       },
       {
         "projekat": "Car Parts",
-        "image": "logo/car-parts.svg"
+        "slika": "car-parts.png"
       },
       {
         "projekat": "Spa",
-        "image": "logo/spa.svg"
+        "slika": "spa.png"
       }
     ],
     "hobi": [

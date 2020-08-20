@@ -1,11 +1,11 @@
 $font: "PT Sans", sans-serif;
 $white: #ffffff;
-$bckgclr: #f2f2f2;
-$blue-dark: #005c85;
-$blue-light: #007db3;
-$green: #77ac39;
+$silver: #cccccc;
+$orient: #005c85;
+$deep-cerulean: #007db3;
+$sushi: #77ac39;
 $black: #000000;
 $transition: all 0.3s ease;
 $transition-2: all 0.5s ease;
-$r-gradient: linear-gradient(135deg, $blue-light 0, $green 100%);
-$l-gradient: linear-gradient(135deg, $green 0, $blue-light 100%);
+$gradient-left: linear-gradient(135deg, $deep-cerulean 0, $sushi 100%);
+$gradient-right: linear-gradient(135deg, $sushi 0, $deep-cerulean 100%);

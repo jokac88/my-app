@@ -1,21 +1,6 @@
 <template>
-  <section class="langueages">
-    <div class="header">
-      <div class="heading">
-        <img
-          src="~/assets/icon/languages.png"
-          class="icon"
-          alt="~/assets/icon/languages.png"
-          title="Languages"
-        />
-        <h4 class="mb-0">Languages</h4>
-      </div>
-      <div class="btn-collapse">
-        <b-button class="switch" v-b-toggle.languages title="Hide">
-          <span class="slider"></span>
-        </b-button>
-      </div>
-    </div>
+  <section class="languages">
+    <Header heading="Languages" property="languages" />
     <b-collapse id="languages" visible>
       <div class="wrapper">
         <div v-for="language in data.languages" :key="language.language">
@@ -31,7 +16,12 @@
 </template>
 
 <script>
+import Header from "@/components/left/Header.vue";
+
 export default {
+  components: {
+    Header,
+  },
   props: {
     data: Object,
   },
@@ -52,7 +42,7 @@ export default {
   .meter {
     height: 30px;
     position: relative;
-    background-color: $blue-dark;
+    background-color: $orient;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
@@ -65,7 +55,7 @@ export default {
       -moz-border-radius: 20px;
       -webkit-border-radius: 20px;
       border-radius: 20px;
-      background-color: $blue-dark;
+      background-color: $orient;
       box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
         inset 0 -2px 6px rgba(0, 0, 0, 0.4);
       position: relative;

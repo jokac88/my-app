@@ -140,7 +140,7 @@ export default {
   // background-color: blue;
   margin: 15px auto;
   // background-color: #ffffff;
-  // border: 3px double $blue-dark;
+  // border: 3px double $orient;
   border: 3px double black;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -159,9 +159,9 @@ export default {
 }
 .header {
   position: relative;
-  background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -moz-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -webkit-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
+  background-image: $gradient-right;
+  -moz-background-image: $gradient-right;
+  -webkit-background-image: $gradient-right;
   margin-bottom: 20px;
 
   img {
@@ -196,13 +196,14 @@ export default {
   }
 }
 .name {
-  background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -moz-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
-  -webkit-background-image: linear-gradient(135deg, #007db3 0, #77ac39 100%);
+  background-image: $gradient-right;
+  -moz-background-image: $gradient-right;
+  -webkit-background-image: $gradient-right;
   letter-spacing: 3px;
   font-weight: bold;
   padding: 8px 0;
 }
+
 .headline {
   padding: 10px 0 15px;
   text-align: center;
@@ -213,7 +214,7 @@ export default {
   margin-bottom: 20px;
 
   .btn-portfolio {
-    // background-image: $r-gradient;
+    // background-image: $gradient-right;
     color: $white;
     font-weight: bold;
     letter-spacing: 1px;
@@ -221,8 +222,8 @@ export default {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    // -webkit-transition: $transition-2;
-    // transition: $transition-2;
+    -webkit-transition: $transition-2;
+    transition: $transition-2;
     z-index: 1;
 
     &:hover {
@@ -238,7 +239,7 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      // background-image: $l-gradient;
+      // background-image: $gradient-left;
       // -webkit-transition: $transition-2;
       // transition: $transition-2;
       border-radius: 5px;

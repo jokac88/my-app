@@ -18,7 +18,7 @@ export default {
   margin-bottom: 20px;
 
   .btn-portfolio {
-    background-image: $r-gradient;
+    background-image: $gradient-right;
     color: $white;
     font-weight: bold;
     letter-spacing: 1px;
@@ -43,7 +43,7 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: $l-gradient;
+      background-image: $gradient-left;
       -webkit-transition: $transition-2;
       transition: $transition-2;
       border-radius: 5px;
