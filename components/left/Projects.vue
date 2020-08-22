@@ -7,7 +7,7 @@
           <b-col
             v-for="project in data.projects"
             :key="project.project"
-            md="6"
+            cols="6"
             class="item text-center"
           >
             <a :href="project.url" class="link" :title="project.project" target="_blank">
@@ -59,12 +59,15 @@ export default {
       display: block;
       height: 100%;
       padding: 10px;
-      opacity: 0.5;
-      transition: $transition;
 
-      &:hover {
-        opacity: 1;
-        bottom: 5px;
+      @include media-breakpoint-up(lg) {
+        opacity: 0.5;
+        transition: $transition;
+
+        &:hover {
+          opacity: 1;
+          bottom: 5px;
+        }
       }
 
       .icon {

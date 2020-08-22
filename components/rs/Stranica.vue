@@ -13,7 +13,7 @@
 
         <!-- Name -->
         <section class="name">
-          <h1 class="text-center m-0">{{ data.ime }}</h1>
+          <h1 class="text-center">{{ data.ime }}</h1>
         </section>
 
         <!-- Headline -->

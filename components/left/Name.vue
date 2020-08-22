@@ -1,6 +1,6 @@
 <template>
   <section class="name">
-    <h1 class="text-center m-0">{{ data.name }}</h1>
+    <h1 class="text-center">{{ data.name }}</h1>
   </section>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <b-button class="btn-switch" v-b-toggle="property" title="Hide">
+  <b-button class="btn-toggle" v-b-toggle="property" title="Hide">
     <span class="slider"></span>
   </b-button>
 </template>
@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .btn {
-  &-switch {
+  &-toggle {
     position: relative;
     width: 32px;
     height: 19px;
@@ -22,14 +22,15 @@ export default {
     padding: 0;
     border: none;
     border-radius: 33px;
+    background-color: transparent !important;
 
     &:before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 32px;
+      height: 19px;
       border-radius: 33px;
       background-image: $gradient-right;
       -moz-background-image: $gradient-right;
@@ -41,22 +42,22 @@ export default {
     &:after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: -0.2px;
+      left: -0.2px;
+      width: 32.4px;
+      height: 19.4px;
       border-radius: 33px;
       transition: $transition-2;
       -webkit-transition: $transition-2;
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded="false"] {
       &:after {
-        background-color: $white;
+        background-color: $concrete;
       }
     }
 
-    &[aria-expanded="false"] {
+    &[aria-expanded="true"] {
       .slider {
         &:before,
         &:after {
@@ -75,8 +76,8 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 32px;
+      height: 19px;
       border-radius: 33px;
       transition: $transition-2;
       -webkit-transition: $transition-2;
@@ -84,10 +85,10 @@ export default {
       &:before {
         content: "";
         position: absolute;
+        top: 3px;
+        left: 3px;
         height: 13px;
         width: 13px;
-        left: 3px;
-        bottom: 3px;
         background-image: $gradient-right;
         -moz-background-image: $gradient-right;
         -webkit-background-image: $gradient-right;
@@ -100,10 +101,10 @@ export default {
       &:after {
         content: "";
         position: absolute;
-        height: 13px;
-        width: 13px;
-        left: 3px;
-        bottom: 3px;
+        left: 2.8px;
+        top: 2.8px;
+        height: 13.4px;
+        width: 13.4px;
         border-radius: 33px;
         transition: $transition-2;
         -webkit-transition: $transition-2;

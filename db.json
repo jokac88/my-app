@@ -95,14 +95,13 @@
     "education": [
       {
         "year": "Oct 2008 - Jul 2011",
-        "college": "Technical College of Applied Sciences",
-        "city": "Kragujevac",
+        "college": "<em>\"Technical College of Applied Sciences\"</em>, Kragujevac",
         "department": "Informatics",
         "degree": "Bachelor degree in Computer Sience"
       },
       {
         "year": "Jan 2017 - Mar 2017",
-        "course": "ICT Cluster of Central Serbia",
+        "course": "<em>\"ICT Cluster of Central Serbia\"</em>",
         "description": {
           "text": "Intensive course for beginners in language independent programming in languages:",
           "technologies": [
@@ -113,7 +112,7 @@
       },
       {
         "year": "Mar 2017 - May 2017",
-        "course": "ICT Cluster of Central Serbia",
+        "course": "<em>\"ICT Cluster of Central Serbia\"</em>",
         "description": {
           "text": "Intensive course for beginners in language independent programming in language:",
           "technologies": [
@@ -123,8 +122,8 @@
       },
       {
         "year": "Jul 2017 - Aug 2017",
-        "course": "Emisia Consulting",
-        "name": "UI Workshop",
+        "course": "<em>\"Emisia Consulting\"</em>",
+        "name": "<em>\"UI Workshop\"</em>",
         "description": {
           "text": "Developing an application for displaying information about festivals in Serbia using:",
           "technologies": [

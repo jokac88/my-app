@@ -39,6 +39,9 @@
           <!-- About Me -->
           <AboutMe :data="data" />
 
+          <!-- Education -->
+          <Education :data="data" />
+
           <!-- Technical Skills -->
           <TechnicalSkills :data="data" />
         </div>
@@ -60,6 +63,7 @@ import Projects from "@/components/left/Projects.vue";
 import Hobbies from "@/components/left/Hobbies.vue";
 import DrivingLicense from "@/components/left/DrivingLicense.vue";
 import AboutMe from "@/components/right/AboutMe.vue";
+import Education from "@/components/right/Education.vue";
 import TechnicalSkills from "@/components/right/TechnicalSkills.vue";
 
 export default {
@@ -78,6 +82,7 @@ export default {
     Hobbies,
     DrivingLicense,
     AboutMe,
+    Education,
     TechnicalSkills,
   },
 };

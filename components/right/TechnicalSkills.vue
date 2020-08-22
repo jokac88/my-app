@@ -6,7 +6,8 @@
         <b-col
           v-for="technology in data.technicalSkills"
           :key="technology.technology"
-          cols="4"
+          cols="6"
+          md="4"
           class="technical-skills-circle"
         >
           <p
