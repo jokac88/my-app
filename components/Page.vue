@@ -34,13 +34,16 @@
         <DrivingLicense :data="data" />
       </b-col>
       <!-- Right -->
-      <b-col md="7" lg="8" class="right">
+      <b-col md="7" lg="8" class="right" :class="darkMode ? 'dark-mode' : ''">
         <div class="wrapper">
           <!-- About Me -->
           <AboutMe :data="data" />
 
           <!-- Education -->
           <Education :data="data" />
+
+          <!-- Employment History -->
+          <EmploymentHistory :data="data" />
 
           <!-- Technical Skills -->
           <TechnicalSkills :data="data" />
@@ -64,6 +67,7 @@ import Hobbies from "@/components/left/Hobbies.vue";
 import DrivingLicense from "@/components/left/DrivingLicense.vue";
 import AboutMe from "@/components/right/AboutMe.vue";
 import Education from "@/components/right/Education.vue";
+import EmploymentHistory from "@/components/right/EmploymentHistory.vue";
 import TechnicalSkills from "@/components/right/TechnicalSkills.vue";
 
 export default {
@@ -83,8 +87,12 @@ export default {
     DrivingLicense,
     AboutMe,
     Education,
+    EmploymentHistory,
     TechnicalSkills,
   },
+  computed: mapState({
+    darkMode: (state) => state.store.darkMode,
+  }),
 };
 </script>
 
@@ -97,6 +105,7 @@ export default {
 .right {
   background-color: $white;
   color: $orient;
+  transition: $transition;
 
   .wrapper {
     padding: 20px;

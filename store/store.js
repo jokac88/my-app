@@ -2,7 +2,8 @@ import axios from "@/services/axios.js";
 
 export const state = () => ({
   data: {},
-  loading: true
+  loading: true,
+  darkMode: false 
 });
 
 export const mutations = {
@@ -11,6 +12,9 @@ export const mutations = {
   },
   SET_LOADING(state, loading) {
     state.loading = loading;
+  },
+  SET_DARKMODE(state) {
+    state.darkMode = !state.darkMode;
   }
 };
 
@@ -23,5 +27,8 @@ export const actions = {
     setTimeout(() => {
       commit("SET_LOADING", loading);
     }, 2000);
+  },
+  toggleDarkMode({ commit }) {
+    commit("SET_DARKMODE");
   }
 };

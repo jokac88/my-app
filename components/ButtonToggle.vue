@@ -43,9 +43,9 @@ export default {
       content: "";
       position: absolute;
       top: -0.2px;
-      left: -0.2px;
-      width: 32.4px;
-      height: 19.4px;
+      left: -0.1px;
+      width: 32.2px;
+      height: 19.3px;
       border-radius: 33px;
       transition: $transition-2;
       -webkit-transition: $transition-2;
@@ -78,7 +78,7 @@ export default {
       left: 0;
       width: 32px;
       height: 19px;
-      border-radius: 33px;
+      border-radius: 50%;
       transition: $transition-2;
       -webkit-transition: $transition-2;
 
@@ -101,11 +101,11 @@ export default {
       &:after {
         content: "";
         position: absolute;
-        left: 2.8px;
+        left: 2.9px;
         top: 2.8px;
-        height: 13.4px;
-        width: 13.4px;
-        border-radius: 33px;
+        height: 13.3px;
+        width: 13.2px;
+        border-radius: 50%;
         transition: $transition-2;
         -webkit-transition: $transition-2;
         z-index: 1;

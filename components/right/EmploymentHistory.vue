@@ -1,11 +1,15 @@
 <template>
   <section>
-    <HeaderShape heading="Education" property="education" />
-    <b-collapse id="education" visible>
-      <b-row v-for="(education, index) in data.education" :key="education.year" class="wrapper">
+    <HeaderShape heading="Employment History" property="employment-history" />
+    <b-collapse id="employment-history" visible>
+      <b-row
+        v-for="(employmentHistory, index) in data.employmentHistory"
+        :key="employmentHistory.year"
+        class="wrapper"
+      >
         <b-col
           v-if="key !== 'description'"
-          v-for="(value, key, index) in education"
+          v-for="(value, key, index) in employmentHistory"
           :key="index"
           lg="6"
         >
@@ -14,12 +18,11 @@
         </b-col>
         <b-col v-else>
           <p class="property">{{ key | capitalize }}</p>
-          <p class="value">{{ value.text }}</p>
           <ul>
-            <li v-for="technologies in value.technologies" :key="technologies">{{ technologies }}</li>
+            <li v-for="description in value" :key="description">{{ description }}</li>
           </ul>
         </b-col>
-        <hr v-if="index !== data.education.length - 1" />
+        <hr v-if="index !== data.employmentHistory.length - 1" />
       </b-row>
     </b-collapse>
   </section>
@@ -46,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-#education {
+#employment-history {
   .wrapper {
     padding: 0 15px;
   }

@@ -33,7 +33,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-image: $gradient-right;
   -moz-background-image: $gradient-right;
   -webkit-background-image: $gradient-right;
@@ -44,12 +44,12 @@ export default {
     align-items: center;
 
     .icon {
-      border-radius: 50%;
       width: 35px;
       margin-right: 15px;
-      -webkit-box-shadow: 2px 2px 10px -5px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 2px 2px 10px -5px rgba(0, 0, 0, 0.75);
-      box-shadow: 2px 2px 10px -5px rgba(0, 0, 0, 0.75);
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
     }
   }
 }

@@ -10,6 +10,10 @@ body {
   margin: 0 auto;
 }
 
+body {
+  transition: $transition-2;
+}
+
 *,
 *:after,
 *:before {
@@ -85,4 +89,9 @@ hr {
   &.active {
     transform: translate3d(80%, 0, 0);
   }
+}
+
+.dark-mode {
+  background-color: $pickled-bluewood !important;
+  color: $white !important;
 }

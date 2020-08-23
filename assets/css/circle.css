@@ -1266,11 +1266,11 @@
 
 .c100.nuxt-js .bar,
 .c100.nuxt-js .fill {
-  border-color: #e87912 !important;
+  border-color: #2f495e !important;
 }
 
 .c100.nuxt-js:hover > span {
-  color: #e87912;
+  color: #2f495e;
 }
 
 .c100.orange.dark .bar,

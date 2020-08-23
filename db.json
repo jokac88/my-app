@@ -1,5 +1,16 @@
 {
   "en": {
+    "navigation": [
+      "Personal Info",
+      "Languages",
+      "Projects",
+      "Hobbies",
+      "Driving License",
+      "About Me",
+      "Education",
+      "Employment History",
+      "Technical Skills"
+    ],
     "name": "Ivan Jovkovic",
     "headline": "- Front-End Developer -",
     "personalInfo": {
@@ -138,7 +149,7 @@
     "employmentHistory": [
       {
         "year": "May 2019 - Apr 2020",
-        "company": "Q Agency",
+        "company": "<em>\"Q Agency\"</em>",
         "position": "Junior JavaScript Developer",
         "description": [
           "Developing new user-facing features",
@@ -149,7 +160,7 @@
       },
       {
         "year": "May 2018 - Apr 2019",
-        "company": "Webtory",
+        "company": "<em>\"Webtory\"</em>",
         "position": "Front-End Web Developer",
         "description": [
           "Developing new user-facing features",
@@ -160,7 +171,7 @@
       },
       {
         "year": "Sep 2017 - Feb 2018",
-        "company": "Digital Share",
+        "company": "<em>\"Digital Share\"</em>",
         "position": "Front-End Web Developer",
         "description": [
           "Maintenance of website through the updating, testing, publishing and manipulating of existing source code",
@@ -170,7 +181,7 @@
       },
       {
         "year": "Sep 2015 - Feb 2017",
-        "company": "Arena Fun Factory",
+        "company": "<em>\"Arena Fun Factory\"</em>",
         "position": "Instructor of sports activities",
         "description": [
           "Developing training programmes",
@@ -179,8 +190,7 @@
       },
       {
         "year": "Oct 2014 - Aug 2015",
-        "club": "K.K. Zicer",
-        "city": "Gruza",
+        "club": "<em>\"K.K. Zicer\"</em>, Gruza",
         "position": "Assistant coach of youth teams",
         "description": [
           "Organizing and directing individual and small group practice activities/exercises as directed by the head Basketball coach",
@@ -189,7 +199,7 @@
       },
       {
         "year": "Jun 2013 - Jun 2014",
-        "company": "Republic Geodetic Authority Kragujevac",
+        "company": "<em>\"Republic Geodetic Authority Kragujevac\"</em>",
         "position": "Computer scientist",
         "description": [
           "Installing and configuring computer hardware, operating systems and applications",
@@ -199,8 +209,7 @@
       },
       {
         "year": "Jul 2011 - Jun 2013",
-        "club": "Z.K.K. Radnicki",
-        "city": "Kragujevac",
+        "club": "<em>\"Z.K.K. Radnicki\"</em>, Kragujevac",
         "position": "Head coach of youth selections",
         "description": [
           "Assistance in coaching kids daily at team practices and games during weekend",
@@ -249,12 +258,12 @@
         "technology": "Vue.js",
         "class": "vue-js",
         "color": "#41b883 ",
-        "percentage": "75"
+        "percentage": "50"
       },
       {
         "technology": "Nuxt.js",
         "class": "nuxt-js",
-        "color": "#41b883 ",
+        "color": "#2f495e ",
         "percentage": "50"
       },
       {

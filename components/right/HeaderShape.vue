@@ -59,7 +59,7 @@ export default {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 10px 20px;
+        padding: 10px 25px;
         -webkit-transform: skew(30deg);
         -moz-transform: skew(30deg);
         transform: skew(30deg);
@@ -68,6 +68,10 @@ export default {
         .icon {
           width: 40px;
           margin-right: 15px;
+          border-radius: 50%;
+          -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
         }
       }
     }
