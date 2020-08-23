@@ -28,10 +28,19 @@ export default {
     background-color: transparent !important;
     padding: 0;
     border: none;
-    z-index: 1;
+    z-index: 2;
+
+    @include media-breakpoint-down(sm) {
+      right: 15px;
+      bottom: 15px;
+    }
 
     .icon {
       width: 48px;
+
+      @include media-breakpoint-down(sm) {
+        width: 24px;
+      }
     }
   }
 }

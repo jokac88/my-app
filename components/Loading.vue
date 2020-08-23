@@ -1,6 +1,6 @@
 <template>
   <div class="loader">
-    <img src="~/assets/loader.gif" alt="~/assets/loader.gif" />
+    <img src="~/assets/loader.gif" alt="~/assets/loader.gif" title="Loader" class="loader-gif" />
   </div>
 </template>
 
@@ -23,9 +23,12 @@ export default {
   width: 100%;
   height: 100%;
 
-  img {
+  &-gif {
     width: 200px;
-    height: 200px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100px;
+    }
   }
 }
 </style>
