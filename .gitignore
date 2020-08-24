@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+services/axios.js
+pages/rs/index.vue
+pages/index.vue
