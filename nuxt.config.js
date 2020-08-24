@@ -43,7 +43,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ["~plugins/filters.js"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -76,6 +76,8 @@ export default {
       short_name: "ij-app"
     },
     meta: {
+      viewport:
+        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no",
       name: "Ivan Jovkovic | Front-End Developer",
       theme_color: "#007db3",
       author: "Ivan Jovkovic",
