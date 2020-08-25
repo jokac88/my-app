@@ -1,13 +1,13 @@
 <template>
   <section class="name">
-    <h1 class="text-center">{{ data.name }}</h1>
+    <h1 class="text-center">{{ name }}</h1>
   </section>
 </template>
 
 <script>
 export default {
   props: {
-    data: Object,
+    name: String,
   },
 };
 </script>

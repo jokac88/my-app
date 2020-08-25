@@ -1,9 +1,9 @@
 <template>
   <section class="about-me">
-    <HeaderShape heading="About Me" property="about-me" />
+    <HeaderShape :heading="$route.path === '/' ? 'About Me' : 'O Meni'" property="about-me" />
     <b-collapse id="about-me" visible>
       <div class="wrapper">
-        <p>{{ data.aboutMe }}</p>
+        <p>{{ aboutMe }}</p>
       </div>
     </b-collapse>
   </section>
@@ -14,7 +14,7 @@ import HeaderShape from "@/components/right/HeaderShape.vue";
 
 export default {
   props: {
-    data: Object,
+    aboutMe: String,
   },
   components: {
     HeaderShape,

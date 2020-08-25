@@ -1,23 +1,31 @@
 <template>
   <section class="projects">
-    <Header heading="Projects" property="projects" />
+    <Header :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
     <b-collapse id="projects" visible>
       <div class="wrapper">
         <b-row>
           <b-col
-            v-for="project in data.projects"
-            :key="project.project"
-            cols="6"
+            v-for="project in projects"
+            :key="project.project || project.projekat"
             class="item text-center"
+            cols="6"
           >
-            <a :href="project.url" class="link" :title="project.project" target="_blank">
-              <h6 v-html="project.project" class="mb-3"></h6>
+            <a
+              :href="project.url || project.link"
+              class="link"
+              :title="project.project || project.projekat"
+              target="_blank"
+            >
+              <h6 v-html="project.project || project.projekat" class="mb-3"></h6>
+              <!-- <template v-else>
+                <h1>Ana</h1>
+              </template>
               <img
-                :src="require('~/assets/logo/' + project.image)"
+                v-else
+                :src="require('~/assets/logo/' + project.slika)"
+                :alt="require('~/assets/logo/' + project.slika)"
                 class="icon"
-                :alt="require('~/assets/logo/' + project.image)"
-                :title="project.project"
-              />
+              />-->
             </a>
           </b-col>
         </b-row>
@@ -31,7 +39,7 @@ import Header from "@/components/left/Header.vue";
 
 export default {
   props: {
-    data: Object,
+    projects: Array,
   },
   components: {
     Header,
@@ -46,7 +54,7 @@ export default {
   }
 
   .item {
-    padding: 0 10px;
+    padding: 0 5px;
     margin-bottom: 20px;
 
     &:last-child {
@@ -71,8 +79,8 @@ export default {
       }
 
       .icon {
-        width: 70px;
-        height: 70px;
+        width: 64px;
+        height: 64px;
       }
     }
   }

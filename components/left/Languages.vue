@@ -1,14 +1,14 @@
 <template>
   <section class="languages">
-    <Header heading="Languages" property="languages" />
+    <Header :heading="$route.path === '/' ? 'Languages' : 'Jezici'" property="languages" />
     <b-collapse id="languages" visible>
       <div class="wrapper">
-        <div v-for="language in data.languages" :key="language.language">
-          <p class="language">{{ language.language }}</p>
+        <div v-for="language in languages" :key="language.language || language.jezik">
+          <p class="language">{{ language.language || language.jezik }}</p>
           <div class="meter">
-            <span :style="{ width: language.percentage + '%' }"></span>
+            <span :style="{ width: language.percentage || language.procenat + '%' }"></span>
           </div>
-          <p class="level">{{ language.level }}</p>
+          <p class="level">{{ language.level || language.nivo }}</p>
         </div>
       </div>
     </b-collapse>
@@ -23,7 +23,7 @@ export default {
     Header,
   },
   props: {
-    data: Object,
+    languages: Array,
   },
 };
 </script>

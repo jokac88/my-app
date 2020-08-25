@@ -1,10 +1,10 @@
 <template>
   <section class="hobbies">
-    <Header heading="Hobbies" property="hobbies" />
+    <Header :heading="$route.path === '/' ? 'Hobbies' : 'Hobi'" property="hobbies" />
     <b-collapse id="hobbies" visible>
       <div class="wrapper">
         <ul>
-          <li v-for="hobby in data.hobbies" :key="hobby">{{ hobby }}</li>
+          <li v-for="hobby in hobbies" :key="hobby">{{ hobby }}</li>
         </ul>
       </div>
     </b-collapse>
@@ -16,7 +16,7 @@ import Header from "@/components/left/Header.vue";
 
 export default {
   props: {
-    data: Object,
+    hobbies: Array,
   },
   components: {
     Header,

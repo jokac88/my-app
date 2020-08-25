@@ -1,18 +1,18 @@
 <template>
-  <Stranica :data="data" />
+  <Page :data="data" />
 </template>
 
 <script>
-import Stranica from "@/components/rs/Stranica.vue";
+import Page from "@/components/Page.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
-    Stranica,
+    Page,
   },
   async fetch({ store, params, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f41a7a3514ec5112d0c399b");
+      await store.dispatch("store/fetchData", "/b/5f451b80993a2e110d360eb9");
       // await store.dispatch("store/fetchData", params.lang || "/rs");
     } catch (e) {
       error({
@@ -20,14 +20,14 @@ export default {
       });
     }
   },
-  async mounted() {
-    await this.localStorage();
-  },
-  methods: {
-    localStorage() {
-      localStorage.setItem("data", JSON.stringify(this.data));
-    },
-  },
+  // async mounted() {
+  //   await this.localStorage();
+  // },
+  // methods: {
+  //   localStorage() {
+  //     localStorage.setItem("data", JSON.stringify(this.data));
+  //   },
+  // },
   computed: mapState({
     data: (state) => state.store.data.rs,
   }),

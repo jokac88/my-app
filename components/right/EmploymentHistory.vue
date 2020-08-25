@@ -1,14 +1,17 @@
 <template>
   <section>
-    <HeaderShape heading="Employment History" property="employment-history" />
+    <HeaderShape
+      :heading="$route.path === '/' ? 'Employment History' : 'Istorija Zapošljavanja'"
+      property="employment-history"
+    />
     <b-collapse id="employment-history" visible>
       <b-row
-        v-for="(employmentHistory, index) in data.employmentHistory"
-        :key="employmentHistory.year"
+        v-for="(employmentHistory, index) in employmentHistories"
+        :key="employmentHistory.year || employmentHistory.godina"
         class="wrapper"
       >
         <b-col
-          v-if="key !== 'description'"
+          v-if="key !== 'description' && key !== 'opis'"
           v-for="(value, key, index) in employmentHistory"
           :key="index"
           lg="6"
@@ -22,7 +25,7 @@
             <li v-for="description in value" :key="description">{{ description }}</li>
           </ul>
         </b-col>
-        <hr v-if="index !== data.employmentHistory.length - 1" />
+        <hr v-if="index !== employmentHistories.length - 1" />
       </b-row>
     </b-collapse>
   </section>
@@ -33,7 +36,7 @@ import HeaderShape from "@/components/right/HeaderShape.vue";
 
 export default {
   props: {
-    data: Object,
+    employmentHistories: Array,
   },
   components: {
     HeaderShape,

@@ -11,6 +11,7 @@
       "Employment History",
       "Technical Skills"
     ],
+    "picture": "picture.png",
     "name": "Ivan Jovkovic",
     "headline": "- Front-End Developer -",
     "personalInfo": {
@@ -293,6 +294,7 @@
     ]
   },
   "rs": {
+    "slika": "picture.png",
     "ime": "Ivan Jovkovic",
     "naslov": "- Front-End Developer -",
     "ličniPodaci": {
@@ -301,8 +303,8 @@
       "državljanstvo": "srpsko",
       "prebivalište": "Kragujevac",
       "mobilni": "+381 (0)69/19-75-777",
-      "e-mail": "ivan.jovkovic88@gmail.com",
-      "website": "https://jokac88.github.io/ivanjovkovic",
+      "email": "ivan.jovkovic88@gmail.com",
+      "website": "https://jokac88.github.io/ivan-jovkovic",
       "linkedin": "https://www.linkedin.com/in/ivanjovkovic/",
       "github": "https://github.com/jokac88",
       "skype": "jokac88"
@@ -310,57 +312,70 @@
     "jezici": [
       {
         "jezik": "Srpski jezik",
-        "nivo": "Maternji"
+        "nivo": "Maternji",
+        "procenat": "100"
       },
       {
         "jezik": "Engleski jezik",
-        "nivo": "Srednji nivo"
+        "nivo": "Srednji nivo",
+        "procenat": "50"
       }
     ],
     "projekti": [
       {
-        "projekat": "Eder",
-        "slika": "eder.svg"
+        "projekat": "Eder Hotel",
+        "slika": "eder-hotel.svg",
+        "link": "https://www.hoteleder.com/en/request"
       },
       {
         "projekat": "Formosa",
-        "slika": "formosa.png"
+        "slika": "formosa.png",
+        "link": "https://formosa.webtory.rs/"
       },
       {
         "projekat": "The Stock Trader",
-        "slika": "vue-js.png"
+        "slika": "vue-js.png",
+        "link": "http://vuejs-deploy-jokac88.s3-website.us-east-2.amazonaws.com/"
       },
       {
         "projekat": "Monster Game",
-        "slika": "vue-js.png"
+        "slika": "vue-js.png",
+        "link": "https://jokac88.github.io/projects/monster-game/"
       },
       {
         "projekat": "Wonderful Quotes",
-        "slika": "vue-js.png"
+        "slika": "vue-js.png",
+        "link": "http://wonderful-quotes.s3-website.eu-central-1.amazonaws.com/"
       },
       {
         "projekat": "Basket Top",
-        "slika": "basket-top.png"
+        "slika": "basket-top.png",
+        "link": "http://baskettop.rs/"
       },
       {
         "projekat": "Hair Saloon",
-        "slika": "hair-saloon.png"
+        "slika": "hair-saloon.png",
+        "link": "https://jokac88.github.io/projects/hair/"
       },
       {
         "projekat": "Real<strong>Estate</strong>",
-        "slika": "real-estate.png"
+        "slika": "real-estate.png",
+        "link": "https://jokac88.github.io/projects/real_estate/t"
       },
       {
         "projekat": "Spotter",
-        "slika": "spotter.png"
+        "slika": "spotter.png",
+        "link": "https://lubar.ch/"
       },
       {
         "projekat": "Car Parts",
-        "slika": "car-parts.png"
+        "slika": "car-parts.png",
+        "link": "https://jokac88.github.io/projects/car/"
       },
       {
         "projekat": "Spa",
-        "slika": "spa.png"
+        "slika": "spa.png",
+        "link": "https://jokac88.github.io/projects/spa/"
       }
     ],
     "hobi": [
@@ -375,14 +390,13 @@
     "obrazovanje": [
       {
         "godina": "Okt 2008 - Jul 2011",
-        "fakultet": "Visoka tehnička škola strukovnih studija",
-        "grad": "Kragujevac",
+        "fakultet": "<em>\"Visoka tehnička škola strukovnih studija\"</em>, Kragujevac",
         "odsek": "Informatika",
         "stepen": "Diplomirani strukovni informatičar"
       },
       {
         "godina": "Jan 2017 - Mar 2017",
-        "kurs": "IKT Klaster Centralne Srbije",
+        "kurs": "<em>\"IKT Klaster Centralne Srbije\"</em>",
         "opis": {
           "tekst": "Intenzivni kurs za početnike u programiranju za samostalno obavljanje programiranja:",
           "tehnologije": [
@@ -393,7 +407,7 @@
       },
       {
         "godina": "Mar 2017 - Maj 2017",
-        "kurs": "IKT Klaster Centralne Srbije",
+        "kurs": "<em>\"IKT Klaster Centralne Srbije\"</em>",
         "opis": {
           "tekst": "Intenzivni kurs za početnike u programiranju za samostalno obavljanje programiranja u programskom jeziku:",
           "tehnologije": [
@@ -403,7 +417,7 @@
       },
       {
         "godina": "Jul 2017 - Avg 2017",
-        "firma": "Emisia Consulting",
+        "firma": "<em>\"Emisia Consulting\"</em>",
         "naziv": "UI Radionica",
         "opis": {
           "tekst": "Razvijanje aplikacije za prikaz informacija o festivalima na prostoru Srbije:",
@@ -419,8 +433,8 @@
     "istorijaZapošljavljanja": [
       {
         "godina": "Maj 2019 - Apr 2020",
-        "firma": "Q Agency",
-        "pozicija": "Junior JavaScript Developer",
+        "firma": "<em>\"Q Agency\"</em>",
+        "pozicija": "<em>\"Junior JavaScript Developer\"</em>",
         "opis": [
           "Razvijanje novih mogućnosti za korisnike",
           "­­Izrada koda i biblioteka za buduću upotrebu",
@@ -430,8 +444,8 @@
       },
       {
         "godina": "Mar 2018 - Maj 2019",
-        "firma": "Webtory",
-        "pozicija": "Front-End Web Developer",
+        "firma": "<em>\"Webtory\"</em>",
+        "pozicija": "<em>\"Front-End Web Developer\"</em>",
         "opis": [
           "Razvijanje novih mogućnosti za korisnike",
           "­­Izrada koda i biblioteka za buduću upotrebu",
@@ -440,8 +454,8 @@
       },
       {
         "godina": "Sep 2017 - Feb 2018",
-        "firma": "Digital Share",
-        "pozicija": "Front-End Web Developer",
+        "firma": "<em>\"Digital Share\"</em>",
+        "pozicija": "<em>\"Front-End Web Developer\"</em>",
         "opis": [
           "­­Održavanje sajta putem ažuriranja, testiranja, objavljivanja i manipulacije postojećeg izvornog koda",
           "Razvijanje funkcionalne i privlačne veb i mobilne aplikacije bazirane na upotrebljivosti",
@@ -450,7 +464,7 @@
       },
       {
         "godina": "Sep 2015 - Feb 2017",
-        "firma": "Arena Fun Factory",
+        "firma": "<em>\"Arena Fun Factory\"</em>",
         "pozicija": "Instruktor sportskih aktivnosti",
         "opis": [
           "­­Razvoj programa obuke",
@@ -459,8 +473,7 @@
       },
       {
         "godina": "Okt 2014 - Avg 2015",
-        "klub": "K.K. Zicer",
-        "grad": "Gruža",
+        "klub": "<em>\"K.K. Zicer\"</em>, Gruža",
         "pozicija": "Pomoćni trener mlađih selekcija",
         "opis": [
           "Organizovanje i usmeravanje individualnih i malih grupa u vežbanju po nalogu glavnog trenera",
@@ -469,8 +482,7 @@
       },
       {
         "godina": "Jun 2013 - Jun 2014",
-        "firma": "Republički geodetski zavod",
-        "grad": "Kragujevac",
+        "firma": "<em>\"Republički geodetski zavod\"</em>, Kragujevac",
         "pozicija": "Informatičar",
         "opis": [
           "Instaliranje i konfigurisanje računarskog hardvera, operativnih sistema i aplikacija",
@@ -480,8 +492,7 @@
       },
       {
         "godina": "Jul 2011 - Jun 2013",
-        "klub": "Ž.K.K. Radnički",
-        "grad": "Kragujevac",
+        "klub": "<em>\"Ž.K.K. Radnički\"</em>, Kragujevac",
         "pozicija": "Glavni trener mlađih selekcija",
         "opis": [
           "Pomoć u svakodnevnoj obuci dece na treninzima i utakmicama tokom vikenda",

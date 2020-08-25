@@ -12,7 +12,7 @@ export default {
   },
   async fetch({ store, params, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f42ac16514ec5112d0caf53");
+      await store.dispatch("store/fetchData", "/b/5f451b5c4d8ce41113806ecd");
       // await store.dispatch("store/fetchData", params.lang || "/en");
     } catch (e) {
       error({
@@ -20,14 +20,14 @@ export default {
       });
     }
   },
-  async mounted() {
-    await this.localStorage(this.data);
-  },
-  methods: {
-    localStorage() {
-      localStorage.setItem("data", JSON.stringify(this.data));
-    },
-  },
+  // async mounted() {
+  //   await this.localStorage(this.data);
+  // },
+  // methods: {
+  //   localStorage() {
+  //     localStorage.setItem("data", JSON.stringify(this.data));
+  //   },
+  // },
   computed: mapState({
     data: (state) => state.store.data.en,
   }),

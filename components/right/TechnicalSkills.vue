@@ -15,7 +15,10 @@
             :class="technology.class + '-p'"
             :style="{ color: technology.color }"
           >{{ technology.technology }}</p>
-          <div class="c100" :class="[technology.class, 'p' + technology.percentage]">
+          <div
+            class="c100"
+            :class="[{ 'dark-mode' : darkMode }, technology.class, 'p' + technology.percentage]"
+          >
             <span>
               <img
                 class="logo"
@@ -36,6 +39,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import HeaderShape from "@/components/right/HeaderShape.vue";
 
 export default {
@@ -45,6 +49,9 @@ export default {
   components: {
     HeaderShape,
   },
+  computed: mapState({
+    darkMode: (state) => state.store.darkMode,
+  }),
 };
 </script>
 

@@ -16,6 +16,9 @@ export default {
 .btn {
   &-toggle {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 19px;
     margin: 0;
@@ -27,8 +30,6 @@ export default {
     &:before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
       width: 32px;
       height: 19px;
       border-radius: 33px;
@@ -37,27 +38,39 @@ export default {
       -webkit-background-image: $gradient-right;
       transition: $transition-2;
       -webkit-transition: $transition-2;
+      visibility: hidden;
+      opacity: 0;
     }
 
     &:after {
       content: "";
       position: absolute;
-      top: -0.2px;
-      left: -0.1px;
-      width: 32.2px;
-      height: 19.3px;
+      width: 32px;
+      height: 19px;
       border-radius: 33px;
       transition: $transition-2;
       -webkit-transition: $transition-2;
     }
 
     &[aria-expanded="false"] {
+      .slider {
+        &:before {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
       &:after {
         background-color: $concrete;
       }
     }
 
     &[aria-expanded="true"] {
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
       .slider {
         &:before,
         &:after {
@@ -95,16 +108,18 @@ export default {
         border-radius: 33px;
         transition: $transition-2;
         -webkit-transition: $transition-2;
+        visibility: hidden;
+        opacity: 0;
         z-index: 1;
       }
 
       &:after {
         content: "";
         position: absolute;
-        left: 2.9px;
-        top: 2.8px;
-        height: 13.3px;
-        width: 13.2px;
+        top: 3px;
+        left: 3px;
+        height: 13px;
+        width: 13px;
         border-radius: 50%;
         transition: $transition-2;
         -webkit-transition: $transition-2;

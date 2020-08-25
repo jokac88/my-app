@@ -1,47 +1,67 @@
 <template>
   <section class="personalInfo">
-    <Header heading="Personal Info" property="personal-info" />
+    <Header
+      :heading="$route.path === '/' ? 'Personal Info' : 'Lični Podaci'"
+      property="personal-info"
+    />
     <b-collapse id="personal-info" visible>
       <div class="wrapper">
-        <p class="property">Date of birth</p>
-        <p class="value" v-html="data.personalInfo.dateOfBirth"></p>
-        <p class="property">City</p>
-        <p class="value">{{ data.personalInfo.city }}</p>
-        <p class="property">Nationality</p>
-        <p class="value">{{ data.personalInfo.nationality }}</p>
-        <p class="property">Residence</p>
-        <p class="value">{{ data.personalInfo.residence }}</p>
-        <p class="property">Mobile</p>
-        <p class="value">{{ data.personalInfo.mobile }}</p>
+        <p v-if="$route.path !== '/rs'" class="property">Date of birth</p>
+        <p v-else class="property">Datum rođenja</p>
+        <p class="value" v-html="personalInfo.dateOfBirth || personalInfo.datumRođenja"></p>
+
+        <p v-if="$route.path !== '/rs'" class="property">City</p>
+        <p v-else class="property">Grad</p>
+        <p class="value">{{ personalInfo.city || personalInfo.grad }}</p>
+
+        <p v-if="$route.path !== '/rs'" class="property">Nationality</p>
+        <p v-else class="property">Državljanstvo</p>
+        <p class="value">{{ personalInfo.nationality || personalInfo.državljanstvo }}</p>
+
+        <p v-if="$route.path !== '/rs'" class="property">Residence</p>
+        <p v-else class="property">Prebivalište</p>
+        <p class="value">{{ personalInfo.residence || personalInfo.prebivalište }}</p>
+
+        <p v-if="$route.path !== '/rs'" class="property">Mobile</p>
+        <p v-else class="property">Mobilni</p>
+        <a
+          :href="'tel:' + personalInfo.mobile || personalInfo.mobilni"
+          class="value link"
+        >{{ personalInfo.mobile || personalInfo.mobilni }}</a>
+
         <p class="property">E-mail</p>
         <a
-          href="mailto:ivan.jovkovic88@gmail.com"
+          :href="'mailto:' + personalInfo.email"
           class="value link"
           title="Contact me"
-        >{{ data.personalInfo.email }}</a>
+        >{{ personalInfo.email }}</a>
+
         <p class="property">Website</p>
         <a
-          :href="data.personalInfo.website"
+          :href="personalInfo.website"
           class="value link"
           title="Website"
           target="_blank"
-        >{{ data.personalInfo.website }}</a>
+        >{{ personalInfo.website }}</a>
+
         <p class="property">LinkedIn</p>
         <a
-          :href="data.personalInfo.linkedin"
+          :href="personalInfo.linkedin"
           class="value link"
           title="LinkedIn"
           target="_blank"
-        >{{ data.personalInfo.linkedin }}</a>
+        >{{ personalInfo.linkedin }}</a>
+
         <p class="property">GitHub</p>
         <a
-          :href="data.personalInfo.github"
+          :href="personalInfo.github"
           class="value link"
           title="GitHub"
           target="_blank"
-        >{{ data.personalInfo.github }}</a>
+        >{{ personalInfo.github }}</a>
+
         <p class="property">Skype</p>
-        <p class="value">{{ data.personalInfo.skype }}</p>
+        <p class="value">{{ personalInfo.skype }}</p>
       </div>
     </b-collapse>
   </section>
@@ -52,7 +72,7 @@ import Header from "@/components/left/Header.vue";
 
 export default {
   props: {
-    data: Object,
+    personalInfo: Object,
   },
   components: {
     Header,

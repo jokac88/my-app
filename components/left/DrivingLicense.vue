@@ -1,9 +1,12 @@
 <template>
   <section class="driving-license">
-    <Header heading="Driving License" property="driving-license" />
+    <Header
+      :heading="$route.path === '/' ? 'Driving License' : 'Vozačka Dozvola'"
+      property="driving-license"
+    />
     <b-collapse id="driving-license" visible>
       <div class="wrapper">
-        <p v-html="data.drivingLicense"></p>
+        <p v-html="drivingLicense"></p>
       </div>
     </b-collapse>
   </section>
@@ -14,7 +17,7 @@ import Header from "@/components/left/Header.vue";
 
 export default {
   props: {
-    data: Object,
+    drivingLicense: String,
   },
   components: {
     Header,

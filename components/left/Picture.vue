@@ -1,9 +1,14 @@
 <template>
-  <section class="picture text-center">
+  <section class="picture">
     <div class="wrapper">
       <div id="lightgallery" lg-uid="lg0">
-        <a class="item-img" href="~/assets/picture.png" lg-event-uid="&amp;1&amp;2">
-          <img src="~/assets/picture.png" alt="~/assets/picture.png" :title="data.name" />
+        <a class="item-img" :href="require('~/assets/' + picture)" lg-event-uid="&amp;1&amp;2">
+          <img
+            :src="require('~/assets/' + picture)"
+            :alt="require('~/assets/' + picture)"
+            :title="name"
+            class="image"
+          />
         </a>
       </div>
     </div>
@@ -13,18 +18,21 @@
 <script>
 export default {
   props: {
-    data: Object,
+    picture: String,
+    name: String,
   },
 };
 </script>
 
 <style lang="scss">
 .picture {
+  text-align: center;
+
   .wrapper {
     padding: 15px;
   }
 
-  img {
+  .image {
     width: 150px;
     height: 180px;
     border: 3px double $orient;

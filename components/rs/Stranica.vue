@@ -36,7 +36,7 @@
         </section>
 
         <!-- Personal Info -->
-        <section>
+        <!-- <section>
           <div class="header">
             <img src="~/assets/icon/personal-info.png" alt="~/assets/icon/personal-info.png" />
             <h4 class="mb-0">Personal Info</h4>
@@ -61,7 +61,7 @@
           <p class="value">{{ data.ličniPodaci.github }}</p>
           <p class="property">Skype</p>
           <p class="value">{{ data.ličniPodaci.skype }}</p>
-        </section>
+        </section>-->
 
         <!-- Languages -->
         <section>

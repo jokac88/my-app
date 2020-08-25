@@ -1,10 +1,14 @@
 <template>
   <section>
-    <HeaderShape heading="Education" property="education" />
+    <HeaderShape :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
     <b-collapse id="education" visible>
-      <b-row v-for="(education, index) in data.education" :key="education.year" class="wrapper">
+      <b-row
+        v-for="(education, index) in educations"
+        :key="education.year || education.godina"
+        class="wrapper"
+      >
         <b-col
-          v-if="key !== 'description'"
+          v-if="key !== 'description' && key !== 'opis'"
           v-for="(value, key, index) in education"
           :key="index"
           lg="6"
@@ -14,12 +18,15 @@
         </b-col>
         <b-col v-else>
           <p class="property">{{ key | capitalize }}</p>
-          <p class="value">{{ value.text }}</p>
+          <p class="value">{{ value.text || value.tekst }}</p>
           <ul>
-            <li v-for="technologies in value.technologies" :key="technologies">{{ technologies }}</li>
+            <li
+              v-for="technologies in value.technologies || value.tehnologije"
+              :key="technologies"
+            >{{ technologies }}</li>
           </ul>
         </b-col>
-        <hr v-if="index !== data.education.length - 1" />
+        <hr v-if="index !== educations.length - 1" />
       </b-row>
     </b-collapse>
   </section>
@@ -30,7 +37,7 @@ import HeaderShape from "@/components/right/HeaderShape.vue";
 
 export default {
   props: {
-    data: Object,
+    educations: Array,
   },
   components: {
     HeaderShape,

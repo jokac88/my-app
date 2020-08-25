@@ -2,15 +2,15 @@
   <b-col lg="10" class="page px-0">
     <b-row no-gutters>
       <!-- Left -->
-      <b-col md="5" lg="4" class="left">
+      <b-col md="5" lg="4" class="left" :class="{ 'dark-mode' : darkMode }">
         <!-- Picture -->
-        <Picture :data="data" />
+        <Picture :picture="data.picture || data.slika" :name="data.name || data.ime" />
 
         <!-- Name -->
-        <Name :data="data" />
+        <Name :name="data.name || data.ime" />
 
         <!-- Headline -->
-        <Headline :data="data" />
+        <Headline :headline="data.headline || data.naslov" />
 
         <!-- QR Code -->
         <QrCode :data="data" />
@@ -19,31 +19,34 @@
         <Portfolio :data="data" />
 
         <!-- Personal Info -->
-        <PersonalInfo :data="data" />
+        <PersonalInfo :personalInfo="data.personalInfo || data.ličniPodaci" />
 
         <!-- Languages -->
-        <Languages :data="data" />
+        <Languages :languages="data.languages || data.jezici" />
 
         <!-- Projects -->
-        <Projects :data="data" />
+        <Projects :projects="data.projects || data.projekti" />
 
         <!-- Hobbies -->
-        <Hobbies :data="data" />
+        <Hobbies :hobbies="data.hobbies || data.hobi" />
 
         <!-- Driving License -->
-        <DrivingLicense :data="data" />
+        <DrivingLicense :drivingLicense="data.drivingLicense || data.vozačkaDozvola" />
       </b-col>
+
       <!-- Right -->
-      <b-col md="7" lg="8" class="right" :class="darkMode ? 'dark-mode' : ''">
+      <b-col md="7" lg="8" class="right" :class="{ 'dark-mode' : darkMode }">
         <div class="wrapper">
           <!-- About Me -->
-          <AboutMe :data="data" />
+          <AboutMe :aboutMe="data.aboutMe || data.oMeni" />
 
           <!-- Education -->
-          <Education :data="data" />
+          <Education :educations="data.education || data.obrazovanje" />
 
           <!-- Employment History -->
-          <EmploymentHistory :data="data" />
+          <EmploymentHistory
+            :employmentHistories="data.employmentHistory || data.istorijaZapošljavljanja"
+          />
 
           <!-- Technical Skills -->
           <TechnicalSkills :data="data" />
@@ -100,12 +103,22 @@ export default {
 .left {
   background-color: $deep-cerulean;
   color: $white;
+  transition: $transition;
+
+  &.dark-mode {
+    background-color: $pickled-bluewood-2;
+  }
 }
 
 .right {
   background-color: $white;
   color: $orient;
   transition: $transition;
+
+  &.dark-mode {
+    background-color: $pickled-bluewood;
+    color: $white;
+  }
 
   .wrapper {
     padding: 20px;
