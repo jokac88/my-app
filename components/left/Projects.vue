@@ -8,6 +8,7 @@
             v-for="project in projects"
             :key="project.project || project.projekat"
             :project="project"
+            :projectImage="project.image || project.slika"
           />
         </b-row>
       </div>

@@ -7,12 +7,12 @@
       target="_blank"
     >
       <h6 v-html="project.project || project.projekat" class="mb-3"></h6>
-      <!-- <img
+      <img
         :src="require('~/assets/logo/' + projectImage)"
         :title="project.project || project.projekat"
         :alt="require('~/assets/logo/' + projectImage)"
         class="icon"
-      />-->
+      />
     </a>
   </b-col>
 </template>
@@ -21,7 +21,7 @@
 export default {
   props: {
     project: Object,
-    // projectImage: String,
+    projectImage: String,
   },
 };
 </script>
