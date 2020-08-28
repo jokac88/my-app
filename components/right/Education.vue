@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="education">
     <HeaderShape :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
     <b-collapse id="education" visible>
       <b-row
@@ -11,7 +11,7 @@
           v-if="key !== 'description' && key !== 'opis'"
           v-for="(value, key, index) in education"
           :key="index"
-          lg="6"
+          cols="6"
         >
           <p class="property">{{ key | capitalize }}</p>
           <p v-html="value" class="value"></p>

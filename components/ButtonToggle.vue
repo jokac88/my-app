@@ -1,5 +1,5 @@
 <template>
-  <b-button class="btn-toggle" v-b-toggle="property" title="Hide">
+  <b-button class="button-toggle" v-b-toggle="property" title="Hide">
     <span class="slider"></span>
   </b-button>
 </template>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-.btn {
+.button {
   &-toggle {
     position: relative;
     display: flex;

@@ -28,7 +28,7 @@
         <Projects :projects="data.projects || data.projekti" />
 
         <!-- Hobbies -->
-        <Hobbies :hobbies="data.hobbies || data.hobi" />
+        <Hobbies :hobbies="data.hobbies || data.hobiji" />
 
         <!-- Driving License -->
         <DrivingLicense :drivingLicense="data.drivingLicense || data.vozačkaDozvola" />
@@ -45,11 +45,11 @@
 
           <!-- Employment History -->
           <EmploymentHistory
-            :employmentHistories="data.employmentHistory || data.istorijaZapošljavljanja"
+            :employmentHistories="data.employmentHistory || data.istorijaZapošljavanja"
           />
 
           <!-- Technical Skills -->
-          <TechnicalSkills :data="data" />
+          <TechnicalSkills :technicalSkills="data.technicalSkills || data.tehničkeVeštine" />
         </div>
       </b-col>
     </b-row>
@@ -99,29 +99,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.left {
-  background-color: $deep-cerulean;
-  color: $white;
-  transition: $transition;
-
-  &.dark-mode {
-    background-color: $pickled-bluewood-2;
-  }
-}
-
-.right {
-  background-color: $white;
-  color: $orient;
-  transition: $transition;
-
-  &.dark-mode {
-    background-color: $pickled-bluewood;
-    color: $white;
-  }
-
-  .wrapper {
-    padding: 20px;
-  }
-}
-</style>
+<style lang="scss"></style>

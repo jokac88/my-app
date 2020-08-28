@@ -1,16 +1,18 @@
 <template>
-  <section class="header">
-    <div class="heading">
-      <img
-        :src="require('~/assets/icon/' + property + '.png')"
-        class="icon"
-        :alt="require('~/assets/icon/' + property + '.png')"
-        :title="heading"
-      />
-      <h4>{{ heading }}</h4>
+  <div class="header">
+    <div class="wrapper">
+      <div class="heading">
+        <img
+          :src="require('~/assets/icon/' + property + '.png')"
+          class="icon"
+          :alt="require('~/assets/icon/' + property + '.png')"
+          :title="heading"
+        />
+        <h4>{{ heading }}</h4>
+      </div>
+      <ButtonToggle :property="property" />
     </div>
-    <ButtonToggle :property="property" />
-  </section>
+  </div>
 </template>
 
 <script>
@@ -29,14 +31,17 @@ export default {
 
 <style lang="scss">
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
-  padding: 10px 20px;
   background-image: $gradient-right;
   -moz-background-image: $gradient-right;
   -webkit-background-image: $gradient-right;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
 
   .heading {
     display: flex;
@@ -45,7 +50,7 @@ export default {
 
     .icon {
       width: 35px;
-      margin-right: 15px;
+      margin-right: 10px;
       border-radius: 50%;
       -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);

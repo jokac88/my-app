@@ -35,7 +35,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~assets/scss/_base.scss", "~assets/css/circle.css"],
+  css: [
+    "~assets/scss/_base.scss",
+    "~assets/css/circle.css",
+    "~assets/css/hamburgers.min.css"
+  ],
   styleResources: {
     scss: ["~assets/scss/_variables.scss"]
   },
@@ -62,7 +66,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    "@nuxtjs/markdownit"
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`

@@ -1,6 +1,6 @@
 <template>
   <section class="hobbies">
-    <Header :heading="$route.path === '/' ? 'Hobbies' : 'Hobi'" property="hobbies" />
+    <Header :heading="$route.path === '/' ? 'Hobbies' : 'Hobiji'" property="hobbies" />
     <b-collapse id="hobbies" visible>
       <div class="wrapper">
         <ul>

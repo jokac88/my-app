@@ -8,6 +8,7 @@ body {
   font-size: 14px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 body {
@@ -88,6 +89,31 @@ hr {
 
   &.active {
     transform: translate3d(80%, 0, 0);
+  }
+
+  .left {
+    background-color: $deep-cerulean;
+    color: $white;
+    transition: $transition;
+
+    &.dark-mode {
+      background-color: $pickled-bluewood-2;
+    }
+  }
+
+  .right {
+    background-color: $white;
+    color: $orient;
+    transition: $transition;
+
+    &.dark-mode {
+      background-color: $pickled-bluewood;
+      color: $white;
+    }
+
+    .wrapper {
+      padding: 10px 15px;
+    }
   }
 }
 

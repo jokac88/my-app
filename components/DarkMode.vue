@@ -1,5 +1,5 @@
 <template>
-  <b-button @click="$store.dispatch('store/toggleDarkMode')" class="btn-darkMode">
+  <b-button @click="$store.dispatch('store/toggleDarkMode')" class="button-darkMode">
     <img
       :src="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
       :alt="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-.btn {
+.button {
   &-darkMode {
     position: fixed;
     right: 30px;

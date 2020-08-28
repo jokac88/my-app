@@ -1,6 +1,8 @@
 <template>
   <section class="name">
-    <h1 class="text-center">{{ name }}</h1>
+    <div class="wrapper">
+      <h1>{{ name }}</h1>
+    </div>
   </section>
 </template>
 
@@ -17,8 +19,14 @@ export default {
   background-image: $gradient-right;
   -moz-background-image: $gradient-right;
   -webkit-background-image: $gradient-right;
-  letter-spacing: 3px;
-  font-weight: bold;
-  padding: 10px 15px;
+
+  .wrapper {
+    padding: 10px 15px;
+  }
+
+  h1 {
+    text-align: center;
+    letter-spacing: 3px;
+  }
 }
 </style>

@@ -1,15 +1,46 @@
 {
   "en": {
     "navigation": [
-      "Personal Info",
-      "Languages",
-      "Projects",
-      "Hobbies",
-      "Driving License",
-      "About Me",
-      "Education",
-      "Employment History",
-      "Technical Skills"
+      {
+        "name": "Home",
+        "url": "home"
+      },
+      {
+        "name": "About Me",
+        "url": "about-me"
+      },
+      {
+        "name": "Personal Info",
+        "url": "personal-info"
+      },
+      {
+        "name": "Education",
+        "url": "education"
+      },
+      {
+        "name": "Employment History",
+        "url": "employment-history"
+      },
+      {
+        "name": "Technical Skills",
+        "url": "technical-skills"
+      },
+      {
+        "name": "Projects",
+        "url": "projects"
+      },
+      {
+        "name": "Languages",
+        "url": "languages"
+      },
+      {
+        "name": "Hobbies",
+        "url": "hobbies"
+      },
+      {
+        "name": "Driving License",
+        "url": "driving-license"
+      }
     ],
     "picture": "picture.png",
     "name": "Ivan Jovkovic",
@@ -223,77 +254,119 @@
         "technology": "HTML5",
         "class": "html",
         "color": "#f0652a",
-        "percentage": "100"
+        "percentage": "p100"
       },
       {
         "technology": "CSS3",
         "class": "css",
         "color": "#33a9dc",
-        "percentage": "100"
+        "percentage": "p100"
       },
       {
         "technology": "JavaScript",
         "class": "javascript",
         "color": "#f0db4f",
-        "percentage": "75"
+        "percentage": "p75"
       },
       {
         "technology": "jQuery",
         "class": "jquery",
         "color": "#0769ad",
-        "percentage": "75"
+        "percentage": "p75"
       },
       {
         "technology": "SASS",
         "class": "sass",
         "color": "#cc6699",
-        "percentage": "75"
+        "percentage": "p75"
       },
       {
         "technology": "Bootstrap 4",
         "class": "bootstrap",
         "color": "#593f7f ",
-        "percentage": "75"
+        "percentage": "p75"
       },
       {
         "technology": "Vue.js",
         "class": "vue-js",
         "color": "#41b883 ",
-        "percentage": "50"
+        "percentage": "p50"
       },
       {
         "technology": "Nuxt.js",
         "class": "nuxt-js",
         "color": "#2f495e ",
-        "percentage": "50"
+        "percentage": "p50"
       },
       {
         "technology": "Photoshop",
         "class": "photoshop",
         "color": "#18163f ",
-        "percentage": "50"
+        "percentage": "p50"
       },
       {
         "technology": "React/Native",
         "class": "react-native",
         "color": "#61dafb ",
-        "percentage": "25"
+        "percentage": "p25"
       },
       {
         "technology": "WordPress",
         "class": "wordpress",
         "color": "#21759b",
-        "percentage": "25"
+        "percentage": "p25"
       },
       {
         "technology": "Laravel",
         "class": "laravel",
         "color": "#f55247",
-        "percentage": "25"
+        "percentage": "p25"
       }
     ]
   },
   "rs": {
+    "navigacija": [
+      {
+        "ime": "Početak",
+        "link": "home"
+      },
+      {
+        "ime": "O Meni",
+        "link": "about-me"
+      },
+      {
+        "ime": "Lični Podaci",
+        "link": "personal-info"
+      },
+      {
+        "ime": "Obrazovanje",
+        "link": "education"
+      },
+      {
+        "ime": "Istorija Zapošljavanja",
+        "link": "employment-history"
+      },
+      {
+        "ime": "Tehničke Veštine",
+        "link": "technical-skills"
+      },
+      {
+        "ime": "Projekti",
+        "link": "projects"
+      },
+      {
+        "ime": "Jezici",
+        "link": "languages"
+      },
+      {
+        "ime": "Hobiji",
+        "link": "hobbies"
+      },
+      {
+        "ime": "Vozačka Dozvola",
+        "link": "driving-license"
+      }
+    ],
     "slika": "picture.png",
     "ime": "Ivan Jovkovic",
     "naslov": "- Front-End Developer -",
@@ -378,7 +451,7 @@
         "link": "https://jokac88.github.io/projects/spa/"
       }
     ],
-    "hobi": [
+    "hobiji": [
       "Film",
       "Fotografija",
       "Putovanja",
@@ -430,7 +503,7 @@
         }
       }
     ],
-    "istorijaZapošljavljanja": [
+    "istorijaZapošljavanja": [
       {
         "godina": "Maj 2019 - Apr 2020",
         "firma": "<em>\"Q Agency\"</em>",
@@ -505,73 +578,73 @@
         "tehnologija": "HTML5",
         "klasa": "html",
         "boja": "#f0652a",
-        "procenat": "100"
+        "procenat": "p100"
       },
       {
         "tehnologija": "CSS3",
         "klasa": "css",
         "boja": "#33a9dc",
-        "procenat": "100"
+        "procenat": "p100"
       },
       {
         "tehnologija": "JavaScript",
         "klasa": "javascript",
         "boja": "#f0db4f",
-        "procenat": "75"
+        "procenat": "p75"
       },
       {
         "tehnologija": "jQuery",
         "klasa": "jquery",
         "boja": "#0769ad",
-        "procenat": "75"
+        "procenat": "p75"
       },
       {
         "tehnologija": "SASS",
         "klasa": "sass",
         "boja": "#cc6699",
-        "procenat": "75"
+        "procenat": "p75"
       },
       {
         "tehnologija": "Bootstrap 4",
         "klasa": "bootstrap",
         "boja": "#593f7f ",
-        "procenat": "75"
+        "procenat": "p75"
       },
       {
         "tehnologija": "Vue.js",
         "klasa": "vue-js",
         "boja": "#41b883 ",
-        "procenat": "75"
+        "procenat": "p50"
       },
       {
         "tehnologija": "Nuxt.js",
         "klasa": "nuxt-js",
-        "boja": "#41b883 ",
-        "procenat": "50"
+        "boja": "#2f495e ",
+        "procenat": "p50"
       },
       {
         "tehnologija": "Photoshop",
         "klasa": "photoshop",
         "boja": "#18163f ",
-        "procenat": "50"
+        "procenat": "p50"
       },
       {
         "tehnologija": "React/Native",
         "klasa": "react-native",
         "boja": "#61dafb ",
-        "procenat": "25"
+        "procenat": "p25"
       },
       {
         "tehnologija": "WordPress",
         "klasa": "wordpress",
         "boja": "#21759b",
-        "procenat": "25"
+        "procenat": "p25"
       },
       {
         "tehnologija": "Laravel",
         "klasa": "laravel",
         "boja": "#f55247",
-        "procenat": "25"
+        "procenat": "p25"
       }
     ]
   }

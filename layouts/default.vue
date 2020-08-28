@@ -1,18 +1,18 @@
 <template>
   <b-container class="p-0">
     <!-- <Loading v-if="loading" /> -->
-    <section>
+    <section id="home">
       <NavBar />
-      <DarkMode />
+      <SideNav />
       <Nuxt />
     </section>
   </b-container>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
 import Loading from "@/components/Loading.vue";
-import DarkMode from "@/components/DarkMode.vue";
+import NavBar from "@/components/NavBar.vue";
+import SideNav from "@/components/SideNav.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -25,6 +25,8 @@ export default {
   },
   components: {
     Loading,
+    NavBar,
+    SideNav,
   },
   computed: mapState({
     loading: (state) => state.store.loading,
@@ -36,6 +38,12 @@ export default {
 <style lang="scss">
 .container {
   overflow: hidden;
+}
+
+#home {
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+  }
 }
 </style>
 

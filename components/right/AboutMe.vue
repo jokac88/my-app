@@ -25,8 +25,7 @@ export default {
 <style lang="scss">
 #about-me {
   .wrapper {
-    padding: 0;
-    padding-bottom: 15px;
+    padding: 0 15px 15px;
   }
 
   font-size: 16px;

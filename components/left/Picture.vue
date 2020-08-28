@@ -29,7 +29,7 @@ export default {
   text-align: center;
 
   .wrapper {
-    padding: 15px;
+    padding: 10px 15px;
   }
 
   .image {

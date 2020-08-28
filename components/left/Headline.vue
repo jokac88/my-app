@@ -1,6 +1,8 @@
 <template>
   <section class="headline">
-    <em>{{ headline }}</em>
+    <div class="wrapper">
+      <em>{{ headline }}</em>
+    </div>
   </section>
 </template>
 
@@ -14,7 +16,10 @@ export default {
 
 <style lang="scss">
 .headline {
-  padding: 10px 0 15px;
   text-align: center;
+
+  .wrapper {
+    padding: 10px 15px;
+  }
 }
 </style>

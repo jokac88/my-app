@@ -1,6 +1,6 @@
 <template>
-  <div class="loader">
-    <img src="~/assets/loader.gif" alt="~/assets/loader.gif" title="Loader" class="loader-gif" />
+  <div class="loading">
+    <img src="~/assets/loader.gif" alt="~/assets/loader.gif" title="Loader" class="loader" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.loader {
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ export default {
   width: 100%;
   height: 100%;
 
-  &-gif {
+  .loader {
     width: 200px;
 
     @include media-breakpoint-down(sm) {

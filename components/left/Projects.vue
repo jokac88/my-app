@@ -4,30 +4,12 @@
     <b-collapse id="projects" visible>
       <div class="wrapper">
         <b-row>
-          <b-col
+          <Project
             v-for="project in projects"
             :key="project.project || project.projekat"
-            class="item text-center"
-            cols="6"
-          >
-            <a
-              :href="project.url || project.link"
-              class="link"
-              :title="project.project || project.projekat"
-              target="_blank"
-            >
-              <h6 v-html="project.project || project.projekat" class="mb-3"></h6>
-              <!-- <template v-else>
-                <h1>Ana</h1>
-              </template>
-              <img
-                v-else
-                :src="require('~/assets/logo/' + project.slika)"
-                :alt="require('~/assets/logo/' + project.slika)"
-                class="icon"
-              />-->
-            </a>
-          </b-col>
+            :project="project"
+            :projectImage="project.image || project.slika"
+          />
         </b-row>
       </div>
     </b-collapse>
@@ -36,6 +18,7 @@
 
 <script>
 import Header from "@/components/left/Header.vue";
+import Project from "@/components/Project.vue";
 
 export default {
   props: {
@@ -43,6 +26,7 @@ export default {
   },
   components: {
     Header,
+    Project,
   },
 };
 </script>

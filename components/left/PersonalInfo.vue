@@ -1,5 +1,5 @@
 <template>
-  <section class="personalInfo">
+  <section class="personal-info">
     <Header
       :heading="$route.path === '/' ? 'Personal Info' : 'Lični Podaci'"
       property="personal-info"
