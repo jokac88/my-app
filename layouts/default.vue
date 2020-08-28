@@ -1,7 +1,7 @@
 <template>
   <b-container class="p-0">
-    <!-- <Loading v-if="loading" /> -->
-    <section id="home">
+    <Loading v-if="loading" />
+    <section id="home" v-else>
       <NavBar />
       <SideNav />
       <Nuxt />

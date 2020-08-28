@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar">
-    <Hamburger />
+    <Hamburger class="d-md-none" />
     <div class="links">
       <router-link :to="{ name: 'index', params: { lang: '/en' } }" exact @click.native="loading">
         <img
