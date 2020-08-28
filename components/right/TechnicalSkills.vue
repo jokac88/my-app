@@ -10,7 +10,6 @@
           v-for="technology in technicalSkills"
           :key="technology.technology || technology.tehnologija"
           :technology="technology"
-          :technologyImage="technology.class || technology.klasa"
           :darkMode="darkMode"
         />
       </b-row>

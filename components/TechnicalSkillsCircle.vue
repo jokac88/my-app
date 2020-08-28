@@ -10,12 +10,12 @@
       :class="[{ 'dark-mode' : darkMode }, technology.class || technology.klasa, technology.percentage || technology.procenat]"
     >
       <span>
-        <img
+        <!-- <img
           :src="require('~/assets/icon/' + technologyImage + '.png')"
           :title="technology.technology || technology.tehnologija"
           :alt="require('~/assets/icon/' + technologyImage + '.png')"
           class="logo"
-        />
+        />-->
       </span>
       <div class="slice">
         <div class="bar"></div>
@@ -29,7 +29,7 @@
 export default {
   props: {
     technology: Object,
-    technologyImage: String,
+    // technologyImage: String,
     darkMode: Boolean,
   },
 };
