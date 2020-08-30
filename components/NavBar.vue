@@ -78,6 +78,17 @@ export default {
       margin-bottom: 15px;
       transition: $transition;
 
+      &.active {
+        &-link {
+          .icon {
+            opacity: 1;
+            -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -90,33 +101,20 @@ export default {
           margin-right: 0;
         }
       }
-    }
 
-    .icon {
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      opacity: 0.5;
-      transition: $transition;
+      .icon {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        opacity: 0.5;
+        transition: $transition;
 
-      &:hover:not(.nuxt-link-active) {
-        opacity: 1;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 35px;
-      }
-    }
-  }
-
-  .nuxt {
-    &-link {
-      &-active {
-        .icon {
+        &:hover:not(.nuxt-link-active) {
           opacity: 1;
-          -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 35px;
         }
       }
     }

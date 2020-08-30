@@ -10,7 +10,9 @@ export default {
    */
   target: "static",
   router: {
-    base: "/ivan-jovkovic/"
+    base: "/ivan-jovkovic/",
+    linkActiveClass: "active-link",
+    linkExactActiveClass: "exact-active-link"
   },
   /*
    ** Headers of the page
