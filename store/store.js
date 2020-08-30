@@ -23,13 +23,13 @@ export const actions = {
     const response = await axios.getData(lang);
     commit("SET_DATA", response.data);
     if (response.status === 200) {
-      dispatch("loading", false);
+      dispatch("loading", { loading: false, duration: 1500 });
     }
   },
-  loading({ commit }, loading) {
+  loading({ commit }, { loading, duration }) {
     setTimeout(() => {
       commit("SET_LOADING", loading);
-    }, 2000);
+    }, duration);
   },
   toggleDarkMode({ commit }) {
     commit("SET_DARKMODE");

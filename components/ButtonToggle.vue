@@ -1,5 +1,10 @@
 <template>
-  <b-button class="button-toggle" v-b-toggle="property" title="Hide">
+  <b-button
+    class="button-toggle"
+    v-b-toggle="property"
+    :title="$route.path === '/' ? 'Hide' : 'Sakrij'"
+    @click="toggle"
+  >
     <span class="slider"></span>
   </b-button>
 </template>
@@ -8,6 +13,23 @@
 export default {
   props: {
     property: String,
+  },
+  methods: {
+    toggle(e) {
+      if (this.$route.path === "/") {
+        if (e.currentTarget.title === "Hide") {
+          e.currentTarget.title = "Open";
+        } else {
+          e.currentTarget.title = "Hide";
+        }
+      } else {
+        if (e.currentTarget.title === "Sakrij") {
+          e.currentTarget.title = "Otvori";
+        } else {
+          e.currentTarget.title = "Sakrij";
+        }
+      }
+    },
   },
 };
 </script>

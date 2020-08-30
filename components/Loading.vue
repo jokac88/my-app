@@ -9,7 +9,7 @@ import { mapState } from "vuex";
 
 export default {
   mounted() {
-    this.$store.dispatch("store/loading", false);
+    this.$store.dispatch("store/loading", { loading: false, duration: 2500 });
   },
   computed: mapState({
     loading: (state) => state.store.loading,

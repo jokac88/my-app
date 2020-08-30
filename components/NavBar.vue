@@ -2,22 +2,27 @@
   <div class="nav-bar">
     <Hamburger class="d-md-none" />
     <div class="links">
-      <router-link :to="{ name: 'index', params: { lang: '/en' } }" exact @click.native="loading">
+      <nuxt-link
+        :to="{ name: 'index', params: { lang: '/en' } }"
+        name="/"
+        exact
+        @click.native="loading"
+      >
         <img
           src="~/assets/flags/gb.png"
           alt="~/assets/flags/gb.png"
           :title="$route.path === '/' ? 'English language' : 'Engleski jezik'"
           class="icon"
         />
-      </router-link>
-      <router-link :to="{ name: 'rs', params: { lang: '/rs' } }" @click.native="loading">
+      </nuxt-link>
+      <nuxt-link :to="{ name: 'rs', params: { lang: '/rs' } }" name="/rs" @click.native="loading">
         <img
           src="~/assets/flags/rs.png"
           alt="~/assets/flags/rs.png"
           :title="$route.path === '/rs' ? 'Srpski jezik' : 'Serbian language'"
           class="icon"
         />
-      </router-link>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -30,8 +35,10 @@ export default {
     Hamburger,
   },
   methods: {
-    loading() {
-      this.$store.commit("store/SET_LOADING", true);
+    loading(e) {
+      if (e.currentTarget.name !== this.$route.path) {
+        this.$store.commit("store/SET_LOADING", true);
+      }
     },
   },
 };
@@ -54,10 +61,10 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    z-index: 2;
     background-image: $gradient-right;
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
+    z-index: 2;
   }
 
   .links {
@@ -69,6 +76,7 @@ export default {
 
     a {
       margin-bottom: 15px;
+      transition: $transition;
 
       &:last-child {
         margin-bottom: 0;
@@ -104,9 +112,6 @@ export default {
   .nuxt {
     &-link {
       &-active {
-        display: block;
-        font-weight: 700;
-
         .icon {
           opacity: 1;
           -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
