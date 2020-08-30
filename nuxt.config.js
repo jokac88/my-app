@@ -33,6 +33,11 @@ export default {
     ]
   },
   /*
+   ** Customize the progress-bar color
+   */
+  // loading: { color: "#39b982", height: "6px", duration: 1000 },
+  loading: "~/components/Loading.vue",
+  /*
    ** Global CSS
    */
   css: [

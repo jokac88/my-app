@@ -1,7 +1,6 @@
 <template>
   <b-container class="p-0">
-    <Loading v-if="loading" />
-    <section id="home" v-else>
+    <section id="home">
       <NavBar />
       <SideNav />
       <Nuxt />
@@ -10,7 +9,6 @@
 </template>
 
 <script>
-import Loading from "@/components/Loading.vue";
 import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
 import { mapState } from "vuex";
@@ -19,12 +17,14 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: this.darkMode ? "dark-mode" : "",
+        class: [
+          this.loading ? "loading" : "",
+          this.darkMode ? "dark-mode" : "",
+        ],
       },
     };
   },
   components: {
-    Loading,
     NavBar,
     SideNav,
   },

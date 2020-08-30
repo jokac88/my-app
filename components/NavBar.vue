@@ -40,8 +40,8 @@ export default {
 <style lang="scss">
 .nav-bar {
   position: fixed;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   width: 60px;
 
   @include media-breakpoint-down(sm) {

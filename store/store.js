@@ -3,7 +3,7 @@ import axios from "@/services/axios.js";
 export const state = () => ({
   data: {},
   loading: true,
-  darkMode: false 
+  darkMode: false
 });
 
 export const mutations = {
@@ -19,14 +19,17 @@ export const mutations = {
 };
 
 export const actions = {
-  async fetchData({ commit }, lang) {
-    const { data } = await axios.getData(lang);
-    commit("SET_DATA", data);
+  async fetchData({ commit, dispatch }, lang) {
+    const response = await axios.getData(lang);
+    commit("SET_DATA", response.data);
+    if (response.status === 200) {
+      dispatch("loading", false);
+    }
   },
   loading({ commit }, loading) {
     setTimeout(() => {
       commit("SET_LOADING", loading);
-    }, 2000);
+    }, 3000);
   },
   toggleDarkMode({ commit }) {
     commit("SET_DARKMODE");
