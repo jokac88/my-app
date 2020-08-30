@@ -85,13 +85,11 @@ export default {
       transition: $transition;
 
       &.active {
-        &-link {
-          .icon {
-            opacity: 1;
-            -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-          }
+        .icon {
+          opacity: 1;
+          -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
         }
       }
 
