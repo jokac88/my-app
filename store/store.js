@@ -29,7 +29,7 @@ export const actions = {
   loading({ commit }, loading) {
     setTimeout(() => {
       commit("SET_LOADING", loading);
-    }, 3000);
+    }, 2500);
   },
   toggleDarkMode({ commit }) {
     commit("SET_DARKMODE");
