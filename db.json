@@ -50,7 +50,12 @@
       "city": "Kragujevac",
       "nationality": "Serbian",
       "residence": "Kragujevac",
-      "mobile": "+381 (0)69/19-75-777",
+      "mobile": [
+        {
+          "text": "+381 (0)69/19-75-777",
+          "number": "+381691975777"
+        }
+      ],
       "email": "ivan.jovkovic88@gmail.com",
       "website": "https://jokac88.github.io/ivan-jovkovic/",
       "linkedin": "https://www.linkedin.com/in/ivanjovkovic/",
@@ -375,7 +380,12 @@
       "grad": "Kragujevac",
       "državljanstvo": "srpsko",
       "prebivalište": "Kragujevac",
-      "mobilni": "+381 (0)69/19-75-777",
+      "mobilni": [
+        {
+          "tekst": "+381 (0)69/19-75-777",
+          "broj": "+381691975777"
+        }
+      ],
       "email": "ivan.jovkovic88@gmail.com",
       "website": "https://jokac88.github.io/ivan-jovkovic",
       "linkedin": "https://www.linkedin.com/in/ivanjovkovic/",

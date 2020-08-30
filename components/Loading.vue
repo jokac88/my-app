@@ -1,6 +1,6 @@
 <template>
   <section class="loading" v-if="loading">
-    <img src="~/assets/loader.svg" alt="~/assets/loader.svg" title="Loader" class="loader" />
+    <img src="~/assets/loader.svg" alt="~/assets/loader.svg" class="loader" />
   </section>
 </template>
 
