@@ -12,7 +12,7 @@ export default {
   },
   async fetch({ store, params, error }) {
     try {
-      await store.dispatch("store/fetchData", "/b/5f451b5c4d8ce41113806ecd");
+      await store.dispatch("store/fetchData", "/b/5f4bc59a993a2e110d39a747");
       // await store.dispatch("store/fetchData", params.lang || "/en");
     } catch (e) {
       error({
