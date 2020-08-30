@@ -4,6 +4,7 @@
     <div class="links">
       <nuxt-link
         :to="{ name: 'index', params: { lang: '/en' } }"
+        :class="$route.path === '/' ? 'active' : ''"
         name="/"
         exact
         @click.native="loading"
@@ -15,7 +16,12 @@
           class="icon"
         />
       </nuxt-link>
-      <nuxt-link :to="{ name: 'rs', params: { lang: '/rs' } }" name="/rs" @click.native="loading">
+      <nuxt-link
+        :to="{ name: 'rs', params: { lang: '/rs' } }"
+        :class="$route.path === '/rs' ? 'active' : ''"
+        name="/rs"
+        @click.native="loading"
+      >
         <img
           src="~/assets/flags/rs.png"
           alt="~/assets/flags/rs.png"
