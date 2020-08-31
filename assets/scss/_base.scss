@@ -77,7 +77,6 @@ hr {
 }
 
 .page {
-  position: relative;
   margin: 15px auto;
   background-color: $white;
   border: 3px double $orient;
@@ -85,7 +84,6 @@ hr {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   transition: $transition-2;
-  z-index: 1;
 
   @include media-breakpoint-down(xs) {
     margin: 0 auto;

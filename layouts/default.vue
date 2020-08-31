@@ -1,11 +1,11 @@
 <template>
-  <b-container class="p-0">
-    <section id="home">
+  <section id="home">
+    <b-container class="p-0">
       <NavBar />
       <!-- <SideNav :navigation="navigation" /> -->
       <Nuxt />
-    </section>
-  </b-container>
+    </b-container>
+  </section>
 </template>
 
 <script>
@@ -43,7 +43,7 @@ export default {
 }
 
 #home {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     padding-top: 50px;
   }
 }

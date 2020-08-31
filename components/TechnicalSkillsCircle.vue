@@ -1,5 +1,5 @@
 <template>
-  <b-col cols="6" md="4" class="technical-skills-circle">
+  <b-col cols="6" lg="4" class="technical-skills-circle">
     <p
       class="technical-skills-text"
       :class="'p-' + [technology.class || technology.klasa]"

@@ -1,59 +1,61 @@
 <template>
-  <b-col lg="10" class="page px-0">
-    <b-row no-gutters>
-      <!-- Left -->
-      <b-col md="5" lg="4" class="left" :class="{ 'dark-mode' : darkMode }">
-        <!-- Picture -->
-        <Picture :picture="data.picture || data.slika" :name="data.name || data.ime" />
+  <b-row no-gutters>
+    <b-col lg="10" offset-lg="1" class="page">
+      <b-row no-gutters>
+        <!-- Left -->
+        <b-col md="5" lg="4" class="left" :class="{ 'dark-mode' : darkMode }">
+          <!-- Picture -->
+          <Picture :picture="data.picture || data.slika" :name="data.name || data.ime" />
 
-        <!-- Name -->
-        <Name :name="data.name || data.ime" />
+          <!-- Name -->
+          <Name :name="data.name || data.ime" />
 
-        <!-- Headline -->
-        <Headline :headline="data.headline || data.naslov" />
+          <!-- Headline -->
+          <Headline :headline="data.headline || data.naslov" />
 
-        <!-- QR Code -->
-        <QrCode :data="data" />
+          <!-- QR Code -->
+          <QrCode :data="data" />
 
-        <!-- Portfolio -->
-        <Portfolio :data="data" />
+          <!-- Portfolio -->
+          <Portfolio :data="data" />
 
-        <!-- Personal Info -->
-        <PersonalInfo :personalInfo="data.personalInfo || data.ličniPodaci" />
+          <!-- Personal Info -->
+          <PersonalInfo :personalInfo="data.personalInfo || data.ličniPodaci" />
 
-        <!-- Languages -->
-        <Languages :languages="data.languages || data.jezici" />
+          <!-- Languages -->
+          <Languages :languages="data.languages || data.jezici" />
 
-        <!-- Projects -->
-        <Projects :projects="data.projects || data.projekti" />
+          <!-- Projects -->
+          <Projects :projects="data.projects || data.projekti" />
 
-        <!-- Hobbies -->
-        <Hobbies :hobbies="data.hobbies || data.hobiji" />
+          <!-- Hobbies -->
+          <Hobbies :hobbies="data.hobbies || data.hobiji" />
 
-        <!-- Driving License -->
-        <DrivingLicense :drivingLicense="data.drivingLicense || data.vozačkaDozvola" />
-      </b-col>
+          <!-- Driving License -->
+          <DrivingLicense :drivingLicense="data.drivingLicense || data.vozačkaDozvola" />
+        </b-col>
 
-      <!-- Right -->
-      <b-col md="7" lg="8" class="right" :class="{ 'dark-mode' : darkMode }">
-        <div class="wrapper">
-          <!-- About Me -->
-          <AboutMe :aboutMe="data.aboutMe || data.oMeni" />
+        <!-- Right -->
+        <b-col md="7" lg="8" class="right" :class="{ 'dark-mode' : darkMode }">
+          <div class="wrapper">
+            <!-- About Me -->
+            <AboutMe :aboutMe="data.aboutMe || data.oMeni" />
 
-          <!-- Education -->
-          <Education :educations="data.education || data.obrazovanje" />
+            <!-- Education -->
+            <Education :educations="data.education || data.obrazovanje" />
 
-          <!-- Employment History -->
-          <EmploymentHistory
-            :employmentHistories="data.employmentHistory || data.istorijaZapošljavanja"
-          />
+            <!-- Employment History -->
+            <EmploymentHistory
+              :employmentHistories="data.employmentHistory || data.istorijaZapošljavanja"
+            />
 
-          <!-- Technical Skills -->
-          <TechnicalSkills :technicalSkills="data.technicalSkills || data.tehničkeVeštine" />
-        </div>
-      </b-col>
-    </b-row>
-  </b-col>
+            <!-- Technical Skills -->
+            <TechnicalSkills :technicalSkills="data.technicalSkills || data.tehničkeVeštine" />
+          </div>
+        </b-col>
+      </b-row>
+    </b-col>
+  </b-row>
 </template>
 
 <script>

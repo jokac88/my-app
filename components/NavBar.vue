@@ -1,6 +1,6 @@
 <template>
-  <div class="nav-bar">
-    <Hamburger class="d-md-none" />
+  <section class="nav-bar">
+    <Hamburger class="d-lg-none" />
     <div class="links">
       <nuxt-link
         :to="{ name: 'index', params: { lang: '/en' } }"
@@ -28,7 +28,7 @@
         />
       </nuxt-link>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -48,7 +48,7 @@ export default {
   right: 15px;
   width: 60px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     top: 0px;
     right: 0;
     left: 0;
@@ -65,7 +65,7 @@ export default {
   }
 
   .links {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -88,7 +88,7 @@ export default {
         margin-bottom: 0;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         margin-bottom: 0;
         margin-right: 15px;
 
@@ -104,11 +104,13 @@ export default {
         opacity: 0.5;
         transition: $transition;
 
-        &:hover:not(.nuxt-link-active) {
-          opacity: 1;
+        @include media-breakpoint-up(lg) {
+          &:hover:not(.active) {
+            opacity: 1;
+          }
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           width: 35px;
         }
       }
