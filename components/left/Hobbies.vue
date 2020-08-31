@@ -2,7 +2,7 @@
   <section class="hobbies">
     <Header :heading="$route.path === '/' ? 'Hobbies' : 'Hobiji'" property="hobbies" />
     <b-collapse id="hobbies" visible>
-      <div class="wrapper">
+      <div class="hobbies-wrapper">
         <ul>
           <li v-for="hobby in hobbies" :key="hobby">{{ hobby }}</li>
         </ul>
@@ -25,8 +25,8 @@ export default {
 </script>
 
 <style lang="scss">
-#hobbies {
-  .wrapper {
+.hobbies {
+  &-wrapper {
     padding: 0 50px 20px;
   }
 

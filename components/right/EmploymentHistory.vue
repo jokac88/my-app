@@ -5,7 +5,7 @@
       property="employment-history"
     />
     <b-collapse id="employment-history" visible>
-      <div class="wrapper">
+      <div class="employment-history-wrapper">
         <b-row
           v-for="(employmentHistory, index) in employmentHistories"
           :key="employmentHistory.year || employmentHistory.godina"
@@ -50,8 +50,8 @@ export default {
 </script>
 
 <style lang="scss">
-#employment-history {
-  .wrapper {
+.employment-history {
+  &-wrapper {
     padding: 0 15px;
   }
 

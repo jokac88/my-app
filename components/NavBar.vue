@@ -49,7 +49,7 @@ export default {
   width: 60px;
 
   @include media-breakpoint-down(md) {
-    top: 0px;
+    top: 0;
     right: 0;
     left: 0;
     width: 100%;
@@ -61,7 +61,8 @@ export default {
     background-image: $gradient-right;
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
-    z-index: 2;
+    // z-index: 4;
+    transform: translate3d(80%, 0, 0);
   }
 
   .links {

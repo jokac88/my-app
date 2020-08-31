@@ -11,7 +11,6 @@
           :key="technology.technology || technology.tehnologija"
           :technology="technology"
           :technologyImage="technology.class || technology.klasa"
-          :darkMode="darkMode"
         />
       </b-row>
     </b-collapse>
@@ -31,9 +30,6 @@ export default {
     HeaderShape,
     TechnicalSkillsCircle,
   },
-  computed: mapState({
-    darkMode: (state) => state.store.darkMode,
-  }),
 };
 </script>
 

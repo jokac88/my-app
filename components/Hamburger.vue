@@ -1,9 +1,5 @@
 <template>
-  <b-button
-    @click="toggle = !toggle"
-    :class="{ 'is-active': toggle }"
-    class="hamburger hamburger--spin"
-  >
+  <b-button @click="toggle" :class="{ 'is-active': isToggle }" class="hamburger hamburger--spin">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
@@ -11,12 +7,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      toggle: false,
-    };
+  methods: {
+    toggle() {
+      this.$store.commit("store/SET_TOGGLE");
+    },
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 

@@ -1,18 +1,22 @@
 <template>
-  <section class="loading" v-if="loading">
-    <img src="~/assets/loader.svg" alt="~/assets/loader.svg" class="loader" />
+  <section class="loading" v-if="isLoading">
+    <Loader class="loader" />
   </section>
 </template>
 
 <script>
+import Loader from "@/assets/svg/loader.svg?inline";
 import { mapState } from "vuex";
 
 export default {
+  components: {
+    Loader,
+  },
   mounted() {
     this.$store.dispatch("store/loading", { loading: false, duration: 2500 });
   },
   computed: mapState({
-    loading: (state) => state.store.loading,
+    isLoading: (state) => state.store.isLoading,
   }),
 };
 </script>
@@ -28,7 +32,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 3;
+  z-index: 4;
 
   .loader {
     width: 250px;

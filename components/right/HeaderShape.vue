@@ -1,7 +1,7 @@
 <template>
   <div class="header-shape">
     <div class="shape">
-      <div class="wrapper">
+      <div class="header-shape-wrapper">
         <img
           :src="require('~/assets/icon/' + property + '.png')"
           class="icon"
@@ -54,25 +54,25 @@ export default {
       background-image: $gradient-right;
       -moz-background-image: $gradient-right;
       -webkit-background-image: $gradient-right;
+    }
 
-      .wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 10px 20px;
-        -webkit-transform: skew(30deg);
-        -moz-transform: skew(30deg);
-        transform: skew(30deg);
-        color: $white;
+    &-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+      -webkit-transform: skew(30deg);
+      -moz-transform: skew(30deg);
+      transform: skew(30deg);
+      color: $white;
 
-        .icon {
-          width: 35px;
-          margin-right: 10px;
-          border-radius: 50%;
-          -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-        }
+      .icon {
+        width: 35px;
+        margin-right: 10px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
       }
     }
   }

@@ -2,7 +2,7 @@
   <section class="education">
     <HeaderShape :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
     <b-collapse id="education" visible>
-      <div class="wrapper">
+      <div class="education-wrapper">
         <b-row v-for="(education, index) in educations" :key="education.year || education.godina">
           <b-col
             v-if="key !== 'description' && key !== 'opis'"
@@ -44,8 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
-#education {
-  .wrapper {
+.education {
+  &-wrapper {
     padding: 0 15px;
   }
 

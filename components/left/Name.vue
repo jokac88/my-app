@@ -1,6 +1,6 @@
 <template>
   <section class="name">
-    <div class="wrapper">
+    <div class="name-wrapper">
       <h1>{{ name }}</h1>
     </div>
   </section>
@@ -20,7 +20,7 @@ export default {
   -moz-background-image: $gradient-right;
   -webkit-background-image: $gradient-right;
 
-  .wrapper {
+  &-wrapper {
     padding: 10px 15px;
   }
 

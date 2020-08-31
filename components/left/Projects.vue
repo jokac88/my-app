@@ -2,7 +2,7 @@
   <section class="projects">
     <Header :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
     <b-collapse id="projects" visible>
-      <div class="wrapper">
+      <div class="projects-wrapper">
         <b-row>
           <Project
             v-for="project in projects"
@@ -32,8 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
-#projects {
-  .wrapper {
+.projects {
+  &-wrapper {
     padding: 0 25px 20px;
   }
 

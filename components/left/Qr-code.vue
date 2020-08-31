@@ -1,13 +1,15 @@
 <template>
   <section class="qr-code">
-    <img src="~/assets/qr-code.svg" alt="~/assets/qr-code.svg" title="QR Code" />
+    <QrCode class="svg" />
   </section>
 </template>
 
 <script>
+import QrCode from "@/assets/svg/qr-code.svg?inline";
+
 export default {
-  props: {
-    data: Object,
+  components: {
+    QrCode,
   },
 };
 </script>
@@ -17,8 +19,9 @@ export default {
   text-align: center;
   margin-bottom: 20px;
 
-  img {
+  svg {
     width: 100px;
+    height: 100px;
   }
 }
 </style>

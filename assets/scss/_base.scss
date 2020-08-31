@@ -3,13 +3,12 @@
 
 html,
 body {
-  background: url("~assets/background.png") repeat;
+  background: url("~assets/background.png") var(--bg) repeat;
   font-family: $font;
   font-size: 14px;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: $white;
 }
 
 body {
@@ -18,6 +17,26 @@ body {
   &.loading {
     overflow: hidden;
   }
+}
+
+:root {
+  --color-left: #{$white};
+  --color-right: #{$orient};
+  --bg: #{$white};
+  --bg-page: #{$white};
+  --bg-left: #{$deep-cerulean};
+  --bg-right: #{$white};
+  --border-color: #{$orient};
+}
+
+.dark-mode {
+  --color-left: #{$white};
+  --color-right: #{$white};
+  --bg: #{$black};
+  --bg-page: #{$transparent};
+  --bg-left: #{$pickled-bluewood-2};
+  --bg-right: #{$pickled-bluewood};
+  --border-color: #{$white};
 }
 
 *,
@@ -30,17 +49,13 @@ body {
 
 a {
   text-decoration: none !important;
-  color: $white !important;
+  color: $white;
   display: inline-block;
 }
 
 img {
   width: 100%;
   height: auto;
-}
-
-svg {
-  cursor: pointer;
 }
 
 h1,
@@ -76,14 +91,15 @@ hr {
   border-image-slice: 1;
 }
 
-.page {
+.page-col {
   margin: 15px auto;
-  background-color: $white;
+  background-color: var(--bg-page);
   border: 3px double $orient;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   transition: $transition-2;
+  transform: translate3d(80%, 0, 0);
 
   @include media-breakpoint-down(xs) {
     margin: 0 auto;
@@ -95,31 +111,18 @@ hr {
   }
 
   .left {
-    background-color: $deep-cerulean;
-    color: $white;
-    transition: $transition;
-
-    &.dark-mode {
-      background-color: $pickled-bluewood-2;
-    }
+    background-color: var(--bg-left);
+    color: var(--color-left);
+    transition: $transition-2;
   }
 
   .right {
-    background-color: $white;
-    color: $orient;
-    transition: $transition;
+    background-color: var(--bg-right);
+    color: var(--color-right);
+    transition: $transition-2;
 
-    &.dark-mode {
-      background-color: $pickled-bluewood;
-      color: $white;
-    }
-
-    .wrapper {
+    &-wrapper {
       padding: 15px;
     }
   }
-}
-
-.dark-mode {
-  background-color: $pickled-bluewood;
 }

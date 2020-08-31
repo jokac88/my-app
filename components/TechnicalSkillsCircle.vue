@@ -7,7 +7,7 @@
     >{{ technology.technology || technology.tehnologija }}</p>
     <div
       class="c100"
-      :class="[{ 'dark-mode' : darkMode }, technology.class || technology.klasa, technology.percentage || technology.procenat]"
+      :class="[technology.class || technology.klasa, technology.percentage || technology.procenat]"
     >
       <span>
         <img
@@ -30,7 +30,6 @@ export default {
   props: {
     technology: Object,
     technologyImage: String,
-    darkMode: Boolean,
   },
 };
 </script>

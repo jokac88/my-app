@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="wrapper">
+    <div class="header-wrapper">
       <div class="heading">
         <img
           :src="require('~/assets/icon/' + property + '.png')"
@@ -36,7 +36,7 @@ export default {
   -moz-background-image: $gradient-right;
   -webkit-background-image: $gradient-right;
 
-  .wrapper {
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;

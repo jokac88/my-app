@@ -3,17 +3,17 @@
     <b-container>
       <h1 class="status-code">{{ error.statusCode }}</h1>
       <div class="no-connection" v-if="error.statusCode === 500">
-        <img src="~assets/no-connection.svg" alt="~assets/no-connection.svg" class="icon" />
+        <img src="~assets/svg/no-connection.svg" alt="~assets/svg/no-connection.svg" class="icon" />
       </div>
       <div class="error-404" v-else>
-        <img src="~assets/not-found.svg" alt="~assets/not-found.svg" class="icon" />
+        <img src="~assets/svg/not-found.svg" alt="~assets/svg/not-found.svg" class="icon" />
       </div>
       <h3 class="message">{{ message }}</h3>
       <div class="back-button">
         <b-link @click="goBack">
           <img
-            src="~assets/back.svg"
-            alt="~assets/back.svg"
+            src="~assets/svg/back.svg"
+            alt="~assets/svg/back.svg"
             :title="$route.path === '/' ? 'Go back' : 'Idi nazad'"
             class="icon"
           />

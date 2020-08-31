@@ -2,7 +2,7 @@
   <section class="about-me">
     <HeaderShape :heading="$route.path === '/' ? 'About Me' : 'O Meni'" property="about-me" />
     <b-collapse id="about-me" visible>
-      <div class="wrapper">
+      <div class="about-me-wrapper">
         <p class="text">{{ aboutMe }}</p>
       </div>
     </b-collapse>
@@ -23,8 +23,8 @@ export default {
 </script>
 
 <style lang="scss">
-#about-me {
-  .wrapper {
+.about-me {
+  &-wrapper {
     padding: 0 15px 15px;
   }
 

@@ -1,6 +1,6 @@
 <template>
   <section class="headline">
-    <div class="wrapper">
+    <div class="headline-wrapper">
       <em>{{ headline }}</em>
     </div>
   </section>
@@ -18,7 +18,7 @@ export default {
 .headline {
   text-align: center;
 
-  .wrapper {
+  &-wrapper {
     padding: 10px 15px;
   }
 }

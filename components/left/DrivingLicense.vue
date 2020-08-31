@@ -5,7 +5,7 @@
       property="driving-license"
     />
     <b-collapse id="driving-license" visible>
-      <div class="wrapper">
+      <div class="driving-license-wrapper">
         <p v-html="drivingLicense"></p>
       </div>
     </b-collapse>
@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style lang="scss">
-#driving-license {
-  .wrapper {
+.driving-license {
+  &-wrapper {
     padding: 0 30px 20px;
   }
 }

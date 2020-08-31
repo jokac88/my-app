@@ -5,7 +5,7 @@
       property="personal-info"
     />
     <b-collapse id="personal-info" visible>
-      <div class="wrapper">
+      <div class="personal-info-wrapper">
         <p v-if="$route.path === '/'" class="property">Date of birth</p>
         <p v-else class="property">Datum rođenja</p>
         <p class="value" v-html="personalInfo.dateOfBirth || personalInfo.datumRođenja"></p>
@@ -82,8 +82,8 @@ export default {
 </script>
 
 <style lang="scss">
-#personal-info {
-  .wrapper {
+.personal-info {
+  &-wrapper {
     padding: 0 30px 20px;
   }
 

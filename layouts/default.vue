@@ -1,51 +1,49 @@
 <template>
-  <section id="home">
-    <b-container class="p-0">
-      <NavBar />
-      <!-- <SideNav :navigation="navigation" /> -->
+  <section id="home" class="home">
+    <SideNav :navigation="navigation" />
+    <transition name="toggle">
       <Nuxt />
-    </b-container>
+    </transition>
   </section>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import SideNav from "@/components/SideNav.vue";
 import { mapState } from "vuex";
 
 export default {
   head() {
     return {
       bodyAttrs: {
-        class: [
-          this.loading ? "loading" : "",
-          this.darkMode ? "dark-mode" : "",
-        ],
+        class: [this.loading ? "loading" : ""],
       },
     };
   },
   components: {
     NavBar,
-    SideNav,
   },
   computed: mapState({
-    loading: (state) => state.store.loading,
     navigation: (state) =>
       state.store.data.navigation || state.store.data.navigacija,
-    darkMode: (state) => state.store.darkMode,
+    isToggle: (state) => state.store.isToggle,
   }),
 };
 </script>
 
 <style lang="scss">
-.container {
-  overflow: hidden;
-}
-
-#home {
+.home {
   @include media-breakpoint-down(md) {
     padding-top: 50px;
   }
+}
+
+.toggle-enter-active,
+.toggle-leave-active {
+  transform: translate3d(0, 0, 0);
+}
+.toggle-enter,
+.toggle-leave-active {
+  transform: translate3d(80%, 0, 0);
 }
 </style>
 

@@ -1,6 +1,6 @@
 <template>
   <section class="picture">
-    <div class="wrapper">
+    <div class="picture-wrapper">
       <img
         :src="require('~/assets/' + picture)"
         :alt="require('~/assets/' + picture)"
@@ -24,7 +24,7 @@ export default {
 .picture {
   text-align: center;
 
-  .wrapper {
+  &-wrapper {
     padding: 15px;
   }
 
