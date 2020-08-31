@@ -24,9 +24,9 @@ export const actions = {
     const response = await axios.getData(url);
     if (process.env.NODE_ENV === "production") {
       commit("SET_DATA", response.data[lang]);
-      return;
+    } else {
+      commit("SET_DATA", response.data);
     }
-    commit("SET_DATA", response.data);
     if (response.status === 200) {
       dispatch("loading", { loading: false, duration: 1500 });
     }
