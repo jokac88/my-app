@@ -10,9 +10,7 @@ export default {
    */
   target: "static",
   router: {
-    base: "/ivan-jovkovic/",
-    linkActiveClass: "active-link",
-    linkExactActiveClass: "exact-active-link"
+    base: "/ivan-jovkovic/"
   },
   /*
    ** Headers of the page
@@ -37,7 +35,6 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  // loading: { color: "#39b982", height: "6px", duration: 1000 },
   loading: "~/components/Loading.vue",
   /*
    ** Global CSS

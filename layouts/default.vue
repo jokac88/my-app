@@ -31,7 +31,6 @@ export default {
   computed: mapState({
     loading: (state) => state.store.loading,
     navigation: (state) =>
-      // state.store.data.navigation || state.store.data.navigacija,
       state.store.data.navigation || state.store.data.navigacija,
     darkMode: (state) => state.store.darkMode,
   }),

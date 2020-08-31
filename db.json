@@ -1,47 +1,5 @@
 {
   "en": {
-    "navigation": [
-      {
-        "name": "Home",
-        "url": "home"
-      },
-      {
-        "name": "About Me",
-        "url": "about-me"
-      },
-      {
-        "name": "Personal Info",
-        "url": "personal-info"
-      },
-      {
-        "name": "Education",
-        "url": "education"
-      },
-      {
-        "name": "Employment History",
-        "url": "employment-history"
-      },
-      {
-        "name": "Technical Skills",
-        "url": "technical-skills"
-      },
-      {
-        "name": "Projects",
-        "url": "projects"
-      },
-      {
-        "name": "Languages",
-        "url": "languages"
-      },
-      {
-        "name": "Hobbies",
-        "url": "hobbies"
-      },
-      {
-        "name": "Driving License",
-        "url": "driving-license"
-      }
-    ],
     "picture": "picture.png",
     "name": "Ivan Jovkovic",
     "headline": "- Front-End Developer -",
@@ -327,51 +285,51 @@
         "color": "#f55247",
         "percentage": "p25"
       }
+    ],
+    "navigation": [
+      {
+        "name": "Home",
+        "url": "home"
+      },
+      {
+        "name": "About Me",
+        "url": "about-me"
+      },
+      {
+        "name": "Personal Info",
+        "url": "personal-info"
+      },
+      {
+        "name": "Education",
+        "url": "education"
+      },
+      {
+        "name": "Employment History",
+        "url": "employment-history"
+      },
+      {
+        "name": "Technical Skills",
+        "url": "technical-skills"
+      },
+      {
+        "name": "Projects",
+        "url": "projects"
+      },
+      {
+        "name": "Languages",
+        "url": "languages"
+      },
+      {
+        "name": "Hobbies",
+        "url": "hobbies"
+      },
+      {
+        "name": "Driving License",
+        "url": "driving-license"
+      }
     ]
   },
   "rs": {
-    "navigacija": [
-      {
-        "ime": "Početak",
-        "link": "home"
-      },
-      {
-        "ime": "O Meni",
-        "link": "about-me"
-      },
-      {
-        "ime": "Lični Podaci",
-        "link": "personal-info"
-      },
-      {
-        "ime": "Obrazovanje",
-        "link": "education"
-      },
-      {
-        "ime": "Istorija Zapošljavanja",
-        "link": "employment-history"
-      },
-      {
-        "ime": "Tehničke Veštine",
-        "link": "technical-skills"
-      },
-      {
-        "ime": "Projekti",
-        "link": "projects"
-      },
-      {
-        "ime": "Jezici",
-        "link": "languages"
-      },
-      {
-        "ime": "Hobiji",
-        "link": "hobbies"
-      },
-      {
-        "ime": "Vozačka Dozvola",
-        "link": "driving-license"
-      }
-    ],
     "slika": "picture.png",
     "ime": "Ivan Jovkovic",
     "naslov": "- Front-End Developer -",
@@ -655,6 +613,48 @@
         "klasa": "laravel",
         "boja": "#f55247",
         "procenat": "p25"
+      }
+    ],
+    "navigacija": [
+      {
+        "ime": "Početak",
+        "link": "home"
+      },
+      {
+        "ime": "O Meni",
+        "link": "about-me"
+      },
+      {
+        "ime": "Lični Podaci",
+        "link": "personal-info"
+      },
+      {
+        "ime": "Obrazovanje",
+        "link": "education"
+      },
+      {
+        "ime": "Istorija Zapošljavanja",
+        "link": "employment-history"
+      },
+      {
+        "ime": "Tehničke Veštine",
+        "link": "technical-skills"
+      },
+      {
+        "ime": "Projekti",
+        "link": "projects"
+      },
+      {
+        "ime": "Jezici",
+        "link": "languages"
+      },
+      {
+        "ime": "Hobiji",
+        "link": "hobbies"
+      },
+      {
+        "ime": "Vozačka Dozvola",
+        "link": "driving-license"
       }
     ]
   }
