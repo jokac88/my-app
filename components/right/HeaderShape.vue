@@ -59,7 +59,7 @@ export default {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 10px 20px;
+        padding: 10px 15px;
         -webkit-transform: skew(30deg);
         -moz-transform: skew(30deg);
         transform: skew(30deg);
