@@ -2,7 +2,7 @@ import axios from "@/services/axios.js";
 
 export const state = () => ({
   data: {},
-  loading: true,
+  loading: false,
   darkMode: false
 });
 
@@ -19,9 +19,13 @@ export const mutations = {
 };
 
 export const actions = {
-  async fetchData({ commit, dispatch }, lang) {
-    const response = await axios.getData(lang);
-    commit("SET_DATA", response.data);
+  async fetchData({ commit, dispatch }, { url, lang }) {
+    const response = await axios.getData(url);
+    if (process.env.NODE_ENV === "production") {
+      commit("SET_DATA", response.data[lang]);
+    } else {
+      commit("SET_DATA", response.data);
+    }
     if (response.status === 200) {
       dispatch("loading", { loading: false, duration: 1500 });
     }

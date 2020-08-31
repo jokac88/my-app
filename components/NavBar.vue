@@ -7,7 +7,6 @@
         :class="$route.path === '/' ? 'active' : ''"
         name="/"
         exact
-        @click.native="loading"
       >
         <img
           src="~/assets/flags/gb.png"
@@ -20,7 +19,6 @@
         :to="{ name: 'rs', params: { lang: '/rs' } }"
         :class="$route.path === '/rs' ? 'active' : ''"
         name="/rs"
-        @click.native="loading"
       >
         <img
           src="~/assets/flags/rs.png"
@@ -39,13 +37,6 @@ import Hamburger from "@/components/Hamburger.vue";
 export default {
   components: {
     Hamburger,
-  },
-  methods: {
-    loading(e) {
-      if (e.currentTarget.name !== this.$route.path) {
-        this.$store.commit("store/SET_LOADING", true);
-      }
-    },
   },
 };
 </script>

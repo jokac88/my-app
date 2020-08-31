@@ -1,11 +1,13 @@
 <template>
   <b-button @click="$store.dispatch('store/toggleDarkMode')" class="button-darkMode">
-    <img
-      :src="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
-      :alt="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
-      :title="$route.path === '/' ? (darkMode ? 'Turn off Dark Mode' : 'Trun on Dark Mode') : (darkMode ? 'Isključiti noćni režim' : 'Uključiti noćni režim')"
-      class="icon"
-    />
+    <transition name="home">
+      <img
+        :src="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
+        :alt="darkMode ? require('~/assets/icon/brightness-off.png') : require('~/assets/icon/brightness.png')"
+        :title="$route.path === '/' ? (darkMode ? 'Turn off Dark Mode' : 'Trun on Dark Mode') : (darkMode ? 'Isključiti noćni režim' : 'Uključiti noćni režim')"
+        class="icon"
+      />
+    </transition>
   </b-button>
 </template>
 
@@ -20,6 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
+}
 .button {
   &-darkMode {
     position: fixed;

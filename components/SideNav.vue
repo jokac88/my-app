@@ -7,17 +7,21 @@
         </li>
       </ul>
     </div>
+    <DarkMode />
   </section>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import DarkMode from "@/components/DarkMode.vue";
 
 export default {
-  computed: mapState({
-    navigation: (state) =>
-      state.store.data.navigation || state.store.data.navigacija,
-  }),
+  props: {
+    navigation: Array,
+  },
+  components: {
+    DarkMode,
+  },
 };
 </script>
 
@@ -26,22 +30,22 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: $black;
+  width: 80%;
+  height: 100vh;
+  z-index: 3;
+  // background-color: $black;
 
   .wrapper {
-    padding: 30px 0;
+    padding: 50px 0;
   }
 
   ul {
     li {
-      background-image: $gradient-left;
+      // background-image: $gradient-left;
       padding: 0 15px;
 
       a {
-        color: $black;
+        color: $black !important;
       }
     }
   }

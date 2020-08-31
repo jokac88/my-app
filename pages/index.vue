@@ -11,12 +11,21 @@ export default {
     Page,
   },
   async fetch({ store, params, error }) {
+    store.commit("store/SET_LOADING", true);
     try {
-      await store.dispatch("store/fetchData", "/b/5f4bc59a993a2e110d39a747");
-      // await store.dispatch("store/fetchData", params.lang || "/en");
+      if (process.env.NODE_ENV === "production") {
+        await store.dispatch("store/fetchData", {
+          url: "/b/5f4bc59a993a2e110d39a747",
+          lang: "en",
+        });
+      } else {
+        await store.dispatch("store/fetchData", {
+          url: params.lang || "/en",
+        });
+      }
     } catch (e) {
       error({
-        message: "Not loading page",
+        message: "Check the internet connection",
       });
     }
   },
@@ -29,7 +38,7 @@ export default {
   //   },
   // },
   computed: mapState({
-    data: (state) => state.store.data.en,
+    data: (state) => state.store.data,
   }),
 };
 </script>

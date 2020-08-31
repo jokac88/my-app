@@ -2,7 +2,7 @@
   <b-container class="p-0">
     <section id="home">
       <NavBar />
-      <SideNav />
+      <!-- <SideNav :navigation="navigation" /> -->
       <Nuxt />
     </section>
   </b-container>
@@ -30,6 +30,9 @@ export default {
   },
   computed: mapState({
     loading: (state) => state.store.loading,
+    navigation: (state) =>
+      // state.store.data.navigation || state.store.data.navigacija,
+      state.store.data.navigation || state.store.data.navigacija,
     darkMode: (state) => state.store.darkMode,
   }),
 };

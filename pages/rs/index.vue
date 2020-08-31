@@ -11,12 +11,21 @@ export default {
     Page,
   },
   async fetch({ store, params, error }) {
+    store.commit("store/SET_LOADING", true);
     try {
-      await store.dispatch("store/fetchData", "/b/5f4bc5b2993a2e110d39a754");
-      // await store.dispatch("store/fetchData", params.lang || "/rs");
+      if (process.env.NODE_ENV === "production") {
+        await store.dispatch("store/fetchData", {
+          url: "/b/5f4bc5b2993a2e110d39a754",
+          lang: "rs",
+        });
+      } else {
+        await store.dispatch("store/fetchData", {
+          url: "/rs",
+        });
+      }
     } catch (e) {
       error({
-        message: "Greška",
+        message: "Proverite internet konekciju",
       });
     }
   },
@@ -29,7 +38,7 @@ export default {
   //   },
   // },
   computed: mapState({
-    data: (state) => state.store.data.rs,
+    data: (state) => state.store.data,
   }),
 };
 </script>
