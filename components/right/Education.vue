@@ -8,7 +8,7 @@
             v-if="key !== 'description' && key !== 'opis'"
             v-for="(value, key, index) in education"
             :key="index"
-            cols="6"
+            sm="6"
           >
             <p class="property">{{ key | capitalize }}</p>
             <p v-html="value" class="value"></p>

@@ -11,11 +11,15 @@
           :key="employmentHistory.year || employmentHistory.godina"
         >
           <b-col
-            v-if="key !== 'description' && key !== 'opis'"
+            v-if="key === 'year' || key === 'godina' || key === 'company' || key === 'firma' || key === 'club' || key === 'klub'"
             v-for="(value, key, index) in employmentHistory"
             :key="index"
-            cols="6"
+            sm="6"
           >
+            <p class="property">{{ key | capitalize }}</p>
+            <p v-html="value" class="value"></p>
+          </b-col>
+          <b-col v-else-if="key === 'position' || key === 'pozicija'" cols="12">
             <p class="property">{{ key | capitalize }}</p>
             <p v-html="value" class="value"></p>
           </b-col>

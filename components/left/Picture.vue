@@ -1,16 +1,12 @@
 <template>
   <section class="picture">
     <div class="wrapper">
-      <div id="lightgallery" lg-uid="lg0">
-        <a class="item-img" :href="require('~/assets/' + picture)" lg-event-uid="&amp;1&amp;2">
-          <img
-            :src="require('~/assets/' + picture)"
-            :alt="require('~/assets/' + picture)"
-            :title="name"
-            class="image"
-          />
-        </a>
-      </div>
+      <img
+        :src="require('~/assets/' + picture)"
+        :alt="require('~/assets/' + picture)"
+        :title="name"
+        class="image"
+      />
     </div>
   </section>
 </template>
