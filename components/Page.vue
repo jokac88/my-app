@@ -111,7 +111,7 @@ export default {
   padding: 15px 0;
   position: relative;
   overflow-y: scroll;
-  height: 1500px;
+  // height: 1500px;
 
   @include media-breakpoint-down(md) {
     padding-top: 50px;
