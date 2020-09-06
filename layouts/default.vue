@@ -1,6 +1,8 @@
 <template>
-  <section id="home" class="home">
+  <section class="default-layout">
+    <NavBar />
     <SideNav :navigation="navigation" />
+    <ColorModePicker />
     <transition name="toggle">
       <Nuxt />
     </transition>
@@ -8,35 +10,34 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
 import { mapState } from "vuex";
+import NavBar from "@/components/NavBar.vue";
+import SideNav from "@/components/SideNav.vue";
+import ColorModePicker from "@/components/ColorModePicker.vue";
 
 export default {
   head() {
     return {
       bodyAttrs: {
-        class: [this.loading ? "loading" : ""],
+        class: [this.isLoading ? "loading" : ""],
       },
     };
   },
   components: {
     NavBar,
+    SideNav,
+    ColorModePicker,
   },
   computed: mapState({
     navigation: (state) =>
       state.store.data.navigation || state.store.data.navigacija,
+    isLoading: (state) => state.store.isLoading,
     isToggle: (state) => state.store.isToggle,
   }),
 };
 </script>
 
 <style lang="scss">
-.home {
-  @include media-breakpoint-down(md) {
-    padding-top: 50px;
-  }
-}
-
 .toggle-enter-active,
 .toggle-leave-active {
   transform: translate3d(0, 0, 0);

@@ -1,5 +1,7 @@
 <template>
-  <section class="page">
+  <section id="page" class="page">
+    <!-- <SideNav :navigation="data.navigation || data.navigacija" /> -->
+    <div class="background"></div>
     <b-container class="p-0">
       <b-col class="page-col px-0" lg="10">
         <b-row no-gutters>
@@ -50,14 +52,13 @@
                 :employmentHistories="data.employmentHistory || data.istorijaZapošljavanja"
               />
 
-              <!-- Technical Skills -->
               <TechnicalSkills :technicalSkills="data.technicalSkills || data.tehničkeVeštine" />
+              <!-- Technical Skills -->
             </div>
           </b-col>
         </b-row>
       </b-col>
     </b-container>
-    <NavBar />
   </section>
 </template>
 
@@ -77,7 +78,6 @@ import AboutMe from "@/components/right/AboutMe.vue";
 import Education from "@/components/right/Education.vue";
 import EmploymentHistory from "@/components/right/EmploymentHistory.vue";
 import TechnicalSkills from "@/components/right/TechnicalSkills.vue";
-import NavBar from "@/components/NavBar.vue";
 
 export default {
   props: {
@@ -98,7 +98,6 @@ export default {
     Education,
     EmploymentHistory,
     TechnicalSkills,
-    NavBar,
   },
   transition: "toggle",
   computed: mapState({
@@ -107,4 +106,61 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.page {
+  padding: 15px 0;
+  position: relative;
+  overflow-y: scroll;
+  // height: 1500px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 50px;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("~assets/background.png") var(--bg) center repeat;
+    transition: $transition-2;
+  }
+
+  .page-col {
+    margin: 0 auto;
+    background-color: var(--bg-page);
+    border: 3px double $orient;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    transition: $transition-2;
+    // transform: translate3d(80%, 0, 0);
+
+    @include media-breakpoint-down(xs) {
+      margin: 0 auto;
+      border: none;
+    }
+
+    &.active {
+      transform: translate3d(80%, 0, 0);
+    }
+
+    .left {
+      background-color: var(--bg-left);
+      color: var(--color-left);
+      transition: $transition-2;
+    }
+
+    .right {
+      background-color: var(--bg-right);
+      color: var(--color-right);
+      transition: $transition-2;
+
+      &-wrapper {
+        padding: 15px;
+      }
+    }
+  }
+}
+</style>

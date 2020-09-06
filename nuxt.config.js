@@ -78,9 +78,6 @@ export default {
     bootstrapVueCSS: false // Or `bvCSS: false`
   },
   pwa: {
-    icon: {
-      targetDir: "static"
-    },
     manifest: {
       short_name: "ij-app"
     },

@@ -1,8 +1,13 @@
 <template>
   <section class="color-mode-picker">
     <ul class="color-mode-picker-ul">
-      <li v-for="color of colors" :key="color">
-        <component :is="`icon-${color}`" @click="$colorMode.preference = color" />
+      <li
+        v-for="color of colors"
+        :key="color"
+        @click="$colorMode.preference = color"
+        :class="[getClasses(color), color]"
+      >
+        <component :is="`icon-${color}`" />
       </li>
     </ul>
   </section>
@@ -42,18 +47,37 @@ export default {
 <style lang="scss">
 .color-mode-picker {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
-  width: 80%;
-  height: 50px;
-  z-index: 4;
-  background-color: $white;
+  z-index: 1;
 
   &-ul {
-    height: inherit;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    .system,
+    .light,
+    .dark,
+    .sepia {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 15px;
+      background-color: var(--bg-color-mode);
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        width: calc(100% + 15px);
+      }
+
+      &.preferred {
+        background-color: $concrete;
+      }
+
+      .feather {
+        color: var(--color-mode);
+        transition: $transition-2;
+      }
+    }
   }
 }
 </style>

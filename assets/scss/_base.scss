@@ -3,17 +3,13 @@
 
 html,
 body {
-  background: url("~assets/background.png") var(--bg) repeat;
   font-family: $font;
   font-size: 14px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 body {
-  transition: $transition-2;
-
   &.loading {
     overflow: hidden;
   }
@@ -22,20 +18,24 @@ body {
 :root {
   --color-left: #{$white};
   --color-right: #{$orient};
+  --color-mode: #{$white};
   --bg: #{$white};
   --bg-page: #{$white};
   --bg-left: #{$deep-cerulean};
   --bg-right: #{$white};
+  --bg-color-mode: #{$black};
   --border-color: #{$orient};
 }
 
 .dark-mode {
   --color-left: #{$white};
   --color-right: #{$white};
-  --bg: #{$black};
+  --color-mode: #{$black};
+  --bg: #{$pickled-bluewood-2};
   --bg-page: #{$transparent};
   --bg-left: #{$pickled-bluewood-2};
   --bg-right: #{$pickled-bluewood};
+  --bg-color-mode: #{$white};
   --border-color: #{$white};
 }
 
@@ -49,8 +49,8 @@ body {
 
 a {
   text-decoration: none !important;
-  color: $white;
   display: inline-block;
+  color: $white !important;
 }
 
 img {
@@ -89,40 +89,4 @@ hr {
   border-bottom: 3px double transparent;
   border-image: $gradient-right;
   border-image-slice: 1;
-}
-
-.page-col {
-  margin: 15px auto;
-  background-color: var(--bg-page);
-  border: 3px double $orient;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  transition: $transition-2;
-  transform: translate3d(80%, 0, 0);
-
-  @include media-breakpoint-down(xs) {
-    margin: 0 auto;
-    border: none;
-  }
-
-  &.active {
-    transform: translate3d(80%, 0, 0);
-  }
-
-  .left {
-    background-color: var(--bg-left);
-    color: var(--color-left);
-    transition: $transition-2;
-  }
-
-  .right {
-    background-color: var(--bg-right);
-    color: var(--color-right);
-    transition: $transition-2;
-
-    &-wrapper {
-      padding: 15px;
-    }
-  }
 }
