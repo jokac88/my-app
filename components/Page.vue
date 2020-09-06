@@ -100,7 +100,9 @@ export default {
   },
   methods: {
     toggle() {
-      this.$store.commit("store/SET_TOGGLE");
+      if (this.isToggle) {
+        this.$store.commit("store/SET_TOGGLE");
+      }
     },
   },
   computed: mapState({
@@ -123,7 +125,9 @@ export default {
   }
 
   &.active {
-    transform: translate3d(80%, 0, 0);
+    @include media-breakpoint-down(md) {
+      transform: translate3d(80%, 0, 0);
+    }
   }
 
   .page-col {

@@ -53,10 +53,10 @@ export default {
     width: 189px;
     height: 189px;
 
-    // @include media-breakpoint-down(sm) {
-    //   width: 126px;
-    //   height: 126px;
-    // }
+    @include media-breakpoint-down(sm) {
+      width: 126px;
+      height: 126px;
+    }
   }
 }
 </style>

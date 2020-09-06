@@ -7,6 +7,7 @@
         v-for="nav in navigation"
         :key="nav.name || nav.ime"
         :href="'#' + nav.url || nav.link"
+        @click="toggle"
       >{{ nav.name || nav.ime }}</b-nav-item>
     </b-nav>
   </section>
@@ -16,6 +17,11 @@
 export default {
   props: {
     navigation: Array,
+  },
+  methods: {
+    toggle() {
+      this.$store.commit("store/SET_TOGGLE");
+    },
   },
 };
 </script>
