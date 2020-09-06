@@ -113,7 +113,6 @@ export default {
 .page {
   padding: 15px 0;
   position: relative;
-  overflow-y: scroll;
   background-color: transparent;
   // height: 1500px;
   transition: $transition-2;
