@@ -1,16 +1,19 @@
 <template>
   <section class="loading" v-if="isLoading">
     <Loader class="loader" />
+    <Icon class="icon" />
   </section>
 </template>
 
 <script>
 import Loader from "@/assets/svg/loader.svg?inline";
+import Icon from "@/assets/svg/icon.svg?inline";
 import { mapState } from "vuex";
 
 export default {
   components: {
     Loader,
+    Icon,
   },
   mounted() {
     this.$store.dispatch("store/loading", { loading: false, duration: 2500 });
@@ -23,22 +26,35 @@ export default {
 
 <style lang="scss" scoped>
 .loading {
-  background: url("~assets/background.png") $white repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  z-index: 5;
 
   .loader {
-    width: 250px;
+    width: 300px;
+    height: 300px;
 
     @include media-breakpoint-down(sm) {
-      width: 200px;
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+
+    @include media-breakpoint-down(sm) {
+      width: 70px;
+      height: 70px;
     }
   }
 }

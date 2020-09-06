@@ -19,7 +19,7 @@ export default {
   text-align: center;
   margin-bottom: 20px;
 
-  svg {
+  .svg {
     width: 100px;
     height: 100px;
   }

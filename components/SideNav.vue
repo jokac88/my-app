@@ -1,56 +1,65 @@
 <template>
-  <section class="side-nav d-md-none">
-    <ColorModePicker />
+  <section class="side-nav">
     <div class="side-nav-wrapper">
-      <ul class="side-nav-ul" v-b-scrollspy:home>
-        <li v-for="nav in navigation" :key="nav.name || nav.ime">
-          <b-link :href="'#' + nav.url || nav.link">{{ nav.name || nav.ime }}</b-link>
-        </li>
-      </ul>
+      <b-nav v-b-scrollspy:page>
+        <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
+        <b-nav-item href="#driving-license">Home</b-nav-item>-->
+        <b-nav-item
+          v-for="nav in navigation"
+          :key="nav.name || nav.ime"
+          :href="'#' + nav.url || nav.link"
+        >{{ nav.name || nav.ime }}</b-nav-item>
+      </b-nav>
     </div>
   </section>
 </template>
 
 <script>
-import ColorModePicker from "@/components/ColorModePicker.vue";
-
 export default {
   props: {
     navigation: Array,
-  },
-  components: {
-    ColorModePicker,
   },
 };
 </script>
 
 <style lang="scss">
-.side-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100vh;
-  z-index: 3;
-  // background-color: $concrete;
-  overflow-y: auto;
+.side {
+  &-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: -1;
+    background-color: $concrete;
+    overflow-y: auto;
+    display: none;
 
-  &-wrapper {
-    padding: 50px 0;
-  }
+    &-wrapper {
+      padding: 50px 0;
 
-  &-ul {
-    li {
-      // background-image: $gradient-left;
-      padding: 0 30px 5px;
+      .nav {
+        display: block;
 
-      &:last-child {
-        padding-bottom: 0;
-      }
+        &-item {
+          // background-image: $gradient-left;
+          padding: 0 30px 15px;
+          line-height: 24px;
 
-      a {
-        color: $black;
-        font-size: 24px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+
+        &-link {
+          color: var(--bg-color-mode) !important;
+          font-size: 24px;
+          padding: 0;
+
+          &.active {
+            font-weight: 700;
+          }
+        }
       }
     }
   }

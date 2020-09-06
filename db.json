@@ -289,7 +289,7 @@
     "navigation": [
       {
         "name": "Home",
-        "url": "home"
+        "url": "page"
       },
       {
         "name": "About Me",
@@ -618,7 +618,7 @@
     "navigacija": [
       {
         "ime": "Početak",
-        "link": "home"
+        "link": "page"
       },
       {
         "ime": "O Meni",
