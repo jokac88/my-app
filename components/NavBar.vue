@@ -47,6 +47,7 @@ export default {
   top: 15px;
   right: 15px;
   width: 60px;
+  z-index: 1;
 
   @include media-breakpoint-down(md) {
     top: 0;

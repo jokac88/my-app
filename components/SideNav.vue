@@ -30,10 +30,9 @@ export default {
     left: 0;
     width: 50%;
     height: 100vh;
-    z-index: -1;
     background-color: $concrete;
     overflow-y: auto;
-    display: none;
+    z-index: -1;
 
     &-wrapper {
       padding: 50px 0;
