@@ -38,23 +38,24 @@ export default {
   z-index: 5;
 
   .loader {
+    position: absolute;
     width: 300px;
     height: 300px;
 
     @include media-breakpoint-down(sm) {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
     }
   }
 
   .icon {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 189px;
+    height: 189px;
 
     @include media-breakpoint-down(sm) {
-      width: 70px;
-      height: 70px;
+      width: 126px;
+      height: 126px;
     }
   }
 }
