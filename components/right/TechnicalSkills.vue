@@ -40,6 +40,11 @@ export default {
       margin: 0 auto 25px;
       float: none;
 
+      &::after {
+        transition: $transition-2;
+        background-color: var(--bg);
+      }
+
       .logo {
         width: 70px;
       }

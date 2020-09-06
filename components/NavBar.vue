@@ -1,6 +1,6 @@
 <template>
-  <section class="nav-bar">
-    <Hamburger class="d-lg-none" />
+  <section class="nav-bar" :class="{ active : isToggle }">
+    <Hamburger class="d-md-none" />
     <div class="links">
       <nuxt-link
         :to="{ name: 'index', params: { lang: '/en' } }"
@@ -32,12 +32,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Hamburger from "@/components/Hamburger.vue";
 
 export default {
   components: {
     Hamburger,
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -47,9 +51,10 @@ export default {
   top: 15px;
   right: 15px;
   width: 60px;
-  z-index: 1;
+  z-index: 3;
+  transition: $transition-2;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     top: 0;
     right: 0;
     left: 0;
@@ -62,12 +67,16 @@ export default {
     background-image: $gradient-right;
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
-    // z-index: 4;
-    transform: translate3d(80%, 0, 0);
+  }
+
+  &.active {
+    @include media-breakpoint-down(sm) {
+      transform: translate3d(80%, 0, 0);
+    }
   }
 
   .links {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -90,7 +99,7 @@ export default {
         margin-bottom: 0;
       }
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         margin-bottom: 0;
         margin-right: 15px;
 
@@ -106,13 +115,13 @@ export default {
         opacity: 0.5;
         transition: $transition;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
           &:hover:not(.active) {
             opacity: 1;
           }
         }
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(sm) {
           width: 35px;
         }
       }

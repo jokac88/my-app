@@ -7,10 +7,14 @@ body {
   font-size: 14px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  background: url("~assets/background.png") var(--bg) center repeat;
+  transition: $transition-2;
 }
 
 body {
-  &.loading {
+  &.loading,
+  &.toggle {
     overflow: hidden;
   }
 }
@@ -19,8 +23,8 @@ body {
   --color-left: #{$white};
   --color-right: #{$orient};
   --color-mode: #{$white};
+  --color-mode-active: #{$orient};
   --bg: #{$white};
-  --bg-page: #{$white};
   --bg-left: #{$deep-cerulean};
   --bg-right: #{$white};
   --bg-color-mode: #{$black};
@@ -28,15 +32,23 @@ body {
 }
 
 .dark-mode {
-  --color-left: #{$white};
   --color-right: #{$white};
   --color-mode: #{$black};
   --bg: #{$pickled-bluewood-2};
-  --bg-page: #{$transparent};
   --bg-left: #{$pickled-bluewood-2};
   --bg-right: #{$pickled-bluewood};
   --bg-color-mode: #{$white};
   --border-color: #{$white};
+}
+
+.sepia-mode {
+  --color-right: #{$orient};
+  --color-mode: #{$white};
+  --bg: #{$parchment};
+  --bg-left: #{$deep-cerulean};
+  --bg-right: #{$parchment};
+  --bg-color-mode: #{$black};
+  --border-color: #{$orient};
 }
 
 *,

@@ -1,7 +1,6 @@
 <template>
-  <section id="page" class="page">
+  <section id="page" class="page" :class="{ active : isToggle }" @click="toggle">
     <!-- <SideNav :navigation="data.navigation || data.navigacija" /> -->
-    <div class="background"></div>
     <b-container class="p-0">
       <b-col class="page-col px-0" lg="10">
         <b-row no-gutters>
@@ -99,7 +98,11 @@ export default {
     EmploymentHistory,
     TechnicalSkills,
   },
-  transition: "toggle",
+  methods: {
+    toggle() {
+      this.$store.commit("store/SET_TOGGLE");
+    },
+  },
   computed: mapState({
     isToggle: (state) => state.store.isToggle,
   }),
@@ -111,20 +114,17 @@ export default {
   padding: 15px 0;
   position: relative;
   overflow-y: scroll;
+  background-color: transparent;
   // height: 1500px;
+  transition: $transition-2;
+  z-index: 2;
 
   @include media-breakpoint-down(md) {
-    padding-top: 50px;
+    padding: 50px 0 0;
   }
 
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url("~assets/background.png") var(--bg) center repeat;
-    transition: $transition-2;
+  &.active {
+    transform: translate3d(80%, 0, 0);
   }
 
   .page-col {
@@ -134,16 +134,10 @@ export default {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    transition: $transition-2;
-    // transform: translate3d(80%, 0, 0);
 
     @include media-breakpoint-down(xs) {
       margin: 0 auto;
       border: none;
-    }
-
-    &.active {
-      transform: translate3d(80%, 0, 0);
     }
 
     .left {

@@ -19,7 +19,7 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: [this.isLoading ? "loading" : ""],
+        class: [this.isLoading ? "loading" : "", this.isToggle ? "toggle" : ""],
       },
     };
   },
