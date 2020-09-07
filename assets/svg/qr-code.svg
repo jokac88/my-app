@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 width="2277px" height="2277px" viewBox="0 0 2277 2277" enable-background="new 0 0 2277 2277" xml:space="preserve">
-<rect x="0" y="0" width="2277" height="2277" fill="rgb(255,255,255)" /><g transform="translate(138,138)"><g><defs>
+<rect class="rect" x="0" y="0" width="2277" height="2277" fill="rgb(255,255,255)" /><g transform="translate(138,138)"><g><defs>
     <linearGradient gradientTransform="rotate(90)" id="grad">
     <stop offset="5%" stop-color="rgb(0,125,179)" />
     <stop offset="95%" stop-color="rgb(119,172,57)" />

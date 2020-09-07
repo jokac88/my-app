@@ -83,7 +83,7 @@ export default {
       }
 
       &:after {
-        background-color: $concrete;
+        background-color: var(--bg-button);
       }
     }
 
@@ -102,7 +102,7 @@ export default {
         }
 
         &:after {
-          background-color: $white;
+          background-color: var(--bg-button);
         }
       }
     }

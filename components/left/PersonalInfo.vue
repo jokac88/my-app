@@ -98,6 +98,7 @@ export default {
       padding-bottom: 0;
     }
   }
+
   a {
     border-bottom: 1px solid transparent;
     transition: $transition;
@@ -107,6 +108,7 @@ export default {
     }
 
     &.link {
+      color: var(--color-left) !important;
       margin-bottom: 10px;
       padding-bottom: 0;
     }

@@ -23,31 +23,35 @@ body {
   --color-left: #{$white};
   --color-right: #{$orient};
   --color-mode: #{$white};
-  --color-mode-active: #{$orient};
+  --color-mode-active: #{$black};
   --bg: #{$white};
   --bg-left: #{$deep-cerulean};
   --bg-right: #{$white};
-  --bg-color-mode: #{$black};
+  --bg-qr: #{$white};
+  --bg-button: #{$concrete};
+  --bg-meter: #{$orient};
   --border-color: #{$orient};
 }
 
 .dark-mode {
   --color-right: #{$white};
   --color-mode: #{$black};
+  --color-mode-active: #{$white};
   --bg: #{$pickled-bluewood-2};
   --bg-left: #{$pickled-bluewood-2};
   --bg-right: #{$pickled-bluewood};
+  --bg-qr: #{$pickled-bluewood};
+  --bg-button: #{$black};
+  --bg-meter: #{$pickled-bluewood};
   --bg-color-mode: #{$white};
   --border-color: #{$white};
 }
 
 .sepia-mode {
-  --color-right: #{$orient};
-  --color-mode: #{$white};
+  --color-left: #{$parchment};
   --bg: #{$parchment};
-  --bg-left: #{$deep-cerulean};
   --bg-right: #{$parchment};
-  --bg-color-mode: #{$black};
+  --bg-qr: #{$parchment};
   --border-color: #{$orient};
 }
 

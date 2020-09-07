@@ -42,12 +42,13 @@ export default {
   .meter {
     height: 30px;
     position: relative;
-    background-color: $orient;
+    background-color: var(--bg-meter);
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    transition: $transition-2;
 
     & > span {
       display: block;
@@ -55,8 +56,7 @@ export default {
       -moz-border-radius: 20px;
       -webkit-border-radius: 20px;
       border-radius: 20px;
-      background-color: $orient;
-      box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+      box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2),
         inset 0 -2px 6px rgba(0, 0, 0, 0.4);
       position: relative;
       overflow: hidden;

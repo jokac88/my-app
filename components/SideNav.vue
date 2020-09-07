@@ -1,15 +1,17 @@
 <template>
   <section class="side-nav d-md-none">
-    <b-nav v-b-scrollspy:page>
-      <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
-      <b-nav-item href="#driving-license">Home</b-nav-item>-->
-      <b-nav-item
-        v-for="nav in navigation"
-        :key="nav.name || nav.ime"
-        :href="'#' + nav.url || nav.link"
-        @click="toggle"
-      >{{ nav.name || nav.ime }}</b-nav-item>
-    </b-nav>
+    <div class="side-nav-wrapper">
+      <b-nav v-b-scrollspy:page>
+        <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
+        <b-nav-item href="#driving-license">Home</b-nav-item>-->
+        <b-nav-item
+          v-for="nav in navigation"
+          :key="nav.name || nav.ime"
+          :href="'#' + [nav.url || nav.link]"
+          @click="toggle"
+        >{{ nav.name || nav.ime }}</b-nav-item>
+      </b-nav>
+    </div>
   </section>
 </template>
 
@@ -30,34 +32,38 @@ export default {
 .side {
   &-nav {
     position: fixed;
-    top: 50px;
-    bottom: 50px;
+    top: 0;
     left: 0;
     width: 80%;
+    height: 100vh;
     overflow-y: auto;
     z-index: 1;
 
-    .nav {
-      display: block;
+    &-wrapper {
+      padding: 50px 0;
 
-      &-item {
-        // background-image: $gradient-left;
-        padding: 0 30px 15px;
-        line-height: 24px;
+      .nav {
+        display: block;
 
-        &:last-child {
-          padding-bottom: 0;
+        &-item {
+          // background-image: $gradient-left;
+          padding: 0 30px 15px;
+          line-height: 24px;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
         }
-      }
 
-      &-link {
-        color: var(--bg-color-mode) !important;
-        font-size: 24px;
-        padding: 0;
-        transition: $transition-2;
+        &-link {
+          color: var(--bg-color-mode) !important;
+          font-size: 24px;
+          padding: 0;
+          transition: $transition-2;
 
-        &.active {
-          font-weight: 700;
+          &.active {
+            font-weight: 700;
+          }
         }
       }
     }

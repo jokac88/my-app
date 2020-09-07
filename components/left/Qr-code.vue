@@ -22,6 +22,11 @@ export default {
   .svg {
     width: 100px;
     height: 100px;
+
+    .rect {
+      transition: $transition-2;
+      fill: var(--bg-qr);
+    }
   }
 }
 </style>

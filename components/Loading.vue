@@ -52,6 +52,7 @@ export default {
     position: absolute;
     width: 189px;
     height: 189px;
+    fill: yellow;
 
     @include media-breakpoint-down(sm) {
       width: 126px;

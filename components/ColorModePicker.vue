@@ -8,6 +8,7 @@
         :class="[getClasses(color), color]"
       >
         <component :is="`icon-${color}`" />
+        <span class="mode-name">{{ color | capitalize }}</span>
       </li>
     </ul>
   </section>
@@ -49,9 +50,14 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 200px;
+  width: 60px;
+  height: 240px;
   z-index: 3;
+  background-image: $gradient-right;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+  border-bottom-right-radius: 3px;
 
   @include media-breakpoint-down(sm) {
     top: auto;
@@ -59,6 +65,10 @@ export default {
     width: 80%;
     height: 50px;
     z-index: 2;
+    -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
+    border-bottom-right-radius: 0;
   }
 
   &-ul {
@@ -74,30 +84,54 @@ export default {
     .dark,
     .sepia {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 50px;
+      height: 60px;
       width: 100%;
-      background-color: var(--bg-color-mode);
       cursor: pointer;
-      transition: $transition;
+      z-index: 1;
+      border-bottom: 1px solid var(--color-mode-active);
+      transition: $transition-2;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include media-breakpoint-down(sm) {
+        height: 50px;
+        border-right: 1px solid var(--color-mode-active);
+        border-bottom: none;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
 
       @include media-breakpoint-up(md) {
-        &:hover {
-          width: calc(100% + 15px);
+        &:not(.preferred):hover {
+          .feather {
+            left: 5px;
+          }
         }
       }
 
       &.preferred {
         .feather {
-          color: var(--color-mode-active);
-          transition: $transition-2;
+          fill: var(--color-mode-active);
         }
       }
 
       .feather {
-        color: var(--color-mode);
+        position: relative;
+        left: 0;
+        fill: var(--color-mode);
         transition: $transition-2;
+        margin-bottom: 2px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 0;
+        }
       }
     }
   }
