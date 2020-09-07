@@ -82,8 +82,8 @@ export default {
       short_name: "ij-app"
     },
     meta: {
-      viewport:
-        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no",
+      // viewport:
+      //   "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no",
       name: "Ivan Jovkovic | Front-End Developer",
       theme_color: "#007db3",
       author: "Ivan Jovkovic",
