@@ -1,6 +1,5 @@
 <template>
-  <section id="page" class="page" :class="{ active : isToggle }" @click="toggle">
-    <!-- <SideNav :navigation="data.navigation || data.navigacija" /> -->
+  <section id="page" class="page" :class="{ active : isToggle }">
     <b-container class="p-0">
       <b-col class="page-col px-0" lg="10">
         <b-row no-gutters>
@@ -97,13 +96,6 @@ export default {
     Education,
     EmploymentHistory,
     TechnicalSkills,
-  },
-  methods: {
-    toggle() {
-      if (this.isToggle) {
-        this.$store.commit("store/SET_TOGGLE");
-      }
-    },
   },
   computed: mapState({
     isToggle: (state) => state.store.isToggle,

@@ -4,7 +4,10 @@
     <b-collapse id="hobbies" visible>
       <div class="hobbies-wrapper">
         <ul>
-          <li v-for="hobby in hobbies" :key="hobby">{{ hobby }}</li>
+          <li v-for="hobby in hobbies" :key="hobby">
+            <Arrow class="arrow" />
+            {{ hobby }}
+          </li>
         </ul>
       </div>
     </b-collapse>
@@ -13,6 +16,7 @@
 
 <script>
 import Header from "@/components/left/Header.vue";
+import Arrow from "@/assets/svg/arrow.svg?inline";
 
 export default {
   props: {
@@ -20,6 +24,7 @@ export default {
   },
   components: {
     Header,
+    Arrow,
   },
 };
 </script>
@@ -27,11 +32,12 @@ export default {
 <style lang="scss">
 .hobbies {
   &-wrapper {
-    padding: 0 50px 20px;
+    padding: 0 30px 20px;
   }
 
   li {
-    position: relative;
+    display: flex;
+    align-items: center;
     font-size: 18px;
     margin: 15px 0;
     padding: 0;
@@ -44,15 +50,15 @@ export default {
       margin-bottom: 0;
     }
 
-    &:before {
-      content: " ";
-      position: absolute;
-      top: 4.5px;
-      left: -25px;
-      width: 18px;
-      height: 18px;
-      background: url("~assets/arrow.png") center no-repeat;
-      background-size: cover;
+    .arrow {
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+
+      polygon {
+        transition: $transition-2;
+        fill: var(--color-left);
+      }
     }
   }
 }

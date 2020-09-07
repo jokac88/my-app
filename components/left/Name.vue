@@ -27,6 +27,8 @@ export default {
   h1 {
     text-align: center;
     letter-spacing: 3px;
+    color: var(--bg);
+    transition: $transition-2;
   }
 }
 </style>

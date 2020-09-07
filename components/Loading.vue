@@ -34,7 +34,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg);
+  background: url("~assets/background.png") var(--bg) center repeat;
   z-index: 5;
 
   .loader {

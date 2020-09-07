@@ -102,7 +102,7 @@ export default {
         }
 
         &:after {
-          background-color: var(--bg-button);
+          background-color: var(--bg-button-2);
         }
       }
     }

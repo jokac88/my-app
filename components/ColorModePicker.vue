@@ -8,7 +8,15 @@
         :class="[getClasses(color), color]"
       >
         <component :is="`icon-${color}`" />
-        <span class="mode-name">{{ color | capitalize }}</span>
+        <template v-if="$route.path === '/'">
+          <span class="mode-name">{{ color | capitalize }}</span>
+        </template>
+        <template v-else>
+          <span v-if="color === 'system'" class="mode-name">Sistem</span>
+          <span v-if="color === 'light'" class="mode-name">Svetlo</span>
+          <span v-if="color === 'dark'" class="mode-name">Tamno</span>
+          <span v-if="color === 'sepia'" class="mode-name">Sepija</span>
+        </template>
       </li>
     </ul>
   </section>
@@ -91,7 +99,7 @@ export default {
       width: 100%;
       cursor: pointer;
       z-index: 1;
-      border-bottom: 1px solid var(--color-mode-active);
+      border-bottom: 1px solid var(--bg);
       transition: $transition-2;
 
       &:last-child {
@@ -100,7 +108,7 @@ export default {
 
       @include media-breakpoint-down(sm) {
         height: 50px;
-        border-right: 1px solid var(--color-mode-active);
+        border-right: 1px solid var(--color-mode);
         border-bottom: none;
 
         &:last-child {
@@ -118,20 +126,26 @@ export default {
 
       &.preferred {
         .feather {
-          fill: var(--color-mode-active);
+          fill: var(--color-mode);
         }
       }
 
       .feather {
         position: relative;
         left: 0;
-        fill: var(--color-mode);
+        color: var(--color-mode);
+        fill: transparent;
         transition: $transition-2;
         margin-bottom: 2px;
 
         @include media-breakpoint-down(sm) {
           margin-bottom: 0;
         }
+      }
+
+      .mode-name {
+        color: var(--color-mode);
+        transition: $transition-2;
       }
     }
   }

@@ -37,8 +37,9 @@ export default {
   &-inner,
   &-inner:before,
   &-inner:after {
-    background-color: $white;
+    background-color: var(--bg);
     height: 3px;
+    transition: $transition-2 !important;
   }
 }
 </style>

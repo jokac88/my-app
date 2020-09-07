@@ -56,6 +56,11 @@ export default {
       -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
     }
+
+    h4 {
+      color: var(--bg);
+      transition: $transition-2;
+    }
   }
 }
 </style>

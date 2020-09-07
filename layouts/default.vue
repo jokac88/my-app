@@ -3,6 +3,8 @@
     <NavBar />
     <SideNav :navigation="navigation" />
     <ColorModePicker />
+    <CloseSideNav />
+    <BackToTop />
     <transition name="toggle">
       <Nuxt />
     </transition>
@@ -14,6 +16,8 @@ import { mapState } from "vuex";
 import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
 import ColorModePicker from "@/components/ColorModePicker.vue";
+import CloseSideNav from "@/components/CloseSideNav.vue";
+import BackToTop from "@/components/BackToTop.vue";
 
 export default {
   head() {
@@ -27,6 +31,8 @@ export default {
     NavBar,
     SideNav,
     ColorModePicker,
+    CloseSideNav,
+    BackToTop,
   },
   computed: mapState({
     navigation: (state) =>
@@ -37,14 +43,5 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.toggle-enter-active,
-.toggle-leave-active {
-  transform: translate3d(0, 0, 0);
-}
-.toggle-enter,
-.toggle-leave-active {
-  transform: translate3d(80%, 0, 0);
-}
-</style>
+<style lang="scss"></style>
 

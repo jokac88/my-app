@@ -23,7 +23,7 @@ export default {
 
   .btn-portfolio {
     background-image: $gradient-right;
-    color: var(--color-left) !important;
+    color: var(--bg) !important;
     font-weight: bold;
     letter-spacing: 1px;
     position: relative;
