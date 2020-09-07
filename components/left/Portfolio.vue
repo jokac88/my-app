@@ -1,6 +1,10 @@
 <template>
   <section class="portfolio">
-    <router-link :to="{ name: 'portfolio' }" class="btn btn-portfolio" target="_blank">Portfolio</router-link>
+    <a
+      href="https://jokac88.github.io/portfolio"
+      class="btn btn-portfolio"
+      target="_blank"
+    >Portfolio</a>
   </section>
 </template>
 
