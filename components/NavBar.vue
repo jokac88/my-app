@@ -73,6 +73,10 @@ export default {
     @include media-breakpoint-down(sm) {
       transform: translate3d(80%, 0, 0);
     }
+
+    @include media-breakpoint-only(sm) {
+      transform: translate3d(60%, 0, 0);
+    }
   }
 
   .links {

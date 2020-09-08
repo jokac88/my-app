@@ -79,6 +79,10 @@ export default {
     border-bottom-right-radius: 0;
   }
 
+  @include media-breakpoint-only(sm) {
+    width: 60%;
+  }
+
   &-ul {
     @include media-breakpoint-down(sm) {
       display: flex;
@@ -119,7 +123,7 @@ export default {
       @include media-breakpoint-up(md) {
         &:not(.preferred):hover {
           .feather {
-            left: 5px;
+            left: 10px;
           }
         }
       }

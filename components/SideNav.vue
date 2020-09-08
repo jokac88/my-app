@@ -36,33 +36,35 @@ export default {
     left: 0;
     width: 80%;
     height: 100vh;
-    overflow-y: auto;
     z-index: 1;
+    overflow-y: auto;
+
+    @include media-breakpoint-only(sm) {
+      width: 60%;
+    }
 
     &-wrapper {
       padding: 50px 0;
 
       .nav {
         display: block;
+        overflow-y: auto;
 
         &-item {
-          // background-image: $gradient-left;
-          padding: 0 30px 15px;
           line-height: 24px;
-
-          &:last-child {
-            padding-bottom: 0;
-          }
+          text-align: center;
         }
 
         &-link {
+          display: block;
           color: var(--bg-color-mode) !important;
+          padding: 10px 30px;
           font-size: 24px;
-          padding: 0;
           transition: $transition-2;
 
           &.active {
-            font-weight: 700;
+            background-image: $gradient-left;
+            color: var(--bg) !important;
           }
         }
       }

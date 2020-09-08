@@ -33,6 +33,10 @@ export default {
     width: 100%;
     transform: translate3d(80%, 0, 0);
     background-color: rgba($black, 0.6);
+
+    @include media-breakpoint-only(sm) {
+      transform: translate3d(60%, 0, 0);
+    }
   }
 
   &.no-active {

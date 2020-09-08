@@ -36,6 +36,7 @@ body {
 .dark-mode {
   --color-right: #{$white};
   --color-mode: #{$black};
+  --color-nuxt-js: #{$pickled-bluewood-2};
   --bg: #{$pickled-bluewood-2};
   --bg-left: #{$pickled-bluewood-2};
   --bg-right: #{$pickled-bluewood};
@@ -55,6 +56,12 @@ body {
   --bg-qr: #{$parchment};
   --bg-button-2: #{$parchment};
   --border-color: #{$orient};
+}
+
+.container {
+  @include media-breakpoint-only(sm) {
+    max-width: 100%;
+  }
 }
 
 *,

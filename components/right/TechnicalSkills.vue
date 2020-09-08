@@ -63,5 +63,9 @@ export default {
     text-align: center;
     margin-bottom: 10px;
   }
+
+  .p-nuxt-js {
+    color: var(--color-nuxt-js) !important;
+  }
 }
 </style>

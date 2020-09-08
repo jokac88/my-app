@@ -112,13 +112,17 @@ export default {
   transition: $transition-2;
   z-index: 2;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     padding: 50px 0 0;
   }
 
   &.active {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       transform: translate3d(80%, 0, 0);
+    }
+
+    @include media-breakpoint-only(sm) {
+      transform: translate3d(60%, 0, 0);
     }
   }
 
@@ -130,7 +134,7 @@ export default {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       margin: 0 auto;
       border: none;
     }
