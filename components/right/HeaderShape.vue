@@ -41,6 +41,7 @@ export default {
     -moz-border-image: $gradient-right;
     -webkit-border-image: $gradient-right;
     border-image: $gradient-right;
+    -webkit-border-image-slice: 1;
     border-image-slice: 1;
 
     .shape {
@@ -51,9 +52,9 @@ export default {
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      background-image: $gradient-right;
       -moz-background-image: $gradient-right;
       -webkit-background-image: $gradient-right;
+      background-image: $gradient-right;
     }
 
     &-wrapper {

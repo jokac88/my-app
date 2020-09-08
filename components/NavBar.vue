@@ -52,6 +52,10 @@ export default {
   right: 15px;
   width: 60px;
   z-index: 3;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
   transition: $transition-2;
 
   @include media-breakpoint-down(sm) {
@@ -64,7 +68,11 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    -moz-background-image: $gradient-right;
+    -webkit-background-image: $gradient-right;
     background-image: $gradient-right;
+    -webkit-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
+    -moz-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
   }
@@ -88,6 +96,10 @@ export default {
 
     a {
       margin-bottom: 15px;
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -o-transition: $transition;
+      -ms-transition: $transition;
       transition: $transition;
 
       &.active {
@@ -117,6 +129,10 @@ export default {
         -webkit-border-radius: 3px;
         border-radius: 3px;
         opacity: 0.5;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+        -ms-transition: $transition;
         transition: $transition;
 
         @include media-breakpoint-up(md) {

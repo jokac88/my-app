@@ -54,6 +54,10 @@ export default {
 
       @include media-breakpoint-up(lg) {
         opacity: 0.5;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+        -ms-transition: $transition;
         transition: $transition;
 
         &:hover {

@@ -56,8 +56,12 @@ export default {
       margin-right: 10px;
 
       polygon {
-        transition: $transition-2;
         fill: var(--color-left);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
       }
     }
   }

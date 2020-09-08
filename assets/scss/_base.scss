@@ -9,6 +9,10 @@ body {
   margin: 0 auto;
   position: relative;
   background: url("~assets/background.png") var(--bg) center repeat;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
   transition: $transition-2;
 }
 
@@ -94,6 +98,8 @@ p {
 }
 
 :focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
   box-shadow: none !important;
   outline: none !important;
 }

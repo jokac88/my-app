@@ -60,10 +60,16 @@ export default {
           color: var(--bg-color-mode) !important;
           padding: 10px 30px;
           font-size: 24px;
+          -webkit-transition: $transition-2;
+          -moz-transition: $transition-2;
+          -o-transition: $transition-2;
+          -ms-transition: $transition-2;
           transition: $transition-2;
 
           &.active {
-            background-image: $gradient-left;
+            -moz-background-image: $gradient-right;
+            -webkit-background-image: $gradient-right;
+            background-image: $gradient-right;
             color: var(--bg) !important;
           }
         }

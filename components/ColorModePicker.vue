@@ -61,6 +61,8 @@ export default {
   width: 60px;
   height: 240px;
   z-index: 3;
+  -moz-background-image: $gradient-right;
+  -webkit-background-image: $gradient-right;
   background-image: $gradient-right;
   -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
@@ -104,6 +106,10 @@ export default {
       cursor: pointer;
       z-index: 1;
       border-bottom: 1px solid var(--bg);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
       transition: $transition-2;
 
       &:last-child {
@@ -139,6 +145,10 @@ export default {
         left: 0;
         color: var(--color-mode);
         fill: transparent;
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
         transition: $transition-2;
         margin-bottom: 2px;
 
@@ -149,6 +159,10 @@ export default {
 
       .mode-name {
         color: var(--color-mode);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
         transition: $transition-2;
       }
     }

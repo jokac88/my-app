@@ -26,6 +26,10 @@ export default {
   left: 0;
   width: 0;
   height: 100vh;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
   transition: $transition-2;
   z-index: 3;
 

@@ -109,6 +109,10 @@ export default {
   position: relative;
   background-color: transparent;
   // height: 1500px;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
   transition: $transition-2;
   z-index: 2;
 
@@ -142,12 +146,20 @@ export default {
     .left {
       background-color: var(--bg-left);
       color: var(--color-left);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
       transition: $transition-2;
     }
 
     .right {
       background-color: var(--bg-right);
       color: var(--color-right);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
       transition: $transition-2;
 
       &-wrapper {

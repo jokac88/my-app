@@ -22,6 +22,8 @@ export default {
   margin-bottom: 20px;
 
   .btn-portfolio {
+    -moz-background-image: $gradient-right;
+    -webkit-background-image: $gradient-right;
     background-image: $gradient-right;
     color: var(--bg) !important;
     font-weight: bold;
@@ -31,6 +33,9 @@ export default {
     padding: 10px 20px;
     border-radius: 5px;
     -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
     transition: $transition-2;
     z-index: 1;
 
@@ -47,6 +52,8 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
+      -moz-background-image: $gradient-left;
+      -webkit-background-image: $gradient-left;
       background-image: $gradient-left;
       -webkit-transition: $transition-2;
       transition: $transition-2;

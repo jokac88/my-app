@@ -41,8 +41,12 @@ export default {
       float: none;
 
       &::after {
-        transition: $transition-2;
         background-color: var(--bg);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
       }
 
       .logo {

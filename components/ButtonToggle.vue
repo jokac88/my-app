@@ -55,11 +55,14 @@ export default {
       width: 32px;
       height: 19px;
       border-radius: 33px;
-      background-image: $gradient-right;
       -moz-background-image: $gradient-right;
       -webkit-background-image: $gradient-right;
-      transition: $transition-2;
+      background-image: $gradient-right;
       -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
       visibility: hidden;
       opacity: 0;
     }
@@ -70,8 +73,11 @@ export default {
       width: 32px;
       height: 19px;
       border-radius: 33px;
-      transition: $transition-2;
       -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
     }
 
     &[aria-expanded="false"] {
@@ -114,8 +120,11 @@ export default {
       width: 32px;
       height: 19px;
       border-radius: 50%;
-      transition: $transition-2;
       -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
 
       &:before {
         content: "";
@@ -124,12 +133,15 @@ export default {
         left: 3px;
         height: 13px;
         width: 13px;
-        background-image: $gradient-right;
         -moz-background-image: $gradient-right;
         -webkit-background-image: $gradient-right;
+        background-image: $gradient-right;
         border-radius: 33px;
-        transition: $transition-2;
         -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
         visibility: hidden;
         opacity: 0;
         z-index: 1;
@@ -143,8 +155,11 @@ export default {
         height: 13px;
         width: 13px;
         border-radius: 50%;
-        transition: $transition-2;
         -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
         z-index: 1;
       }
     }

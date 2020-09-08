@@ -101,6 +101,10 @@ export default {
 
   a {
     border-bottom: 1px solid transparent;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
     transition: $transition;
 
     &:hover {

@@ -24,8 +24,12 @@ export default {
     height: 100px;
 
     .rect {
-      transition: $transition-2;
       fill: var(--bg-qr);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
     }
   }
 }

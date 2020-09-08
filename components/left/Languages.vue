@@ -47,7 +47,13 @@ export default {
     -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 10px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
     transition: $transition-2;
 
     & > span {
@@ -56,21 +62,13 @@ export default {
       -moz-border-radius: 20px;
       -webkit-border-radius: 20px;
       border-radius: 20px;
+      -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2);
+      -moz-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2);
       box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2),
         inset 0 -2px 6px rgba(0, 0, 0, 0.4);
       position: relative;
       overflow: hidden;
       background-size: 30px 30px;
-      background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.15) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 75%,
-        transparent
-      );
       -moz-background-image: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
@@ -82,6 +80,16 @@ export default {
         transparent
       );
       -webkit-background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-image: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
