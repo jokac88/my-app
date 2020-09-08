@@ -68,9 +68,9 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-    -moz-background-image: $gradient-right;
-    -webkit-background-image: $gradient-right;
-    background-image: $gradient-right;
+    -moz-background: $gradient-right;
+    -webkit-background: $gradient-right;
+    background: $gradient-right;
     -webkit-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
     -moz-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),

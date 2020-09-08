@@ -67,9 +67,9 @@ export default {
           transition: $transition-2;
 
           &.active {
-            -moz-background-image: $gradient-right;
-            -webkit-background-image: $gradient-right;
-            background-image: $gradient-right;
+            -moz-background: $gradient-right;
+            -webkit-background: $gradient-right;
+            background: $gradient-right;
             color: var(--bg) !important;
           }
         }

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="{ dark : isDarkMode }">
     <div class="header-wrapper">
       <div class="heading">
         <img
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import ButtonToggle from "@/components/ButtonToggle.vue";
 
 export default {
@@ -26,15 +27,45 @@ export default {
     heading: String,
     property: String,
   },
+  computed: mapState({
+    isDarkMode: (state) => state.store.isDarkMode,
+  }),
 };
 </script>
 
 <style lang="scss">
 .header {
+  position: relative;
   margin-bottom: 20px;
-  -moz-background-image: $gradient-right;
-  -webkit-background-image: $gradient-right;
-  background-image: $gradient-right;
+  -moz-background: $gradient-right;
+  -webkit-background: $gradient-right;
+  background: $gradient-right;
+  z-index: 1;
+
+  &.dark {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -moz-background: $gradient-right-dark;
+    -webkit-background: $gradient-right-dark;
+    background: $gradient-right-dark;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
+    z-index: -1;
+  }
 
   &-wrapper {
     display: flex;
@@ -55,15 +86,6 @@ export default {
       -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-    }
-
-    h4 {
-      color: var(--bg);
-      -webkit-transition: $transition-2;
-      -moz-transition: $transition-2;
-      -o-transition: $transition-2;
-      -ms-transition: $transition-2;
-      transition: $transition-2;
     }
   }
 }

@@ -3,7 +3,8 @@ import axios from "@/services/axios.js";
 export const state = () => ({
   data: {},
   isLoading: false,
-  isToggle: false
+  isToggle: false,
+  isDarkMode: false
 });
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   SET_TOGGLE(state) {
     state.isToggle = !state.isToggle;
+  },
+  SET_DARK_MODE(state, darkMode) {
+    state.isDarkMode = darkMode;
   }
 };
 

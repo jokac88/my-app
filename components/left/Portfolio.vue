@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio">
+  <section class="portfolio" :class="{ dark : isDarkMode }">
     <a
       href="https://jokac88.github.io/portfolio"
       class="btn btn-portfolio"
@@ -9,10 +9,15 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   props: {
     data: Object,
   },
+  computed: mapState({
+    isDarkMode: (state) => state.store.isDarkMode,
+  }),
 };
 </script>
 
@@ -22,24 +27,25 @@ export default {
   margin-bottom: 20px;
 
   .btn-portfolio {
-    -moz-background-image: $gradient-right;
-    -webkit-background-image: $gradient-right;
-    background-image: $gradient-right;
-    color: var(--bg) !important;
+    position: relative;
+    color: var(--color-left) !important;
+    -moz-background: var(--bg-gradient);
+    -webkit-background: var(--bg-gradient);
+    background: var(--bg-gradient);
     font-weight: bold;
     letter-spacing: 1px;
-    position: relative;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    -webkit-transition: $transition-2;
-    -moz-transition: $transition-2;
-    -o-transition: $transition-2;
-    -ms-transition: $transition-2;
-    transition: $transition-2;
     z-index: 1;
 
     &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &.dark {
       &:after {
         opacity: 1;
       }
@@ -52,13 +58,16 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      -moz-background-image: $gradient-left;
-      -webkit-background-image: $gradient-left;
-      background-image: $gradient-left;
-      -webkit-transition: $transition-2;
-      transition: $transition-2;
       border-radius: 5px;
       opacity: 0;
+      -moz-background: var(--bg-gradient-after);
+      -webkit-background: var(--bg-gradient-after);
+      background: var(--bg-gradient-after);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
       z-index: -1;
     }
   }

@@ -51,6 +51,12 @@ export default {
       display: block;
       height: 100%;
       padding: 10px;
+      color: var(--color-left) !important;
+      -webkit-transition: $transition-2 !important;
+      -moz-transition: $transition-2 !important;
+      -o-transition: $transition-2 !important;
+      -ms-transition: $transition-2 !important;
+      transition: $transition-2 !important;
 
       @include media-breakpoint-up(lg) {
         opacity: 0.5;

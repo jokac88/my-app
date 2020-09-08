@@ -55,9 +55,9 @@ export default {
       width: 32px;
       height: 19px;
       border-radius: 33px;
-      -moz-background-image: $gradient-right;
-      -webkit-background-image: $gradient-right;
-      background-image: $gradient-right;
+      -moz-background: $gradient-right;
+      -webkit-background: $gradient-right;
+      background: $gradient-right;
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
       -o-transition: $transition-2;
@@ -133,9 +133,9 @@ export default {
         left: 3px;
         height: 13px;
         width: 13px;
-        -moz-background-image: $gradient-right;
-        -webkit-background-image: $gradient-right;
-        background-image: $gradient-right;
+        -moz-background: $gradient-right;
+        -webkit-background: $gradient-right;
+        background: $gradient-right;
         border-radius: 33px;
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;

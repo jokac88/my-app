@@ -69,7 +69,7 @@ export default {
       position: relative;
       overflow: hidden;
       background-size: 30px 30px;
-      -moz-background-image: linear-gradient(
+      -moz-background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
@@ -79,7 +79,7 @@ export default {
         transparent 75%,
         transparent
       );
-      -webkit-background-image: linear-gradient(
+      -webkit-background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
@@ -89,7 +89,7 @@ export default {
         transparent 75%,
         transparent
       );
-      background-image: linear-gradient(
+      background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
@@ -114,7 +114,7 @@ export default {
   }
 
   .level {
-    padding: 0 10px 20px;
+    padding: 5px 10px 20px;
     text-align: right;
 
     &:last-child {

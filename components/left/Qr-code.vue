@@ -20,8 +20,8 @@ export default {
   margin-bottom: 20px;
 
   .svg {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
     .rect {
       fill: var(--bg-qr);

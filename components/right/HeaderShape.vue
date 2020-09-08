@@ -52,9 +52,9 @@ export default {
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      -moz-background-image: $gradient-right;
-      -webkit-background-image: $gradient-right;
-      background-image: $gradient-right;
+      -moz-background: $gradient-right;
+      -webkit-background: $gradient-right;
+      background: $gradient-right;
     }
 
     &-wrapper {

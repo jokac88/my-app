@@ -4,7 +4,7 @@
       <li
         v-for="color of colors"
         :key="color"
-        @click="$colorMode.preference = color"
+        @click="$colorMode.preference = color, darkMode(color)"
         :class="[getClasses(color), color]"
       >
         <component :is="`icon-${color}`" />
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import IconSystem from "@/assets/svg/system.svg?inline";
 import IconLight from "@/assets/svg/light.svg?inline";
 import IconDark from "@/assets/svg/dark.svg?inline";
@@ -49,7 +50,17 @@ export default {
         selected: color === this.$colorMode.value,
       };
     },
+    darkMode(color) {
+      if (color === "dark") {
+        this.$store.commit("store/SET_DARK_MODE", true);
+      } else {
+        this.$store.commit("store/SET_DARK_MODE", false);
+      }
+    },
   },
+  computed: mapState({
+    isDarkMode: (state) => state.store.isDarkMode,
+  }),
 };
 </script>
 
@@ -61,9 +72,9 @@ export default {
   width: 60px;
   height: 240px;
   z-index: 3;
-  -moz-background-image: $gradient-right;
-  -webkit-background-image: $gradient-right;
-  background-image: $gradient-right;
+  -moz-background: $gradient-right;
+  -webkit-background: $gradient-right;
+  background: $gradient-right;
   -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);

@@ -24,41 +24,45 @@ body {
 }
 
 :root {
-  --color-left: #{$white};
-  --color-right: #{$lochmara};
-  --color-mode: #{$white};
   --bg: #{$white};
   --bg-left: #{$lochmara};
   --bg-right: #{$white};
   --bg-qr: #{$white};
   --bg-button: #{$concrete};
-  --bg-button-2: #{$concrete};
+  --bg-button-2: #{$white};
   --bg-meter: #{$orient};
+  --bg-gradient: #{$gradient-right};
+  --bg-gradient-after: #{$gradient-left};
+  --color-left: #{$white};
+  --color-right: #{$lochmara};
+  --color-mode: #{$white};
   --border-color: #{$white};
 }
 
 .dark-mode {
-  --color-right: #{$white};
-  --color-mode: #{$black};
-  --color-nuxt-js: #{$pickled-bluewood-2};
   --bg: #{$pickled-bluewood-2};
   --bg-left: #{$pickled-bluewood-2};
   --bg-right: #{$pickled-bluewood};
   --bg-qr: #{$pickled-bluewood};
-  --bg-button: #{$black};
-  --bg-button-2: #{$black};
+  --bg-button: #{$pickled-bluewood-2};
+  --bg-button-2: #{$pickled-bluewood-2};
   --bg-meter: #{$pickled-bluewood};
-  --bg-color-mode: #{$white};
+  --bg-gradient: #{$gradient-right-dark};
+  --bg-gradient-after: #{$gradient-left-dark};
+  --color-right: #{$white};
+  --color-mode: #{$black};
+  --color-nuxt-js: #{$pickled-bluewood-2};
   --border-color: #{$pickled-bluewood};
 }
 
 .sepia-mode {
-  --color-left: #{$parchment};
-  --color-mode: #{$parchment};
   --bg: #{$parchment};
   --bg-right: #{$parchment};
   --bg-qr: #{$parchment};
+  --bg-button: #{$concrete};
   --bg-button-2: #{$parchment};
+  --color-left: #{$parchment};
+  --color-mode: #{$parchment};
   --border-color: #{$parchment};
 }
 
@@ -78,8 +82,7 @@ body {
 
 a {
   text-decoration: none !important;
-  display: inline-block;
-  color: $white !important;
+  display: block;
 }
 
 img {
