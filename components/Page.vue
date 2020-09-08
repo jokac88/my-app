@@ -132,11 +132,16 @@ export default {
 
   .page-col {
     margin: 0 auto;
-    background-color: var(--bg-page);
-    border: 3px double $orient;
+    background-color: transparent;
+    border: 3px double var(--bg-left);
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
 
     @include media-breakpoint-down(sm) {
       margin: 0 auto;

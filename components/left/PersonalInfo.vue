@@ -108,7 +108,7 @@ export default {
     transition: $transition;
 
     &:hover {
-      border-color: $white;
+      border-color: var(--color-left);
     }
 
     &.link {

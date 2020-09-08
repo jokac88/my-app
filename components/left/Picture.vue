@@ -31,10 +31,15 @@ export default {
   .image {
     width: 150px;
     height: 180px;
-    border: 3px double $orient;
+    border: 3px double var(--border-color);
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
   }
 }
 </style>
