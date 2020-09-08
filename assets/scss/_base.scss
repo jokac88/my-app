@@ -25,16 +25,16 @@ body {
 
 :root {
   --color-left: #{$white};
-  --color-right: #{$orient};
+  --color-right: #{$lochmara};
   --color-mode: #{$white};
   --bg: #{$white};
-  --bg-left: #{$deep-cerulean};
+  --bg-left: #{$lochmara};
   --bg-right: #{$white};
   --bg-qr: #{$white};
   --bg-button: #{$concrete};
   --bg-button-2: #{$concrete};
   --bg-meter: #{$orient};
-  --border-color: #{$orient};
+  --border-color: #{$white};
 }
 
 .dark-mode {
@@ -49,7 +49,7 @@ body {
   --bg-button-2: #{$black};
   --bg-meter: #{$pickled-bluewood};
   --bg-color-mode: #{$white};
-  --border-color: #{$white};
+  --border-color: #{$pickled-bluewood};
 }
 
 .sepia-mode {
@@ -59,7 +59,7 @@ body {
   --bg-right: #{$parchment};
   --bg-qr: #{$parchment};
   --bg-button-2: #{$parchment};
-  --border-color: #{$orient};
+  --border-color: #{$parchment};
 }
 
 .container {
