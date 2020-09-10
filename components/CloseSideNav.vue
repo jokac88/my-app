@@ -29,9 +29,8 @@ export default {
   position: fixed;
   top: 50px;
   left: 0;
-  bottom: 0;
   width: 100%;
-  // height: 100vh;
+  height: 100vh;
   background-color: rgba($black, 0.6);
 
   // -webkit-transition: $transition-2;
