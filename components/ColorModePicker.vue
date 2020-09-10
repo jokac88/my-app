@@ -64,7 +64,7 @@ export default {
   left: 0;
   width: 60px;
   height: 240px;
-  z-index: 3;
+  z-index: 4;
   -moz-background: $gradient-right;
   -webkit-background: $gradient-right;
   background: $gradient-right;

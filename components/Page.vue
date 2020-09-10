@@ -113,7 +113,7 @@ export default {
   transition: $transition-2;
 
   @include media-breakpoint-down(sm) {
-    padding-top: 50px;
+    padding: 50px 0 0;
   }
 
   .page-col {

@@ -1,5 +1,10 @@
 <template>
-  <section class="close-nav d-md-none" @click="toggle" :class="isToggle ? 'active' : 'no-active'"></section>
+  <section
+    v-if="!isToggle"
+    class="close-nav d-md-none"
+    @click="toggle"
+    :class="isToggle ? 'active' : 'no-active'"
+  ></section>
 </template>
 
 <script>
@@ -24,78 +29,81 @@ export default {
   position: fixed;
   top: 50px;
   left: 0;
-  width: 0;
-  height: 100vh;
-  -webkit-transition: $transition-2;
-  -moz-transition: $transition-2;
-  -o-transition: $transition-2;
-  -ms-transition: $transition-2;
-  transition: $transition-2;
-  z-index: 4;
+  bottom: 0;
+  width: 100%;
+  // height: 100vh;
+  background-color: rgba($black, 0.6);
 
-  &.active {
-    width: 100%;
-    transform: translate3d(80%, 0, 0);
-    background-color: rgba($black, 0.6);
+  // -webkit-transition: $transition-2;
+  // -moz-transition: $transition-2;
+  // -o-transition: $transition-2;
+  // -ms-transition: $transition-2;
+  // transition: $transition-2;
+  z-index: 5;
 
-    @include media-breakpoint-only(sm) {
-      transform: translate3d(60%, 0, 0);
-    }
-  }
+  // &.active {
+  //   width: 100%;
+  //   transform: translate3d(80%, 0, 0);
+  //   background-color: rgba($black, 0.6);
 
-  &.no-active {
-    -webkit-animation: 0.5s linear no-activeBckg forwards;
-    animation: 0.5s linear no-activeBckg forwards;
+  //   @include media-breakpoint-only(sm) {
+  //     transform: translate3d(60%, 0, 0);
+  //   }
+  // }
 
-    @keyframes no-activeBckg {
-      0% {
-        width: 100%;
-      }
+  // &.no-active {
+  //   -webkit-animation: 0.5s linear no-activeBckg forwards;
+  //   animation: 0.5s linear no-activeBckg forwards;
 
-      10% {
-        width: 100%;
-      }
+  //   @keyframes no-activeBckg {
+  //     0% {
+  //       width: 100%;
+  //     }
 
-      20% {
-        width: 100%;
-      }
+  //     10% {
+  //       width: 100%;
+  //     }
 
-      30% {
-        width: 100%;
-      }
+  //     20% {
+  //       width: 100%;
+  //     }
 
-      40% {
-        width: 100%;
-      }
+  //     30% {
+  //       width: 100%;
+  //     }
 
-      50% {
-        width: 100%;
-      }
+  //     40% {
+  //       width: 100%;
+  //     }
 
-      60% {
-        width: 100%;
-      }
+  //     50% {
+  //       width: 100%;
+  //     }
 
-      70% {
-        width: 100%;
-      }
+  //     60% {
+  //       width: 100%;
+  //     }
 
-      80% {
-        width: 100%;
-      }
+  //     70% {
+  //       width: 100%;
+  //     }
 
-      90% {
-        width: 100%;
-      }
+  //     80% {
+  //       width: 100%;
+  //     }
 
-      99% {
-        width: 100%;
-      }
+  //     90% {
+  //       width: 100%;
+  //     }
 
-      100% {
-        width: 0;
-      }
-    }
-  }
+  //     99% {
+  //       width: 100%;
+  //     }
+
+  //     100% {
+  //       width: 0;
+  //     }
+  //   }
+  // }
 }
 </style>

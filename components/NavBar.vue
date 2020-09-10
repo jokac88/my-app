@@ -51,7 +51,7 @@ export default {
   top: 15px;
   right: 15px;
   width: 60px;
-  z-index: 3;
+  z-index: 4;
   -webkit-transition: $transition-2;
   -moz-transition: $transition-2;
   -o-transition: $transition-2;
@@ -75,7 +75,6 @@ export default {
     -moz-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
-    z-index: 4;
   }
 
   &.active {
