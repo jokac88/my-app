@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <Header :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
+    <HeaderLeft :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
     <b-collapse id="projects" visible>
       <div class="projects-wrapper">
         <b-row>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Header from "@/components/left/Header.vue";
+import HeaderLeft from "@/components/left/HeaderLeft.vue";
 import Project from "@/components/Project.vue";
 
 export default {
@@ -25,7 +25,7 @@ export default {
     projects: Array,
   },
   components: {
-    Header,
+    HeaderLeft,
     Project,
   },
 };

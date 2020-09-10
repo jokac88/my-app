@@ -1,18 +1,21 @@
 <template>
-  <div class="header-shape">
-    <div class="shape">
-      <div class="header-shape-wrapper">
-        <img
-          :src="require('~/assets/icon/' + property + '.png')"
-          class="icon"
-          :alt="require('~/assets/icon/' + property + '.png')"
-          :title="heading"
-        />
-        <h4>{{ heading }}</h4>
+  <section class="header-right">
+    <div class="header-shape">
+      <div class="shape">
+        <div class="header-shape-wrapper">
+          <img
+            :src="require('~/assets/icon/' + property + '.png')"
+            class="icon"
+            :alt="require('~/assets/icon/' + property + '.png')"
+            :title="heading"
+          />
+          <h4>{{ heading }}</h4>
+        </div>
       </div>
+      <ButtonToggle :property="property" />
     </div>
-    <ButtonToggle :property="property" />
-  </div>
+    <hr class="hr-gradient" />
+  </section>
 </template>
 
 <script>
@@ -35,14 +38,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 5px solid transparent;
-    -moz-border-image: $gradient-right;
-    -webkit-border-image: $gradient-right;
-    border-image: $gradient-right;
-    -webkit-border-image-slice: 1;
-    border-image-slice: 1;
 
     .shape {
       margin-left: 15px;
@@ -65,7 +60,6 @@ export default {
       -webkit-transform: skew(30deg);
       -moz-transform: skew(30deg);
       transform: skew(30deg);
-      color: $white;
 
       .icon {
         width: 35px;
@@ -77,7 +71,11 @@ export default {
       }
 
       h4 {
-        color: var(--bg);
+        color: var(--color-left);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
         transition: $transition-2;
       }
     }

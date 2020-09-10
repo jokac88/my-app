@@ -1,6 +1,6 @@
 <template>
   <section class="languages">
-    <Header :heading="$route.path === '/' ? 'Languages' : 'Jezici'" property="languages" />
+    <HeaderLeft :heading="$route.path === '/' ? 'Languages' : 'Jezici'" property="languages" />
     <b-collapse id="languages" visible>
       <div class="languages-wrapper">
         <div v-for="language in languages" :key="language.language || language.jezik">
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import Header from "@/components/left/Header.vue";
+import HeaderLeft from "@/components/left/HeaderLeft.vue";
 
 export default {
   components: {
-    Header,
+    HeaderLeft,
   },
   props: {
     languages: Array,
@@ -50,11 +50,6 @@ export default {
     -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
     -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.2);
-    -webkit-transition: $transition-2;
-    -moz-transition: $transition-2;
-    -o-transition: $transition-2;
-    -ms-transition: $transition-2;
-    transition: $transition-2;
 
     & > span {
       display: block;
@@ -62,6 +57,7 @@ export default {
       -moz-border-radius: 20px;
       -webkit-border-radius: 20px;
       border-radius: 20px;
+      background-color: var(--bg-meter);
       -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2);
       -moz-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2);
       box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.2),
@@ -69,7 +65,7 @@ export default {
       position: relative;
       overflow: hidden;
       background-size: 30px 30px;
-      -moz-background: linear-gradient(
+      background-image: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
@@ -79,7 +75,7 @@ export default {
         transparent 75%,
         transparent
       );
-      -webkit-background: linear-gradient(
+      -moz-background-image: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,
@@ -89,7 +85,7 @@ export default {
         transparent 75%,
         transparent
       );
-      background: linear-gradient(
+      -webkit-background-image: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 25%,
         transparent 25%,

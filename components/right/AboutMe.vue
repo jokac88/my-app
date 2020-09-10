@@ -1,6 +1,6 @@
 <template>
   <section class="about-me">
-    <HeaderShape :heading="$route.path === '/' ? 'About Me' : 'O Meni'" property="about-me" />
+    <HeaderRight :heading="$route.path === '/' ? 'About Me' : 'O Meni'" property="about-me" />
     <b-collapse id="about-me" visible>
       <div class="about-me-wrapper">
         <p class="text">{{ aboutMe }}</p>
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import HeaderShape from "@/components/right/HeaderShape.vue";
+import HeaderRight from "@/components/right/HeaderRight.vue";
 
 export default {
   props: {
     aboutMe: String,
   },
   components: {
-    HeaderShape,
+    HeaderRight,
   },
 };
 </script>

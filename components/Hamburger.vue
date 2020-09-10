@@ -37,13 +37,8 @@ export default {
   &-inner,
   &-inner:before,
   &-inner:after {
-    background-color: var(--bg);
+    background-color: var(--color-left);
     height: 3px;
-    -webkit-transition: $transition-2 !important;
-    -moz-transition: $transition-2 !important;
-    -o-transition: $transition-2 !important;
-    -ms-transition: $transition-2 !important;
-    transition: $transition-2 !important;
   }
 }
 </style>

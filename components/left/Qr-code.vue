@@ -16,7 +16,9 @@ export default {
 
 <style lang="scss">
 .qr-code {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 
   .svg {

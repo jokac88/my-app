@@ -1,6 +1,6 @@
 <template>
   <section class="hobbies">
-    <Header :heading="$route.path === '/' ? 'Hobbies' : 'Hobiji'" property="hobbies" />
+    <HeaderLeft :heading="$route.path === '/' ? 'Hobbies' : 'Hobiji'" property="hobbies" />
     <b-collapse id="hobbies" visible>
       <div class="hobbies-wrapper">
         <ul>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Header from "@/components/left/Header.vue";
+import HeaderLeft from "@/components/left/HeaderLeft.vue";
 import Arrow from "@/assets/svg/arrow.svg?inline";
 
 export default {
@@ -23,7 +23,7 @@ export default {
     hobbies: Array,
   },
   components: {
-    Header,
+    HeaderLeft,
     Arrow,
   },
 };

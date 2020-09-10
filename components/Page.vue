@@ -1,7 +1,7 @@
 <template>
-  <section id="page" class="page" :class="{ active : isToggle }">
-    <b-container class="p-0">
-      <b-col class="page-col px-0" lg="10">
+  <b-container class="p-0">
+    <section class="page">
+      <b-col class="page-col px-0" lg="10" :class="{ active : isToggle }">
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -56,8 +56,8 @@
           </b-col>
         </b-row>
       </b-col>
-    </b-container>
-  </section>
+    </section>
+  </b-container>
 </template>
 
 <script>
@@ -106,37 +106,23 @@ export default {
 <style lang="scss">
 .page {
   padding: 15px 0;
-  position: relative;
-  background-color: transparent;
-  // height: 1500px;
   -webkit-transition: $transition-2;
   -moz-transition: $transition-2;
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  z-index: 2;
 
   @include media-breakpoint-down(sm) {
-    padding: 50px 0 0;
-  }
-
-  &.active {
-    @include media-breakpoint-down(sm) {
-      transform: translate3d(80%, 0, 0);
-    }
-
-    @include media-breakpoint-only(sm) {
-      transform: translate3d(60%, 0, 0);
-    }
+    padding-top: 50px;
   }
 
   .page-col {
     margin: 0 auto;
-    background-color: transparent;
     border: 3px double var(--bg-left);
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    z-index: 3;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;
@@ -144,8 +130,17 @@ export default {
     transition: $transition-2;
 
     @include media-breakpoint-down(sm) {
-      margin: 0 auto;
       border: none;
+    }
+
+    &.active {
+      @include media-breakpoint-down(sm) {
+        transform: translate3d(80%, 0, 0);
+      }
+
+      @include media-breakpoint-only(sm) {
+        transform: translate3d(60%, 0, 0);
+      }
     }
 
     .left {

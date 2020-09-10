@@ -24,7 +24,7 @@ body {
 }
 
 :root {
-  --bg: #{$white};
+  --bg: #{$concrete};
   --bg-left: #{$lochmara};
   --bg-right: #{$white};
   --bg-qr: #{$white};
@@ -35,7 +35,6 @@ body {
   --bg-gradient-after: #{$gradient-left};
   --color-left: #{$white};
   --color-right: #{$lochmara};
-  --color-mode: #{$white};
   --border-color: #{$white};
 }
 
@@ -47,11 +46,7 @@ body {
   --bg-button: #{$pickled-bluewood-2};
   --bg-button-2: #{$pickled-bluewood-2};
   --bg-meter: #{$pickled-bluewood};
-  --bg-gradient: #{$gradient-right-dark};
-  --bg-gradient-after: #{$gradient-left-dark};
   --color-right: #{$white};
-  --color-mode: #{$black};
-  --color-nuxt-js: #{$pickled-bluewood-2};
   --border-color: #{$pickled-bluewood};
 }
 
@@ -62,7 +57,6 @@ body {
   --bg-button: #{$concrete};
   --bg-button-2: #{$parchment};
   --color-left: #{$parchment};
-  --color-mode: #{$parchment};
   --border-color: #{$parchment};
 }
 
@@ -116,11 +110,19 @@ ul {
   }
 }
 
-hr {
-  position: relative;
+.hr-gradient {
   width: 100%;
-  margin: 0 0 20px;
-  border-bottom: 3px double transparent;
+  margin: 15px 0;
+  border: none;
+  border-bottom: 5px double;
+  -moz-border-image: $gradient-right;
+  -webkit-border-image: $gradient-right;
   border-image: $gradient-right;
+  -webkit-border-image-slice: 1;
   border-image-slice: 1;
+
+  &-small {
+    margin-top: 0;
+    border-width: 3px;
+  }
 }

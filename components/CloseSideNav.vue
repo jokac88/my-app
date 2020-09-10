@@ -31,7 +31,7 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  z-index: 3;
+  z-index: 4;
 
   &.active {
     width: 100%;

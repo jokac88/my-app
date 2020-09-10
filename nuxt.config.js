@@ -85,7 +85,7 @@ export default {
       viewport:
         "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no",
       name: "Ivan Jovkovic | Front-End Developer",
-      theme_color: "#007db3",
+      theme_color: "#0082c3",
       author: "Ivan Jovkovic",
       description:
         "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel"

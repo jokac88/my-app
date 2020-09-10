@@ -1,6 +1,6 @@
 <template>
   <section class="education">
-    <HeaderShape :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
+    <HeaderRight :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
     <b-collapse id="education" visible>
       <div class="education-wrapper">
         <b-row v-for="(education, index) in educations" :key="education.year || education.godina">
@@ -23,7 +23,7 @@
               >{{ technologies }}</li>
             </ul>
           </b-col>
-          <hr v-if="index !== educations.length - 1" />
+          <hr v-if="index !== educations.length - 1" class="hr-gradient hr-gradient-small" />
         </b-row>
       </div>
     </b-collapse>
@@ -31,14 +31,14 @@
 </template>
 
 <script>
-import HeaderShape from "@/components/right/HeaderShape.vue";
+import HeaderRight from "@/components/right/HeaderRight.vue";
 
 export default {
   props: {
     educations: Array,
   },
   components: {
-    HeaderShape,
+    HeaderRight,
   },
 };
 </script>

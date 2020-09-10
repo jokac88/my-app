@@ -290,7 +290,6 @@
   display: block;
   content: " ";
   border-radius: 50%;
-  background-color: #ffffff;
   width: 0.84em;
   height: 0.84em;
   -webkit-transition-property: all;
@@ -1266,11 +1265,11 @@
 
 .c100.nuxt-js .bar,
 .c100.nuxt-js .fill {
-  border-color: #2f495e !important;
+  border-color: #223544 !important;
 }
 
 .c100.nuxt-js:hover > span {
-  color: #2f495e;
+  color: #223544;
 }
 
 .c100.orange.dark .bar,

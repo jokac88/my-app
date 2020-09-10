@@ -1,6 +1,6 @@
 <template>
   <section class="technical-skills">
-    <HeaderShape
+    <HeaderRight
       :heading="$route.path === '/' ? 'Technical Skills' : 'Tehničke Veštine'"
       property="technical-skills"
     />
@@ -19,7 +19,7 @@
 
 <script>
 import { mapState } from "vuex";
-import HeaderShape from "@/components/right/HeaderShape.vue";
+import HeaderRight from "@/components/right/HeaderRight.vue";
 import TechnicalSkillsCircle from "@/components/TechnicalSkillsCircle.vue";
 
 export default {
@@ -27,7 +27,7 @@ export default {
     technicalSkills: Array,
   },
   components: {
-    HeaderShape,
+    HeaderRight,
     TechnicalSkillsCircle,
   },
 };
@@ -39,9 +39,10 @@ export default {
     .c100 {
       margin: 0 auto 25px;
       float: none;
+      font-size: 130px;
 
       &::after {
-        background-color: var(--bg);
+        background-color: var(--bg-right);
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;
         -o-transition: $transition-2;
@@ -50,7 +51,7 @@ export default {
       }
 
       .logo {
-        width: 70px;
+        width: 100px;
       }
     }
 
@@ -66,10 +67,6 @@ export default {
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
-  }
-
-  .p-nuxt-js {
-    color: var(--color-nuxt-js) !important;
   }
 }
 </style>

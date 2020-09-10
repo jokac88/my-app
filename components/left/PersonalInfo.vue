@@ -1,6 +1,6 @@
 <template>
   <section class="personal-info">
-    <Header
+    <HeaderLeft
       :heading="$route.path === '/' ? 'Personal Info' : 'Lični Podaci'"
       property="personal-info"
     />
@@ -69,14 +69,14 @@
 </template>
 
 <script>
-import Header from "@/components/left/Header.vue";
+import HeaderLeft from "@/components/left/HeaderLeft.vue";
 
 export default {
   props: {
     personalInfo: Object,
   },
   components: {
-    Header,
+    HeaderLeft,
   },
 };
 </script>

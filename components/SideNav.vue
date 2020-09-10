@@ -1,5 +1,5 @@
 <template>
-  <section class="side-nav d-md-none">
+  <section class="side-nav d-md-none" :class="{ active : isToggle }">
     <div class="side-nav-wrapper">
       <b-nav v-b-scrollspy:page>
         <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   props: {
     navigation: Array,
@@ -25,6 +27,9 @@ export default {
       this.$store.commit("store/SET_TOGGLE");
     },
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -36,8 +41,19 @@ export default {
     left: 0;
     width: 80%;
     height: 100vh;
-    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
     overflow-y: auto;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
     @include media-breakpoint-only(sm) {
       width: 60%;
@@ -57,9 +73,9 @@ export default {
 
         &-link {
           display: block;
-          color: var(--bg-color-mode) !important;
           padding: 10px 30px;
           font-size: 24px;
+          color: var(--color-right) !important;
           -webkit-transition: $transition-2;
           -moz-transition: $transition-2;
           -o-transition: $transition-2;
@@ -70,7 +86,7 @@ export default {
             -moz-background: $gradient-right;
             -webkit-background: $gradient-right;
             background: $gradient-right;
-            color: var(--bg) !important;
+            color: var(--color-left) !important;
           }
         }
       }

@@ -1,6 +1,6 @@
 <template>
   <section class="employment-history">
-    <HeaderShape
+    <HeaderRight
       :heading="$route.path === '/' ? 'Employment History' : 'Istorija Zapošljavanja'"
       property="employment-history"
     />
@@ -29,7 +29,7 @@
               <li v-for="description in value" :key="description">{{ description }}</li>
             </ul>
           </b-col>
-          <hr v-if="index !== employmentHistories.length - 1" />
+          <hr v-if="index !== employmentHistories.length - 1" class="hr-gradient hr-gradient-small" />
         </b-row>
       </div>
     </b-collapse>
@@ -37,14 +37,14 @@
 </template>
 
 <script>
-import HeaderShape from "@/components/right/HeaderShape.vue";
+import HeaderRight from "@/components/right/HeaderRight.vue";
 
 export default {
   props: {
     employmentHistories: Array,
   },
   components: {
-    HeaderShape,
+    HeaderRight,
   },
 };
 </script>

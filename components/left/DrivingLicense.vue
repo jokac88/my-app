@@ -1,6 +1,6 @@
 <template>
   <section class="driving-license">
-    <Header
+    <HeaderLeft
       :heading="$route.path === '/' ? 'Driving License' : 'Vozačka Dozvola'"
       property="driving-license"
     />
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import Header from "@/components/left/Header.vue";
+import HeaderLeft from "@/components/left/HeaderLeft.vue";
 
 export default {
   props: {
     drivingLicense: String,
   },
   components: {
-    Header,
+    HeaderLeft,
   },
 };
 </script>

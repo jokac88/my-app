@@ -1,12 +1,14 @@
 <template>
   <section class="picture">
     <div class="picture-wrapper">
-      <img
-        :src="require('~/assets/' + picture)"
-        :alt="require('~/assets/' + picture)"
-        :title="name"
-        class="image"
-      />
+      <div class="image-div">
+        <img
+          :src="require('~/assets/' + picture)"
+          :alt="require('~/assets/' + picture)"
+          :title="name"
+          class="image"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -22,7 +24,9 @@ export default {
 
 <style lang="scss">
 .picture {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &-wrapper {
     padding: 15px;
@@ -31,15 +35,16 @@ export default {
   .image {
     width: 150px;
     height: 180px;
-    border: 3px double var(--border-color);
+    border: 3px double;
+    padding: 3px;
+    -moz-border-image: $gradient-right;
+    -webkit-border-image: $gradient-right;
+    border-image: $gradient-right;
+    -webkit-border-image-slice: 1;
+    border-image-slice: 1;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: $transition-2;
-    -moz-transition: $transition-2;
-    -o-transition: $transition-2;
-    -ms-transition: $transition-2;
-    transition: $transition-2;
   }
 }
 </style>

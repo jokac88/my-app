@@ -1,7 +1,9 @@
 <template>
   <section class="headline">
     <div class="headline-wrapper">
-      <em>{{ headline }}</em>
+      <h5>
+        <em>{{ headline }}</em>
+      </h5>
     </div>
   </section>
 </template>
@@ -16,7 +18,9 @@ export default {
 
 <style lang="scss">
 .headline {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &-wrapper {
     padding: 10px 15px;

@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio" :class="{ dark : isDarkMode }">
+  <section class="portfolio">
     <a
       href="https://jokac88.github.io/portfolio"
       class="btn btn-portfolio"
@@ -15,9 +15,6 @@ export default {
   props: {
     data: Object,
   },
-  computed: mapState({
-    isDarkMode: (state) => state.store.isDarkMode,
-  }),
 };
 </script>
 
@@ -40,12 +37,6 @@ export default {
     z-index: 1;
 
     &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }
-
-    &.dark {
       &:after {
         opacity: 1;
       }

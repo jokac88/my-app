@@ -75,6 +75,7 @@ export default {
     -moz-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
+    z-index: 4;
   }
 
   &.active {

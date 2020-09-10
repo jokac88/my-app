@@ -1,10 +1,10 @@
 <template>
-  <section class="color-mode-picker">
+  <section class="color-mode-picker" :class="{ active : isToggle }">
     <ul class="color-mode-picker-ul">
       <li
         v-for="color of colors"
         :key="color"
-        @click="$colorMode.preference = color, darkMode(color)"
+        @click="$colorMode.preference = color"
         :class="[getClasses(color), color]"
       >
         <component :is="`icon-${color}`" />
@@ -50,16 +50,9 @@ export default {
         selected: color === this.$colorMode.value,
       };
     },
-    darkMode(color) {
-      if (color === "dark") {
-        this.$store.commit("store/SET_DARK_MODE", true);
-      } else {
-        this.$store.commit("store/SET_DARK_MODE", false);
-      }
-    },
   },
   computed: mapState({
-    isDarkMode: (state) => state.store.isDarkMode,
+    isToggle: (state) => state.store.isToggle,
   }),
 };
 </script>
@@ -79,6 +72,11 @@ export default {
   -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   border-bottom-right-radius: 3px;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
+  transition: $transition-2;
 
   @include media-breakpoint-down(sm) {
     top: auto;
@@ -86,6 +84,8 @@ export default {
     width: 80%;
     height: 50px;
     z-index: 2;
+    opacity: 0;
+    visibility: hidden;
     -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
@@ -94,6 +94,13 @@ export default {
 
   @include media-breakpoint-only(sm) {
     width: 60%;
+  }
+
+  &.active {
+    @include media-breakpoint-down(sm) {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &-ul {
@@ -115,26 +122,14 @@ export default {
       height: 60px;
       width: 100%;
       cursor: pointer;
-      z-index: 1;
-      border-bottom: 1px solid var(--bg);
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
       -o-transition: $transition-2;
       -ms-transition: $transition-2;
       transition: $transition-2;
 
-      &:last-child {
-        border-bottom: none;
-      }
-
       @include media-breakpoint-down(sm) {
         height: 50px;
-        border-right: 1px solid var(--color-mode);
-        border-bottom: none;
-
-        &:last-child {
-          border-right: none;
-        }
       }
 
       @include media-breakpoint-up(md) {
@@ -147,21 +142,21 @@ export default {
 
       &.preferred {
         .feather {
-          fill: var(--color-mode);
+          fill: var(--color-left);
         }
       }
 
       .feather {
         position: relative;
         left: 0;
-        color: var(--color-mode);
+        margin-bottom: 2px;
+        color: var(--color-left);
         fill: transparent;
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;
         -o-transition: $transition-2;
         -ms-transition: $transition-2;
         transition: $transition-2;
-        margin-bottom: 2px;
 
         @include media-breakpoint-down(sm) {
           margin-bottom: 0;
@@ -169,7 +164,7 @@ export default {
       }
 
       .mode-name {
-        color: var(--color-mode);
+        color: var(--color-left);
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;
         -o-transition: $transition-2;
