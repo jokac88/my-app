@@ -1,6 +1,8 @@
 <template>
   <section class="qr-code">
-    <QrCode class="svg" />
+    <div class="qr-code-wrapper">
+      <QrCode class="svg" />
+    </div>
   </section>
 </template>
 
@@ -20,6 +22,16 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+
+  &-wrapper {
+    padding: 3px;
+    border: 3px double;
+    -moz-border-image: $gradient-right;
+    -webkit-border-image: $gradient-right;
+    border-image: $gradient-right;
+    -webkit-border-image-slice: 1;
+    border-image-slice: 1;
+  }
 
   .svg {
     width: 120px;

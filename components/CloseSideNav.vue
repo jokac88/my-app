@@ -1,10 +1,12 @@
 <template>
-  <section
-    v-if="!isToggle"
-    class="close-nav d-md-none"
-    @click="toggle"
-    :class="isToggle ? 'active' : 'no-active'"
-  ></section>
+  <transition name="fade">
+    <section
+      v-if="!isToggle"
+      class="close-nav d-md-none"
+      @click="toggle"
+      :class="isToggle ? 'active' : 'no-active'"
+    ></section>
+  </transition>
 </template>
 
 <script>
@@ -25,30 +27,36 @@ export default {
 </script>
 
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .close-nav {
   position: fixed;
   top: 50px;
   left: 0;
   width: 100%;
   height: 100vh;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
+  transition: $transition-2;
+  z-index: -1;
   background-color: rgba($black, 0.6);
 
-  // -webkit-transition: $transition-2;
-  // -moz-transition: $transition-2;
-  // -o-transition: $transition-2;
-  // -ms-transition: $transition-2;
-  // transition: $transition-2;
-  z-index: 5;
+  &.active {
+    width: 100%;
+    transform: translate3d(80%, 0, 0);
+    background-color: rgba($black, 0.6);
 
-  // &.active {
-  //   width: 100%;
-  //   transform: translate3d(80%, 0, 0);
-  //   background-color: rgba($black, 0.6);
-
-  //   @include media-breakpoint-only(sm) {
-  //     transform: translate3d(60%, 0, 0);
-  //   }
-  // }
+    @include media-breakpoint-only(sm) {
+      transform: translate3d(60%, 0, 0);
+    }
+  }
 
   // &.no-active {
   //   -webkit-animation: 0.5s linear no-activeBckg forwards;

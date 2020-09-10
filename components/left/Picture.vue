@@ -42,9 +42,6 @@ export default {
     border-image: $gradient-right;
     -webkit-border-image-slice: 1;
     border-image-slice: 1;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
   }
 }
 </style>
