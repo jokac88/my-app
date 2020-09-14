@@ -1163,49 +1163,49 @@
   color: #5fd400;
 }
 
-.c100.html .bar,
-.c100.html .fill {
+.c100.html5 .bar,
+.c100.html5 .fill {
   border-color: #f0652a !important;
   border-color: #f0652a !important;
 }
 
-.c100.html:hover > span {
+.c100.html5:hover > span {
   color: #f0652a;
 }
 
-.c100.css .bar,
-.c100.css .fill {
+.c100.css3 .bar,
+.c100.css3 .fill {
   border-color: #33a9dc !important;
 }
 
-.c100.css:hover > span {
+.c100.css3:hover > span {
   color: #33a9dc;
 }
 
-.c100.javascript .bar,
-.c100.javascript .fill {
+.c100.js .bar,
+.c100.js .fill {
   border-color: #f0db4f !important;
 }
 
-.c100.javascript:hover > span {
+.c100.js:hover > span {
   color: #f0db4f;
 }
 
-.c100.jquery .bar,
-.c100.jquery .fill {
+.c100.jq .bar,
+.c100.jq .fill {
   border-color: #0769ad !important;
 }
 
-.c100.jquery:hover > span {
+.c100.jq:hover > span {
   color: #0769ad;
 }
 
-.c100.bootstrap .bar,
-.c100.bootstrap .fill {
+.c100.bootstrap4 .bar,
+.c100.bootstrap4 .fill {
   border-color: #593f7f !important;
 }
 
-.c100.bootstrap:hover > span {
+.c100.bootstrap4:hover > span {
   color: #593f7f;
 }
 

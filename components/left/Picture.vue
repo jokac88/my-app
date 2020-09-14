@@ -1,7 +1,7 @@
 <template>
   <section class="picture">
     <div class="picture-wrapper">
-      <div class="image-div">
+      <div class="border-gradient border-gradient-small">
         <img
           :src="require('~/assets/' + picture)"
           :alt="require('~/assets/' + picture)"
@@ -35,13 +35,9 @@ export default {
   .image {
     width: 150px;
     height: 180px;
-    border: 3px double;
-    padding: 3px;
-    -moz-border-image: $gradient-right;
-    -webkit-border-image: $gradient-right;
-    border-image: $gradient-right;
-    -webkit-border-image-slice: 1;
-    border-image-slice: 1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
   }
 }
 </style>

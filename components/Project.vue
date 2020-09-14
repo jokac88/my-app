@@ -21,7 +21,10 @@
 export default {
   props: {
     project: Object,
-    projectImage: String,
+    projectImage: {
+      type: String,
+      default: "image.svg",
+    },
   },
 };
 </script>

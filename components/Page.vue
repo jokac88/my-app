@@ -1,7 +1,7 @@
 <template>
   <b-container class="p-0">
     <section class="page">
-      <b-col class="page-col px-0" lg="10" :class="{ active : isToggle }">
+      <b-col class="page-col border-gradient" lg="10" :class="{ active : isToggle }">
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -18,7 +18,7 @@
             <QrCode />
 
             <!-- Portfolio -->
-            <Portfolio :data="data" />
+            <Portfolio />
 
             <!-- Personal Info -->
             <PersonalInfo :personalInfo="data.personalInfo || data.ličniPodaci" />
@@ -118,19 +118,20 @@ export default {
 
   .page-col {
     margin: 0 auto;
-    border: 3px double var(--bg-left);
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    z-index: 3;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;
     -ms-transition: $transition-2;
     transition: $transition-2;
+    z-index: 3;
 
-    @include media-breakpoint-down(sm) {
-      border: none;
+    &.border-gradient {
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+      }
     }
 
     &.active {
@@ -146,21 +147,39 @@ export default {
     .left {
       background-color: var(--bg-left);
       color: var(--color-left);
+      -moz-border-radius: 3px 0 0 3px;
+      -webkit-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
       -o-transition: $transition-2;
       -ms-transition: $transition-2;
       transition: $transition-2;
+
+      @include media-breakpoint-down(sm) {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+      }
     }
 
     .right {
       background-color: var(--bg-right);
       color: var(--color-right);
+      -moz-border-radius: 0 3px 3px 0;
+      -webkit-border-radius: 0 3px 3px 0;
+      border-radius: 0 3px 3px 0;
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
       -o-transition: $transition-2;
       -ms-transition: $transition-2;
       transition: $transition-2;
+
+      @include media-breakpoint-down(sm) {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+      }
 
       &-wrapper {
         padding: 15px;

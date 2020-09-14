@@ -29,7 +29,7 @@
               <li v-for="description in value" :key="description">{{ description }}</li>
             </ul>
           </b-col>
-          <hr v-if="index !== employmentHistories.length - 1" class="hr-gradient hr-gradient-small" />
+          <hr v-if="index !== employmentHistories.length - 1" class="gradient gradient-small" />
         </b-row>
       </div>
     </b-collapse>

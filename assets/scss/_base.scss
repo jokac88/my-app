@@ -76,7 +76,7 @@ body {
 
 a {
   text-decoration: none !important;
-  display: block;
+  display: inline-block;
 }
 
 img {
@@ -110,19 +110,38 @@ ul {
   }
 }
 
-.hr-gradient {
-  width: 100%;
-  margin: 15px 0;
-  border: none;
-  border-bottom: 5px double;
-  -moz-border-image: $gradient-right;
-  -webkit-border-image: $gradient-right;
-  border-image: $gradient-right;
-  -webkit-border-image-slice: 1;
-  border-image-slice: 1;
+.border {
+  &-gradient {
+    padding: 5px;
+    -moz-background: $gradient-right;
+    -webkit-background: $gradient-right;
+    background: $gradient-right;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 
-  &-small {
-    margin-top: 0;
-    border-width: 3px;
+    &-small {
+      padding: 4px;
+    }
+  }
+}
+
+hr {
+  &.gradient {
+    width: 100%;
+    margin: 15px 0;
+    border: none;
+    height: 4px;
+    -moz-background: $gradient-right;
+    -webkit-background: $gradient-right;
+    background: $gradient-right;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    &-small {
+      margin-top: 0;
+      height: 3px;
+    }
   }
 }

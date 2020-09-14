@@ -23,7 +23,7 @@
               >{{ technologies }}</li>
             </ul>
           </b-col>
-          <hr v-if="index !== educations.length - 1" class="hr-gradient hr-gradient-small" />
+          <hr v-if="index !== educations.length - 1" class="gradient gradient-small" />
         </b-row>
       </div>
     </b-collapse>

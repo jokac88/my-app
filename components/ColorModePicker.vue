@@ -71,6 +71,8 @@ export default {
   -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+  -moz-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
   -webkit-transition: $transition-2;
   -moz-transition: $transition-2;
@@ -89,6 +91,8 @@ export default {
     -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
+    -moz-border-bottom-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 

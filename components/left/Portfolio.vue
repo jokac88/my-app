@@ -9,13 +9,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
-export default {
-  props: {
-    data: Object,
-  },
-};
+export default {};
 </script>
 
 <style lang="scss">
@@ -33,9 +27,9 @@ export default {
     letter-spacing: 1px;
     border: none;
     padding: 10px 20px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     z-index: 1;
 
     &:hover {
@@ -51,7 +45,9 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 5px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
       opacity: 0;
       -moz-background: var(--bg-gradient-after);
       -webkit-background: var(--bg-gradient-after);

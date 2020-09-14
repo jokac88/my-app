@@ -22,16 +22,16 @@ export default {
 
 <style lang="scss">
 .hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   background-color: transparent !important;
 
   &:hover {
     opacity: 1;
-  }
-
-  &-box {
-    height: 25px;
   }
 
   &-inner,
@@ -39,6 +39,14 @@ export default {
   &-inner:after {
     background-color: var(--color-left);
     height: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: $transition-2 !important;
+    -moz-transition: $transition-2 !important;
+    -o-transition: $transition-2 !important;
+    -ms-transition: $transition-2 !important;
+    transition: $transition-2 !important;
   }
 }
 </style>

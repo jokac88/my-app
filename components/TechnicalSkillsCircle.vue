@@ -2,18 +2,18 @@
   <b-col cols="6" lg="4" class="technical-skills-circle">
     <p
       class="technical-skills-text"
-      :class="'p-' + [technology.class || technology.klasa]"
+      :class="'p-' + technologyImage | substring"
       :style="{ color: technology.color || technology.boja }"
     >{{ technology.technology || technology.tehnologija }}</p>
     <div
       class="c100"
-      :class="[technology.class || technology.klasa, technology.percentage || technology.procenat]"
+      :class="[technology.percentage || technology.procenat, technologyImage.substring(0, technologyImage.length - 4)]"
     >
       <span>
         <img
-          :src="require('~/assets/icon/' + technologyImage + '.png')"
+          :src="require('~/assets/icon/' + technologyImage)"
           :title="technology.technology || technology.tehnologija"
-          :alt="require('~/assets/icon/' + technologyImage + '.png')"
+          :alt="require('~/assets/icon/' + technologyImage)"
           class="logo"
         />
       </span>
@@ -29,7 +29,10 @@
 export default {
   props: {
     technology: Object,
-    technologyImage: String,
+    technologyImage: {
+      type: String,
+      default: "image.svg",
+    },
   },
 };
 </script>

@@ -215,73 +215,73 @@
     "technicalSkills": [
       {
         "technology": "HTML5",
-        "class": "html",
+        "icon": "html5.png",
         "color": "#f0652a",
         "percentage": "p100"
       },
       {
         "technology": "CSS3",
-        "class": "css",
+        "icon": "css3.png",
         "color": "#33a9dc",
         "percentage": "p100"
       },
       {
         "technology": "JavaScript",
-        "class": "javascript",
+        "icon": "js.png",
         "color": "#f0db4f",
         "percentage": "p75"
       },
       {
         "technology": "jQuery",
-        "class": "jquery",
+        "icon": "jq.png",
         "color": "#0769ad",
         "percentage": "p75"
       },
       {
         "technology": "SASS",
-        "class": "sass",
+        "icon": "sass.png",
         "color": "#cc6699",
         "percentage": "p75"
       },
       {
         "technology": "Bootstrap 4",
-        "class": "bootstrap",
+        "icon": "bootstrap4.png",
         "color": "#593f7f ",
         "percentage": "p75"
       },
       {
         "technology": "Vue.js",
-        "class": "vue-js",
+        "icon": "vue-js.png",
         "color": "#41b883 ",
         "percentage": "p50"
       },
       {
         "technology": "Nuxt.js",
-        "class": "nuxt-js",
+        "icon": "nuxt-js.png",
         "color": "#223544 ",
         "percentage": "p50"
       },
       {
         "technology": "Photoshop",
-        "class": "photoshop",
+        "icon": "photoshop.png",
         "color": "#18163f ",
         "percentage": "p50"
       },
       {
         "technology": "React/Native",
-        "class": "react-native",
+        "icon": "react-native.png",
         "color": "#61dafb ",
         "percentage": "p25"
       },
       {
         "technology": "WordPress",
-        "class": "wordpress",
+        "icon": "wordpress.png",
         "color": "#21759b",
         "percentage": "p25"
       },
       {
         "technology": "Laravel",
-        "class": "laravel",
+        "icon": "laravel.png",
         "color": "#f55247",
         "percentage": "p25"
       }
@@ -544,73 +544,73 @@
     "tehničkeVeštine": [
       {
         "tehnologija": "HTML5",
-        "klasa": "html",
+        "ikonica": "html5.png",
         "boja": "#f0652a",
         "procenat": "p100"
       },
       {
         "tehnologija": "CSS3",
-        "klasa": "css",
+        "ikonica": "css3.png",
         "boja": "#33a9dc",
         "procenat": "p100"
       },
       {
         "tehnologija": "JavaScript",
-        "klasa": "javascript",
+        "ikonica": "js.png",
         "boja": "#f0db4f",
         "procenat": "p75"
       },
       {
         "tehnologija": "jQuery",
-        "klasa": "jquery",
+        "ikonica": "jq.png",
         "boja": "#0769ad",
         "procenat": "p75"
       },
       {
         "tehnologija": "SASS",
-        "klasa": "sass",
+        "ikonica": "sass.png",
         "boja": "#cc6699",
         "procenat": "p75"
       },
       {
         "tehnologija": "Bootstrap 4",
-        "klasa": "bootstrap",
+        "ikonica": "bootstrap4.png",
         "boja": "#593f7f ",
         "procenat": "p75"
       },
       {
         "tehnologija": "Vue.js",
-        "klasa": "vue-js",
+        "ikonica": "vue-js.png",
         "boja": "#41b883 ",
         "procenat": "p50"
       },
       {
         "tehnologija": "Nuxt.js",
-        "klasa": "nuxt-js",
+        "ikonica": "nuxt-js.png",
         "boja": "#223544 ",
         "procenat": "p50"
       },
       {
         "tehnologija": "Photoshop",
-        "klasa": "photoshop",
+        "ikonica": "photoshop.png",
         "boja": "#18163f ",
         "procenat": "p50"
       },
       {
         "tehnologija": "React/Native",
-        "klasa": "react-native",
+        "ikonica": "react-native.png",
         "boja": "#61dafb ",
         "procenat": "p25"
       },
       {
         "tehnologija": "WordPress",
-        "klasa": "wordpress",
+        "ikonica": "wordpress.png",
         "boja": "#21759b",
         "procenat": "p25"
       },
       {
         "tehnologija": "Laravel",
-        "klasa": "laravel",
+        "ikonica": "laravel.png",
         "boja": "#f55247",
         "procenat": "p25"
       }

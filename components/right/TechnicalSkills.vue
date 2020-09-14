@@ -10,7 +10,7 @@
           v-for="technology in technicalSkills"
           :key="technology.technology || technology.tehnologija"
           :technology="technology"
-          :technologyImage="technology.class || technology.klasa"
+          :technologyImage="technology.icon || technology.ikonica"
         />
       </b-row>
     </b-collapse>
@@ -40,6 +40,7 @@ export default {
       margin: 0 auto 25px;
       float: none;
       font-size: 130px;
+      background-color: $mercury;
 
       &::after {
         background-color: var(--bg-right);
