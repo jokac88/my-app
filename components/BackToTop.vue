@@ -1,6 +1,7 @@
 <template>
   <section class="back-to-top" :class="{ active : true }">
     <b-button
+      @click="backToTop"
       class="btn-back-to-top border-gradient border-gradient-small"
       :title="$route.path === '/' ? 'Back to top' : 'Vrati se na vrh'"
     >
