@@ -10,7 +10,7 @@ export default {
    */
   target: "static",
   router: {
-    base: "/ivan-jovkovic/"
+    base: "/ivan-jovkovic/",
   },
   /*
    ** Headers of the page
@@ -21,16 +21,16 @@ export default {
       {
         name: "keywords",
         content:
-          "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel"
-      }
+          "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel",
+      },
     ],
     link: [
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-      }
-    ]
+          "https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap",
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -42,10 +42,10 @@ export default {
   css: [
     "~assets/scss/_base.scss",
     "~assets/css/circle.css",
-    "~assets/css/hamburgers.min.css"
+    "~assets/css/hamburgers.min.css",
   ],
   styleResources: {
-    scss: ["~assets/scss/_variables.scss"]
+    scss: ["~assets/scss/_variables.scss"],
   },
   /*
    ** Plugins to load before mounting the App
@@ -69,17 +69,17 @@ export default {
     "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    "@nuxtjs/markdownit",
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources",
-    "@nuxtjs/markdownit"
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false // Or `bvCSS: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
   },
   pwa: {
     manifest: {
-      short_name: "ij-app"
+      short_name: "ij-app",
     },
     meta: {
       viewport:
@@ -88,14 +88,14 @@ export default {
       theme_color: "#0082c3",
       author: "Ivan Jovkovic",
       description:
-        "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel"
-    }
+        "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel",
+    },
   },
   env: {
     baseUrl:
       process.env.NODE_ENV === "production"
         ? "https://api.jsonbin.io/"
-        : "http://localhost:3000"
+        : "http://localhost:3000",
   },
   /*
    ** Axios module configuration
@@ -106,5 +106,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 };
