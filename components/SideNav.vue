@@ -1,7 +1,7 @@
 <template>
-  <section class="side-nav d-md-none" :class="{ active : isToggle }">
+  <section class="side-nav d-md-none" :class="{ isToggle : isToggle }">
     <div class="side-nav-wrapper">
-      <b-nav v-b-scrollspy:page>
+      <b-nav>
         <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
         <b-nav-item href="#driving-license">Home</b-nav-item>-->
         <b-nav-item
@@ -50,7 +50,7 @@ export default {
     -ms-transition: $transition-2;
     transition: $transition-2;
 
-    &.active {
+    &.isToggle {
       opacity: 1;
       visibility: visible;
     }

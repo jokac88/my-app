@@ -1,7 +1,7 @@
 <template>
   <b-container class="p-0">
     <section class="page">
-      <b-col class="page-col border-gradient" lg="10" :class="{ active : isToggle }">
+      <b-col class="page-col border-gradient" lg="10" :class="{ isToggle : isToggle }">
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -134,7 +134,7 @@ export default {
       }
     }
 
-    &.active {
+    &.isToggle {
       @include media-breakpoint-down(sm) {
         transform: translate3d(80%, 0, 0);
       }

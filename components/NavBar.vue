@@ -1,5 +1,5 @@
 <template>
-  <section class="nav-bar" :class="{ active : isToggle }">
+  <section class="nav-bar" :class="{ isToggle : isToggle }">
     <Hamburger class="d-md-none" />
     <div class="links">
       <nuxt-link
@@ -77,7 +77,7 @@ export default {
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
   }
 
-  &.active {
+  &.isToggle {
     @include media-breakpoint-down(sm) {
       transform: translate3d(80%, 0, 0);
     }
@@ -135,7 +135,7 @@ export default {
         -ms-transition: $transition;
         transition: $transition;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(xl) {
           &:hover:not(.active) {
             opacity: 1;
           }

@@ -17,17 +17,15 @@ export default {
   components: {
     BackToTop,
   },
-  computed: {
-    scroll() {
-      return window.scrollY >= 300;
-    },
-  },
   methods: {
     backToTop() {
-      window.scroll({
-        top: 0,
-        behavior: "smooth",
-      });
+      const scroll = window.scrollY;
+      if (scroll >= 300) {
+        window.scroll({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     },
   },
 };
@@ -36,7 +34,7 @@ export default {
 <style lang="scss">
 .back-to-top {
   position: fixed;
-  right: 30px;
+  right: 15px;
   bottom: -50px;
   -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
@@ -46,10 +44,10 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  z-index: 5;
+  z-index: 4;
 
   &.active {
-    bottom: 30px;
+    bottom: 15px;
   }
 
   .btn-back-to-top {
@@ -61,7 +59,7 @@ export default {
     border: none;
     z-index: 1;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       &:hover {
         &:after {
           opacity: 1;

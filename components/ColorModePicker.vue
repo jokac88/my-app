@@ -1,5 +1,5 @@
 <template>
-  <section class="color-mode-picker" :class="{ active : isToggle }">
+  <section class="color-mode-picker" :class="{ isToggle : isToggle }">
     <ul class="color-mode-picker-ul">
       <li
         v-for="color of colors"
@@ -100,7 +100,7 @@ export default {
     width: 60%;
   }
 
-  &.active {
+  &.isToggle {
     @include media-breakpoint-down(sm) {
       opacity: 1;
       visibility: visible;
@@ -136,7 +136,7 @@ export default {
         height: 50px;
       }
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(xl) {
         &:not(.preferred):hover {
           .feather {
             left: 10px;

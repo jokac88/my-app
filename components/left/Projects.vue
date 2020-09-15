@@ -58,7 +58,7 @@ export default {
       -ms-transition: $transition-2 !important;
       transition: $transition-2 !important;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         opacity: 0.5;
         -webkit-transition: $transition;
         -moz-transition: $transition;
