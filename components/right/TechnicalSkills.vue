@@ -6,7 +6,7 @@
     />
     <b-collapse id="technical-skills" visible>
       <b-row>
-        <TechnicalSkillsCircle
+        <TechnicalSkill
           v-for="technology in technicalSkills"
           :key="technology.technology || technology.tehnologija"
           :technology="technology"
@@ -20,7 +20,7 @@
 <script>
 import { mapState } from "vuex";
 import HeaderRight from "@/components/right/HeaderRight.vue";
-import TechnicalSkillsCircle from "@/components/TechnicalSkillsCircle.vue";
+import TechnicalSkill from "@/components/TechnicalSkill.vue";
 
 export default {
   props: {
@@ -28,7 +28,7 @@ export default {
   },
   components: {
     HeaderRight,
-    TechnicalSkillsCircle,
+    TechnicalSkill,
   },
 };
 </script>

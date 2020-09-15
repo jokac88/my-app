@@ -44,9 +44,9 @@ export default {
       transform: skew(-30deg);
       -webkit-transform: skew(-30deg);
       -moz-transform: skew(-30deg);
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
       -moz-background: $gradient-right;
       -webkit-background: $gradient-right;
       background: $gradient-right;

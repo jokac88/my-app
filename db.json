@@ -204,7 +204,7 @@
       },
       {
         "year": "Jul 2011 - Jun 2013",
-        "club": "<em>\"Z.K.K. Radnicki\"</em>, Kragujevac",
+        "club": "<em>\"Ž.K.K. Radnički\"</em>, Kragujevac",
         "position": "Head coach of youth selections",
         "description": [
           "Assistance in coaching kids daily at team practices and games during weekend",
@@ -215,73 +215,73 @@
     "technicalSkills": [
       {
         "technology": "HTML5",
-        "icon": "html5.png",
+        "icon": "html5",
         "color": "#f0652a",
         "percentage": "p100"
       },
       {
         "technology": "CSS3",
-        "icon": "css3.png",
+        "icon": "css3",
         "color": "#33a9dc",
         "percentage": "p100"
       },
       {
         "technology": "JavaScript",
-        "icon": "js.png",
+        "icon": "js",
         "color": "#f0db4f",
         "percentage": "p75"
       },
       {
         "technology": "jQuery",
-        "icon": "jq.png",
+        "icon": "jq",
         "color": "#0769ad",
         "percentage": "p75"
       },
       {
         "technology": "SASS",
-        "icon": "sass.png",
+        "icon": "sass",
         "color": "#cc6699",
         "percentage": "p75"
       },
       {
         "technology": "Bootstrap 4",
-        "icon": "bootstrap4.png",
+        "icon": "bs4",
         "color": "#593f7f ",
         "percentage": "p75"
       },
       {
         "technology": "Vue.js",
-        "icon": "vue-js.png",
+        "icon": "vue-js",
         "color": "#41b883 ",
         "percentage": "p50"
       },
       {
         "technology": "Nuxt.js",
-        "icon": "nuxt-js.png",
+        "icon": "nuxt-js",
         "color": "#223544 ",
         "percentage": "p50"
       },
       {
         "technology": "Photoshop",
-        "icon": "photoshop.png",
+        "icon": "ps",
         "color": "#18163f ",
         "percentage": "p50"
       },
       {
         "technology": "React/Native",
-        "icon": "react-native.png",
+        "icon": "react-native",
         "color": "#61dafb ",
         "percentage": "p25"
       },
       {
         "technology": "WordPress",
-        "icon": "wordpress.png",
+        "icon": "wordpress",
         "color": "#21759b",
         "percentage": "p25"
       },
       {
         "technology": "Laravel",
-        "icon": "laravel.png",
+        "icon": "laravel",
         "color": "#f55247",
         "percentage": "p25"
       }
@@ -544,73 +544,73 @@
     "tehničkeVeštine": [
       {
         "tehnologija": "HTML5",
-        "ikonica": "html5.png",
+        "ikonica": "html5",
         "boja": "#f0652a",
         "procenat": "p100"
       },
       {
         "tehnologija": "CSS3",
-        "ikonica": "css3.png",
+        "ikonica": "css3",
         "boja": "#33a9dc",
         "procenat": "p100"
       },
       {
         "tehnologija": "JavaScript",
-        "ikonica": "js.png",
+        "ikonica": "js",
         "boja": "#f0db4f",
         "procenat": "p75"
       },
       {
         "tehnologija": "jQuery",
-        "ikonica": "jq.png",
+        "ikonica": "jq",
         "boja": "#0769ad",
         "procenat": "p75"
       },
       {
         "tehnologija": "SASS",
-        "ikonica": "sass.png",
+        "ikonica": "sass",
         "boja": "#cc6699",
         "procenat": "p75"
       },
       {
         "tehnologija": "Bootstrap 4",
-        "ikonica": "bootstrap4.png",
+        "ikonica": "bs4",
         "boja": "#593f7f ",
         "procenat": "p75"
       },
       {
         "tehnologija": "Vue.js",
-        "ikonica": "vue-js.png",
+        "ikonica": "vue-js",
         "boja": "#41b883 ",
         "procenat": "p50"
       },
       {
         "tehnologija": "Nuxt.js",
-        "ikonica": "nuxt-js.png",
+        "ikonica": "nuxt-js",
         "boja": "#223544 ",
         "procenat": "p50"
       },
       {
         "tehnologija": "Photoshop",
-        "ikonica": "photoshop.png",
+        "ikonica": "ps",
         "boja": "#18163f ",
         "procenat": "p50"
       },
       {
         "tehnologija": "React/Native",
-        "ikonica": "react-native.png",
+        "ikonica": "react-native",
         "boja": "#61dafb ",
         "procenat": "p25"
       },
       {
         "tehnologija": "WordPress",
-        "ikonica": "wordpress.png",
+        "ikonica": "wordpress",
         "boja": "#21759b",
         "procenat": "p25"
       },
       {
         "tehnologija": "Laravel",
-        "ikonica": "laravel.png",
+        "ikonica": "laravel",
         "boja": "#f55247",
         "procenat": "p25"
       }

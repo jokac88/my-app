@@ -44,10 +44,14 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
+  opacity: 0;
+  visibility: hidden;
   z-index: 4;
 
   &.active {
     bottom: 15px;
+    opacity: 1;
+    visibility: visible;
   }
 
   .btn-back-to-top {
@@ -65,6 +69,11 @@ export default {
           opacity: 1;
         }
       }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 35px;
+      height: 35px;
     }
 
     &:after {
@@ -93,6 +102,11 @@ export default {
   &-icon {
     width: 40px;
     height: 40px;
+
+    @include media-breakpoint-down(md) {
+      width: 30px;
+      height: 30px;
+    }
 
     path {
       fill: var(--color-left);
