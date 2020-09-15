@@ -4,7 +4,7 @@
     <SideNav :navigation="navigation" />
     <ColorModePicker />
     <CloseSideNav />
-    <BackToTop />
+    <BackToTop :active="isScroll" />
     <transition name="toggle">
       <Nuxt />
     </transition>
@@ -20,6 +20,9 @@ import CloseSideNav from "@/components/CloseSideNav.vue";
 import BackToTop from "@/components/BackToTop.vue";
 
 export default {
+  data: () => ({
+    isScroll: false,
+  }),
   head() {
     return {
       bodyAttrs: {
@@ -34,12 +37,26 @@ export default {
     CloseSideNav,
     BackToTop,
   },
-  computed: mapState({
-    navigation: (state) =>
-      state.store.data.navigation || state.store.data.navigacija,
-    isLoading: (state) => state.store.isLoading,
-    isToggle: (state) => state.store.isToggle,
-  }),
+  computed: {
+    ...mapState({
+      navigation: (state) =>
+        state.store.data.navigation || state.store.data.navigacija,
+      isLoading: (state) => state.store.isLoading,
+      isToggle: (state) => state.store.isToggle,
+    }),
+  },
+  methods: {
+    scroll() {
+      if (window.scrollY <= 300) {
+        this.isScroll = false;
+      } else {
+        this.isScroll = true;
+      }
+    },
+  },
+  mounted() {
+    document.addEventListener("scroll", this.scroll);
+  },
 };
 </script>
 

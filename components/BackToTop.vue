@@ -1,5 +1,5 @@
 <template>
-  <section class="back-to-top" :class="{ active : true }">
+  <section class="back-to-top" :class="{ active : active }">
     <b-button
       @click="backToTop"
       class="btn-back-to-top border-gradient border-gradient-small"
@@ -14,18 +14,18 @@
 import BackToTop from "@/assets/svg/back-to-top.svg?inline";
 
 export default {
+  props: {
+    active: Boolean,
+  },
   components: {
     BackToTop,
   },
   methods: {
     backToTop() {
-      const scroll = window.scrollY;
-      if (scroll >= 300) {
-        window.scroll({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
     },
   },
 };
@@ -52,8 +52,8 @@ export default {
 
   .btn-back-to-top {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     padding: 0;
     background-color: transparent !important;
     border: none;
@@ -91,8 +91,8 @@ export default {
   }
 
   &-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 
     path {
       fill: var(--color-left);
