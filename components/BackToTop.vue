@@ -48,14 +48,10 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  opacity: 0;
-  visibility: hidden;
   z-index: 4;
 
   &.active {
     bottom: 15px;
-    opacity: 1;
-    visibility: visible;
   }
 
   &.isToggle {
