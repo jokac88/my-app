@@ -1,5 +1,5 @@
 <template>
-  <section class="back-to-top" :class="{ active : active }">
+  <section class="back-to-top" :class="{ active : active, isToggle : isToggle }">
     <b-button
       @click="backToTop"
       class="btn-back-to-top border-gradient border-gradient-small"
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import BackToTop from "@/assets/svg/back-to-top.svg?inline";
 
 export default {
@@ -28,6 +29,9 @@ export default {
       });
     },
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -52,6 +56,12 @@ export default {
     bottom: 15px;
     opacity: 1;
     visibility: visible;
+  }
+
+  &.isToggle {
+    @include media-breakpoint-down(md) {
+      right: -35px;
+    }
   }
 
   .btn-back-to-top {

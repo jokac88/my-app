@@ -38,7 +38,7 @@
 
           <!-- Right -->
           <b-col md="7" lg="8" class="right">
-            <div class="right-wrapper">
+            <div class="right-wrapper" :class="{ 'remove-pb' : removePB }">
               <!-- About Me -->
               <AboutMe :aboutMe="data.aboutMe || data.oMeni" />
 
@@ -78,6 +78,9 @@ import EmploymentHistory from "@/components/right/EmploymentHistory.vue";
 import TechnicalSkills from "@/components/right/TechnicalSkills.vue";
 
 export default {
+  data: () => ({
+    removePB: false,
+  }),
   props: {
     data: Object,
   },
@@ -100,6 +103,11 @@ export default {
   computed: mapState({
     isToggle: (state) => state.store.isToggle,
   }),
+  mounted() {
+    this.$bus.$on("remove-pb", (value) => {
+      this.removePB = value;
+    });
+  },
 };
 </script>
 
@@ -183,6 +191,15 @@ export default {
 
       &-wrapper {
         padding: 15px;
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
+
+        &.remove-pb {
+          padding-bottom: 0;
+        }
       }
     }
   }

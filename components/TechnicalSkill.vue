@@ -1,7 +1,7 @@
 <template>
-  <b-col cols="6" lg="4" class="technical-skills-circle">
+  <b-col cols="6" lg="4" class="technical-skill">
     <p
-      class="technical-skills-text"
+      class="technical-skill-text"
       :class="'p-' + technologyImage"
       :style="{ color: technology.color || technology.boja }"
     >{{ technology.technology || technology.tehnologija }}</p>
@@ -39,12 +39,55 @@ export default {
 </script>
 
 <style lang="scss">
-.default-image {
-  width: 64px;
-  height: 64px;
+.technical-skill {
+  &:nth-last-child(-n + 3) {
+    .c100 {
+      margin-bottom: 0;
+    }
+  }
 
-  .path {
-    fill: var(--color-right);
+  @include media-breakpoint-down(md) {
+    &:nth-last-child(3) {
+      .c100 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .c100 {
+    margin: 0 auto 25px;
+    float: none;
+    font-size: 130px;
+    background-color: $mercury;
+
+    &::after {
+      background-color: var(--bg-right);
+      -webkit-transition: $transition-2;
+      -moz-transition: $transition-2;
+      -o-transition: $transition-2;
+      -ms-transition: $transition-2;
+      transition: $transition-2;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .default-image {
+      width: 64px;
+      height: 64px;
+
+      .path {
+        fill: var(--color-right);
+      }
+    }
   }
 }
 </style>

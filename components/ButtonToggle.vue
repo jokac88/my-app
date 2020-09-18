@@ -4,6 +4,7 @@
     v-b-toggle="property"
     :title="$route.path === '/' ? 'Hide' : 'Sakrij'"
     @click="toggle"
+    :name="property"
   >
     <span class="slider"></span>
   </b-button>
@@ -28,6 +29,12 @@ export default {
         } else {
           e.currentTarget.title = "Sakrij";
         }
+      }
+      if (e.currentTarget.name === "technical-skills") {
+        this.$bus.$emit(
+          "remove-pb",
+          e.currentTarget.classList.contains("not-collapsed")
+        );
       }
     },
   },

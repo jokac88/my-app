@@ -47,15 +47,21 @@ export default {
   },
   methods: {
     scroll() {
-      if (window.scrollY <= 300) {
+      if (window.scrollY <= 600) {
         this.isScroll = false;
       } else {
         this.isScroll = true;
       }
     },
+    onResize() {
+      if (window.innerWidth >= 768) {
+        this.$store.commit("store/SET_TOGGLE");
+      }
+    },
   },
   mounted() {
     document.addEventListener("scroll", this.scroll);
+    window.addEventListener("resize", this.onResize);
   },
 };
 </script>
