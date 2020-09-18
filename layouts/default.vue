@@ -26,7 +26,10 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: [this.isLoading ? "loading" : "", this.isToggle ? "toggle" : ""],
+        class: [
+          this.isLoading ? "isLoading" : "",
+          this.isToggle ? "isToggle" : "",
+        ],
       },
     };
   },
@@ -54,8 +57,11 @@ export default {
       }
     },
     onResize() {
-      if (window.innerWidth >= 768) {
-        this.$store.commit("store/RESET_TOGGLE", false);
+      const body = document.querySelector("body");
+      if (window.innerWidth >= 768 && this.isToggle) {
+        return body.classList.remove("isToggle");
+      } else if (window.innerWidth < 768 && this.isToggle) {
+        return body.classList.add("isToggle");
       }
     },
   },

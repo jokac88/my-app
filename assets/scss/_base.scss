@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  &.loading,
-  &.toggle {
+  &.isLoading,
+  &.isToggle {
     overflow: hidden;
   }
 }
