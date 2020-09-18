@@ -15,6 +15,9 @@ export const mutations = {
   },
   SET_TOGGLE(state) {
     state.isToggle = !state.isToggle;
+  },
+  RESET_TOGGLE(state, toggle) {
+    state.isToggle = toggle;
   }
 };
 

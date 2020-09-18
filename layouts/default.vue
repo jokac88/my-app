@@ -55,7 +55,7 @@ export default {
     },
     onResize() {
       if (window.innerWidth >= 768) {
-        this.$store.commit("store/SET_TOGGLE");
+        this.$store.commit("store/RESET_TOGGLE", false);
       }
     },
   },
