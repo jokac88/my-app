@@ -1,11 +1,6 @@
 <template>
   <transition name="fade">
-    <section
-      v-if="!isToggle"
-      class="close-nav d-md-none"
-      @click="toggle"
-      :class="isToggle ? 'active' : 'no-active'"
-    ></section>
+    <section class="close-nav d-md-none" @click="toggle" :class="{ active : isToggle }"></section>
   </transition>
 </template>
 
@@ -27,13 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
 .close-nav {
   position: fixed;
   top: 50px;
@@ -45,72 +33,20 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  z-index: -1;
-  background-color: rgba($black, 0.6);
+  z-index: 4;
+  background-color: $black;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 0, 0);
 
   &.active {
-    width: 100%;
     transform: translate3d(80%, 0, 0);
-    background-color: rgba($black, 0.6);
+    opacity: 0.6;
+    visibility: visible;
 
     @include media-breakpoint-only(sm) {
       transform: translate3d(60%, 0, 0);
     }
   }
-
-  // &.no-active {
-  //   -webkit-animation: 0.5s linear no-activeBckg forwards;
-  //   animation: 0.5s linear no-activeBckg forwards;
-
-  //   @keyframes no-activeBckg {
-  //     0% {
-  //       width: 100%;
-  //     }
-
-  //     10% {
-  //       width: 100%;
-  //     }
-
-  //     20% {
-  //       width: 100%;
-  //     }
-
-  //     30% {
-  //       width: 100%;
-  //     }
-
-  //     40% {
-  //       width: 100%;
-  //     }
-
-  //     50% {
-  //       width: 100%;
-  //     }
-
-  //     60% {
-  //       width: 100%;
-  //     }
-
-  //     70% {
-  //       width: 100%;
-  //     }
-
-  //     80% {
-  //       width: 100%;
-  //     }
-
-  //     90% {
-  //       width: 100%;
-  //     }
-
-  //     99% {
-  //       width: 100%;
-  //     }
-
-  //     100% {
-  //       width: 0;
-  //     }
-  //   }
-  // }
 }
 </style>

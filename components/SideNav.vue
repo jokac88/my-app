@@ -1,7 +1,7 @@
 <template>
   <section class="side-nav d-md-none" :class="{ isToggle : isToggle }">
     <div class="side-nav-wrapper">
-      <b-nav>
+      <b-nav v-b-scrollspy:__layout>
         <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
         <b-nav-item href="#driving-license">Home</b-nav-item>-->
         <b-nav-item
@@ -41,19 +41,12 @@ export default {
     left: 0;
     width: 80%;
     height: 100vh;
-    opacity: 0;
-    visibility: hidden;
     overflow-y: auto;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;
     -ms-transition: $transition-2;
     transition: $transition-2;
-
-    &.isToggle {
-      opacity: 1;
-      visibility: visible;
-    }
 
     @include media-breakpoint-only(sm) {
       width: 60%;

@@ -86,8 +86,6 @@ export default {
     width: 80%;
     height: 50px;
     z-index: 2;
-    opacity: 0;
-    visibility: hidden;
     -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
@@ -98,13 +96,6 @@ export default {
 
   @include media-breakpoint-only(sm) {
     width: 60%;
-  }
-
-  &.isToggle {
-    @include media-breakpoint-down(sm) {
-      opacity: 1;
-      visibility: visible;
-    }
   }
 
   &-ul {
