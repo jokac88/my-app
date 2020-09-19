@@ -15,7 +15,7 @@ export default {};
 <style lang="scss">
 .portfolio {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   .btn-portfolio {
     position: relative;

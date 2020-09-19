@@ -1,7 +1,7 @@
 <template>
-  <section class="hobbies">
+  <section id="hobbies" class="hobbies">
     <HeaderLeft :heading="$route.path === '/' ? 'Hobbies' : 'Hobiji'" property="hobbies" />
-    <b-collapse id="hobbies" visible>
+    <b-collapse id="hobbies-collapse" visible>
       <div class="hobbies-wrapper">
         <ul>
           <li v-for="hobby in hobbies" :key="hobby">
@@ -32,7 +32,7 @@ export default {
 <style lang="scss">
 .hobbies {
   &-wrapper {
-    padding: 0 30px 20px;
+    padding: 0 30px 15px;
   }
 
   li {

@@ -1,7 +1,12 @@
 <template>
   <b-container class="p-0">
-    <section class="page">
-      <b-col class="page-col border-gradient" lg="10" :class="{ isToggle : isToggle }">
+    <section id="page" class="page">
+      <b-col
+        id="page-col"
+        class="page-col border-gradient"
+        lg="10"
+        :class="{ isToggle : isToggle }"
+      >
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -126,6 +131,9 @@ export default {
 
   .page-col {
     margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+    // height: 300px;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;

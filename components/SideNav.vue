@@ -1,13 +1,12 @@
 <template>
   <section class="side-nav d-md-none" :class="{ isToggle : isToggle }">
     <div class="side-nav-wrapper">
-      <b-nav v-b-scrollspy:__layout>
-        <!-- <b-nav-item href="#about-me">About Me</b-nav-item>
-        <b-nav-item href="#driving-license">Home</b-nav-item>-->
+      <b-nav v-b-scrollspy:page-col>
         <b-nav-item
           v-for="nav in navigation"
           :key="nav.name || nav.ime"
           :href="'#' + [nav.url || nav.link]"
+          v-scroll-to="'#' + [nav.url || nav.link]"
           @click="toggle"
         >{{ nav.name || nav.ime }}</b-nav-item>
       </b-nav>
@@ -57,7 +56,6 @@ export default {
 
       .nav {
         display: block;
-        overflow-y: auto;
 
         &-item {
           line-height: 24px;

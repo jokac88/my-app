@@ -1,7 +1,7 @@
 <template>
-  <section class="about-me">
+  <section id="about-me" class="about-me">
     <HeaderRight :heading="$route.path === '/' ? 'About Me' : 'O Meni'" property="about-me" />
-    <b-collapse id="about-me" visible>
+    <b-collapse id="about-me-collapse" visible>
       <div class="about-me-wrapper">
         <p class="text">{{ aboutMe }}</p>
       </div>

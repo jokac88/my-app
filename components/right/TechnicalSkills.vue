@@ -1,10 +1,10 @@
 <template>
-  <section class="technical-skills">
+  <section id="technical-skills" class="technical-skills">
     <HeaderRight
       :heading="$route.path === '/' ? 'Technical Skills' : 'Tehničke Veštine'"
       property="technical-skills"
     />
-    <b-collapse id="technical-skills" visible>
+    <b-collapse id="technical-skills-collapse" visible>
       <b-row>
         <TechnicalSkill
           v-for="technology in technicalSkills"

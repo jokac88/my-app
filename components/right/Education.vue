@@ -1,7 +1,7 @@
 <template>
-  <section class="education">
+  <section id="education" class="education">
     <HeaderRight :heading="$route.path === '/' ? 'Education' : 'Obrazovanje'" property="education" />
-    <b-collapse id="education" visible>
+    <b-collapse id="education-collapse" visible>
       <div class="education-wrapper">
         <b-row v-for="(education, index) in educations" :key="education.year || education.godina">
           <b-col

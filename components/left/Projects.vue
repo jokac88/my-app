@@ -1,7 +1,7 @@
 <template>
-  <section class="projects">
+  <section id="projects" class="projects">
     <HeaderLeft :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
-    <b-collapse id="projects" visible>
+    <b-collapse id="projects-collapse" visible>
       <div class="projects-wrapper">
         <b-row>
           <Project
@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 .projects {
   &-wrapper {
-    padding: 0 25px 20px;
+    padding: 0 25px 15px;
   }
 
   .item {

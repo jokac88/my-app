@@ -34,7 +34,7 @@ export default {
 .header {
   &-left {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     -moz-background: $gradient-right;
     -webkit-background: $gradient-right;
     background: $gradient-right;

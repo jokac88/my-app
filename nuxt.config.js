@@ -71,7 +71,15 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/pwa",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    [
+      "vue-scrollto/nuxt",
+      {
+        duration: 3000,
+        easing: "ease",
+        offset: -65
+      }
+    ]
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`

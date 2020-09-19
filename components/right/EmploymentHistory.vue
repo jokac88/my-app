@@ -1,10 +1,10 @@
 <template>
-  <section class="employment-history">
+  <section id="employment-history" class="employment-history">
     <HeaderRight
       :heading="$route.path === '/' ? 'Employment History' : 'Istorija Zapošljavanja'"
       property="employment-history"
     />
-    <b-collapse id="employment-history" visible>
+    <b-collapse id="employment-history-collapse" visible>
       <div class="employment-history-wrapper">
         <b-row
           v-for="(employmentHistory, index) in employmentHistories"

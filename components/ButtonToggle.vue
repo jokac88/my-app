@@ -1,7 +1,7 @@
 <template>
   <b-button
     class="button-toggle"
-    v-b-toggle="property"
+    v-b-toggle="property + '-collapse'"
     :title="$route.path === '/' ? 'Hide' : 'Sakrij'"
     @click="toggle"
     :name="property"

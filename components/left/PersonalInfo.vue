@@ -1,10 +1,10 @@
 <template>
-  <section class="personal-info">
+  <section id="personal-info" class="personal-info">
     <HeaderLeft
       :heading="$route.path === '/' ? 'Personal Info' : 'Lični Podaci'"
       property="personal-info"
     />
-    <b-collapse id="personal-info" visible>
+    <b-collapse id="personal-info-collapse" visible>
       <div class="personal-info-wrapper">
         <p v-if="$route.path === '/'" class="property">Date of birth</p>
         <p v-else class="property">Datum rođenja</p>
@@ -84,7 +84,7 @@ export default {
 <style lang="scss">
 .personal-info {
   &-wrapper {
-    padding: 0 30px 20px;
+    padding: 0 30px 15px;
   }
 
   .property {

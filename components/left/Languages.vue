@@ -1,7 +1,7 @@
 <template>
-  <section class="languages">
+  <section id="languages" class="languages">
     <HeaderLeft :heading="$route.path === '/' ? 'Languages' : 'Jezici'" property="languages" />
-    <b-collapse id="languages" visible>
+    <b-collapse id="languages-collapse" visible>
       <div class="languages-wrapper">
         <div v-for="language in languages" :key="language.language || language.jezik">
           <p class="language">{{ language.language || language.jezik }}</p>
@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 .languages {
   &-wrapper {
-    padding: 0 25px 20px;
+    padding: 0 25px 15px;
   }
 
   .language {

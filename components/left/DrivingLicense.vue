@@ -1,10 +1,10 @@
 <template>
-  <section class="driving-license">
+  <section id="driving-license" class="driving-license">
     <HeaderLeft
       :heading="$route.path === '/' ? 'Driving License' : 'Vozačka Dozvola'"
       property="driving-license"
     />
-    <b-collapse id="driving-license" visible>
+    <b-collapse id="driving-license-collapse" visible>
       <div class="driving-license-wrapper">
         <p v-html="drivingLicense"></p>
       </div>
@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 .driving-license {
   &-wrapper {
-    padding: 0 30px 20px;
+    padding: 0 30px 15px;
   }
 }
 </style>
