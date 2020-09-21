@@ -27,6 +27,7 @@ export default {
     padding: 10px 30px;
 
     h1 {
+      font-weight: 700;
       text-align: center;
       letter-spacing: 3px;
     }

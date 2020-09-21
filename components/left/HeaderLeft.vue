@@ -60,6 +60,10 @@ export default {
         }
       }
     }
+
+    h4 {
+      font-weight: 700;
+    }
   }
 }
 </style>

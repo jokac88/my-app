@@ -72,6 +72,7 @@ export default {
 
       h4 {
         color: var(--color-left);
+        font-weight: 700;
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;
         -o-transition: $transition-2;
