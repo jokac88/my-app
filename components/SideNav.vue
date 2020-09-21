@@ -67,6 +67,7 @@ export default {
           padding: 10px 30px;
           font-size: 24px;
           color: var(--color-right) !important;
+          font-weight: 700;
           -webkit-transition: $transition-2;
           -moz-transition: $transition-2;
           -o-transition: $transition-2;

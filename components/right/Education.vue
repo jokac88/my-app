@@ -58,7 +58,7 @@ export default {
     }
 
     ul {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       padding-left: 25px;
 
       li {
