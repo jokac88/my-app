@@ -36,6 +36,14 @@ export default {
           e.currentTarget.classList.contains("not-collapsed")
         );
       }
+      setTimeout(() => {
+        const documentHeight = document.body.clientHeight;
+        const windowHeight = window.outerHeight;
+        const height = (documentHeight - windowHeight) / 100;
+        const scrollY = +window.scrollY.toFixed(2);
+        const paceWidth = +(scrollY / height).toFixed(2);
+        this.$store.commit("store/SET_PACE_WIDTH", paceWidth);
+      }, 500);
     },
   },
 };
