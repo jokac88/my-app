@@ -29,15 +29,15 @@ export default {
   align-items: center;
 
   &-wrapper {
-    padding: 15px;
-  }
+    padding: 15px 30px;
 
-  .image {
-    width: 150px;
-    height: 180px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    .image {
+      width: 150px;
+      height: 180px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
   }
 }
 </style>

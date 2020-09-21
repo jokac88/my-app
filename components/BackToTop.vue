@@ -2,7 +2,7 @@
   <section class="back-to-top" :class="{ active : active, isToggle : isToggle }">
     <b-button
       @click="backToTop"
-      class="btn-back-to-top border-gradient border-gradient-small"
+      class="btn-back-to-top"
       :title="$route.path === '/' ? 'Back to top' : 'Vrati se na vrh'"
     >
       <BackToTop class="back-to-top-icon" />
@@ -65,7 +65,9 @@ export default {
     width: 45px;
     height: 45px;
     padding: 0;
-    background-color: transparent !important;
+    -moz-background: $gradient-right;
+    -webkit-background: $gradient-right;
+    background: $gradient-right;
     border: none;
     z-index: 1;
 
@@ -93,9 +95,9 @@ export default {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       opacity: 0;
-      -moz-background: var(--bg-gradient-after);
-      -webkit-background: var(--bg-gradient-after);
-      background: var(--bg-gradient-after);
+      -moz-background: $gradient-left;
+      -webkit-background: $gradient-left;
+      background: $gradient-left;
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
       -o-transition: $transition-2;

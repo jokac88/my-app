@@ -53,23 +53,23 @@ export default {
 .employment-history {
   &-wrapper {
     padding: 0 15px;
-  }
 
-  .property {
-    padding-bottom: 5px;
-    font-weight: 700;
-  }
+    .property {
+      padding-bottom: 5px;
+      font-weight: 700;
+    }
 
-  .value {
-    padding-bottom: 15px;
-  }
+    .value {
+      padding-bottom: 15px;
+    }
 
-  ul {
-    margin-bottom: 20px;
-    padding-left: 25px;
+    ul {
+      margin-bottom: 20px;
+      padding-left: 25px;
 
-    li {
-      list-style-type: disc;
+      li {
+        list-style-type: disc;
+      }
     }
   }
 }

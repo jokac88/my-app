@@ -24,12 +24,12 @@ export default {
   background: $gradient-right;
 
   &-wrapper {
-    padding: 10px 15px;
-  }
+    padding: 10px 30px;
 
-  h1 {
-    text-align: center;
-    letter-spacing: 3px;
+    h1 {
+      text-align: center;
+      letter-spacing: 3px;
+    }
   }
 }
 </style>

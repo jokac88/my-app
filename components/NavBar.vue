@@ -59,7 +59,7 @@ export default {
   transition: $transition-2;
 
   @include media-breakpoint-down(sm) {
-    top: 0;
+    top: 5px;
     right: 0;
     left: 0;
     width: 100%;

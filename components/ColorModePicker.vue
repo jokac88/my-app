@@ -60,7 +60,7 @@ export default {
 <style lang="scss">
 .color-mode-picker {
   position: fixed;
-  top: 0;
+  top: 6px;
   left: 0;
   width: 60px;
   height: 240px;
@@ -96,6 +96,36 @@ export default {
 
   @include media-breakpoint-only(sm) {
     width: 60%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    opacity: 0;
+    -moz-background: $gradient-left;
+    -webkit-background: $gradient-left;
+    background: $gradient-left;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
+    z-index: -1;
   }
 
   &-ul {

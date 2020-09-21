@@ -1,5 +1,6 @@
 <template>
   <section class="default-layout">
+    <Pace />
     <NavBar />
     <SideNav :navigation="navigation" />
     <ColorModePicker />
@@ -13,6 +14,7 @@
 
 <script>
 import { mapState } from "vuex";
+import Pace from "@/components/Pace.vue";
 import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
 import ColorModePicker from "@/components/ColorModePicker.vue";
@@ -34,6 +36,7 @@ export default {
     };
   },
   components: {
+    Pace,
     NavBar,
     SideNav,
     ColorModePicker,

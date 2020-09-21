@@ -33,35 +33,35 @@ export default {
 .hobbies {
   &-wrapper {
     padding: 0 30px 15px;
-  }
 
-  li {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    margin: 15px 0;
-    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      margin: 15px 0;
+      padding: 0;
 
-    &:first-child {
-      margin-top: 0;
-    }
+      &:first-child {
+        margin-top: 0;
+      }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+      &:last-child {
+        margin-bottom: 0;
+      }
 
-    .arrow {
-      width: 12px;
-      height: 12px;
-      margin-right: 10px;
+      .arrow {
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
 
-      polygon {
-        fill: var(--color-left);
-        -webkit-transition: $transition-2;
-        -moz-transition: $transition-2;
-        -o-transition: $transition-2;
-        -ms-transition: $transition-2;
-        transition: $transition-2;
+        polygon {
+          fill: var(--color-left);
+          -webkit-transition: $transition-2;
+          -moz-transition: $transition-2;
+          -o-transition: $transition-2;
+          -ms-transition: $transition-2;
+          transition: $transition-2;
+        }
       }
     }
   }

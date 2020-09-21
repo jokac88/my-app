@@ -23,7 +23,7 @@ export default {
   align-items: center;
 
   &-wrapper {
-    padding: 10px 15px;
+    padding: 15px 30px;
   }
 }
 </style>

@@ -26,14 +26,14 @@ export default {
 .about-me {
   &-wrapper {
     padding: 0 15px 15px;
-  }
 
-  .text {
-    font-size: 16px;
-    text-indent: 30px;
-    text-align: justify;
-    text-align-last: left;
-    line-height: 1.4;
+    .text {
+      font-size: 16px;
+      text-indent: 30px;
+      text-align: justify;
+      text-align-last: left;
+      line-height: 1.4;
+    }
   }
 }
 </style>

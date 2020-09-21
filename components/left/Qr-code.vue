@@ -23,7 +23,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
 
   .svg {
     width: 120px;

@@ -24,7 +24,7 @@ export default {
 <style lang="scss">
 .close-nav {
   position: fixed;
-  top: 50px;
+  top: 55px;
   left: 0;
   width: 100%;
   height: 100vh;

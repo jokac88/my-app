@@ -52,7 +52,7 @@ export default {
     }
 
     &-wrapper {
-      padding: 50px 0;
+      padding: 55px 0;
 
       .nav {
         display: block;

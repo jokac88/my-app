@@ -85,36 +85,36 @@ export default {
 .personal-info {
   &-wrapper {
     padding: 0 30px 15px;
-  }
 
-  .property {
-    font-weight: bold;
-  }
-
-  .value {
-    padding-bottom: 10px;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  a {
-    border-bottom: 1px solid transparent;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    -ms-transition: $transition;
-    transition: $transition;
-
-    &:hover {
-      border-color: var(--color-left);
+    .property {
+      font-weight: bold;
     }
 
-    &.link {
-      color: var(--color-left) !important;
-      margin-bottom: 10px;
-      padding-bottom: 0;
+    .value {
+      padding-bottom: 10px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    a {
+      border-bottom: 1px solid transparent;
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -o-transition: $transition;
+      -ms-transition: $transition;
+      transition: $transition;
+
+      &:hover {
+        border-color: var(--color-left);
+      }
+
+      &.link {
+        color: var(--color-left) !important;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+      }
     }
   }
 }

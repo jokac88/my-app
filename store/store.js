@@ -3,7 +3,8 @@ import axios from "@/services/axios.js";
 export const state = () => ({
   data: {},
   isLoading: false,
-  isToggle: false
+  isToggle: false,
+  paceWidth: 0
 });
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   SET_TOGGLE(state) {
     state.isToggle = !state.isToggle;
+  },
+  SET_PACE_WIDTH(state, paceWidth) {
+    state.paceWidth = paceWidth;
   }
 };
 

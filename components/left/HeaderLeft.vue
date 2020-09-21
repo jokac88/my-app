@@ -34,30 +34,30 @@ export default {
 .header {
   &-left {
     position: relative;
-    margin-bottom: 15px;
     -moz-background: $gradient-right;
     -webkit-background: $gradient-right;
     background: $gradient-right;
+    margin-bottom: 15px;
 
     &-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 15px;
-    }
 
-    .heading {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      .heading {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-      .icon {
-        width: 35px;
-        margin-right: 10px;
-        border-radius: 50%;
-        -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        .icon {
+          width: 35px;
+          margin-right: 10px;
+          border-radius: 50%;
+          -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
+        }
       }
     }
   }
