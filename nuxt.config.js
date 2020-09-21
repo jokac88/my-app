@@ -77,7 +77,7 @@ export default {
       {
         duration: 3000,
         easing: "ease",
-        offset: -70
+        offset: -72
       }
     ]
   ],
