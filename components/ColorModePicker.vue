@@ -60,7 +60,7 @@ export default {
 <style lang="scss">
 .color-mode-picker {
   position: fixed;
-  top: 6px;
+  top: 0;
   left: 0;
   width: 60px;
   height: 240px;

@@ -71,17 +71,17 @@ export default {
     border: none;
     z-index: 1;
 
+    @include media-breakpoint-down(md) {
+      width: 35px;
+      height: 35px;
+    }
+
     @include media-breakpoint-up(xl) {
       &:hover {
         &:after {
           opacity: 1;
         }
       }
-    }
-
-    @include media-breakpoint-down(md) {
-      width: 35px;
-      height: 35px;
     }
 
     &:after {

@@ -10,6 +10,7 @@
           @click="toggle"
         >{{ nav.name || nav.ime }}</b-nav-item>
       </b-nav>
+      <h1>Side Nav</h1>
     </div>
   </section>
 </template>
@@ -52,7 +53,12 @@ export default {
     }
 
     &-wrapper {
-      padding: 55px 0;
+      height: inherit;
+      // padding: 55px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
 
       .nav {
         display: block;

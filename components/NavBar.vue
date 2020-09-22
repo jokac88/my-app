@@ -77,6 +77,15 @@ export default {
       0 3px 1px 0 rgba(20, 23, 28, 0.1);
   }
 
+  @include media-breakpoint-only(md) {
+    right: 5px;
+    width: 35px;
+  }
+
+  @include media-breakpoint-only(lg) {
+    width: 45px;
+  }
+
   &.isToggle {
     @include media-breakpoint-down(sm) {
       transform: translate3d(80%, 0, 0);
@@ -135,14 +144,14 @@ export default {
         -ms-transition: $transition;
         transition: $transition;
 
+        @include media-breakpoint-down(sm) {
+          width: 35px;
+        }
+
         @include media-breakpoint-up(xl) {
           &:hover:not(.active) {
             opacity: 1;
           }
-        }
-
-        @include media-breakpoint-down(sm) {
-          width: 35px;
         }
       }
     }
