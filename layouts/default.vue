@@ -3,7 +3,7 @@
     <Pace />
     <NavBar />
     <SideNav :navigation="navigation" />
-    <!-- <ColorModePicker /> -->
+    <ColorModePicker />
     <CloseSideNav />
     <BackToTop :active="isScroll" />
     <transition name="toggle">

@@ -82,7 +82,7 @@ export default {
 
   @include media-breakpoint-down(sm) {
     top: auto;
-    bottom: 0;
+    bottom: 15px;
     width: 80%;
     height: 50px;
     z-index: 2;
