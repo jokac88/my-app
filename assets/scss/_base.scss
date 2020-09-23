@@ -35,6 +35,7 @@ body {
   --bg-meter: #{$orient};
   --color-left: #{$white};
   --color-right: #{$lochmara};
+  --color-error: #{$black};
   --color-svg: #{$black};
   --border-color: #{$white};
 }
@@ -48,6 +49,7 @@ body {
   --bg-button-2: #{$pickled-bluewood-2};
   --bg-meter: #{$pickled-bluewood};
   --color-right: #{$white};
+  --color-error: #{$white};
   --color-svg: #{$white};
   --border-color: #{$pickled-bluewood};
 }

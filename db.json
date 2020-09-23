@@ -24,12 +24,12 @@
       {
         "language": "Serbian language",
         "level": "Native",
-        "percentage": "100"
+        "percentage": "100%"
       },
       {
         "language": "English language",
         "level": "Intermediate level",
-        "percentage": "50"
+        "percentage": "50%"
       }
     ],
     "projects": [
@@ -354,12 +354,12 @@
       {
         "jezik": "Srpski jezik",
         "nivo": "Maternji",
-        "procenat": "100"
+        "procenat": "100%"
       },
       {
         "jezik": "Engleski jezik",
         "nivo": "Srednji nivo",
-        "procenat": "50"
+        "procenat": "50%"
       }
     ],
     "projekti": [

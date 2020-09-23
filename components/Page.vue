@@ -199,11 +199,11 @@ export default {
 
       &-wrapper {
         padding: 15px;
-        -webkit-transition: $transition-2;
-        -moz-transition: $transition-2;
-        -o-transition: $transition-2;
-        -ms-transition: $transition-2;
-        transition: $transition-2;
+        -webkit-transition: padding $transition-2;
+        -moz-transition: padding $transition-2;
+        -o-transition: padding $transition-2;
+        -ms-transition: padding $transition-2;
+        transition: padding $transition-2;
 
         &.remove-pb {
           padding-bottom: 0;

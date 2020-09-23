@@ -10,7 +10,6 @@
           v-for="technology in technicalSkills"
           :key="technology.technology || technology.tehnologija"
           :technology="technology"
-          :technologyImage="technology.icon || technology.ikonica"
         />
       </b-row>
     </b-collapse>

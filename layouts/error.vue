@@ -2,21 +2,18 @@
   <section class="error">
     <b-container>
       <h1 class="status-code">{{ error.statusCode }}</h1>
-      <div class="no-connection" v-if="error.statusCode === 500">
-        <img src="~assets/svg/no-connection.svg" alt="~assets/svg/no-connection.svg" class="icon" />
+      <div v-if="error.statusCode === 500" class="no-connection">
+        <NoConnection class="icon" />
+        <!-- <img src="~assets/svg/no-connection.svg" alt="~assets/svg/no-connection.svg" class="icon" /> -->
       </div>
-      <div class="error-404" v-else>
-        <img src="~assets/svg/not-found.svg" alt="~assets/svg/not-found.svg" class="icon" />
+      <div v-else class="error-404">
+        <NotFound class="icon" />
+        <!-- <img src="~assets/svg/not-found.svg" alt="~assets/svg/not-found.svg" class="icon" /> -->
       </div>
       <h3 class="message">{{ message }}</h3>
       <div class="back-button">
-        <b-link @click="goBack">
-          <img
-            src="~assets/svg/back.svg"
-            alt="~assets/svg/back.svg"
-            :title="$route.path === '/' ? 'Go back' : 'Idi nazad'"
-            class="icon"
-          />
+        <b-link @click="goBack" :title="$route.path === '/' ? 'Go back' : 'Idi nazad'">
+          <Back class="icon" />
         </b-link>
       </div>
     </b-container>
@@ -24,7 +21,16 @@
 </template>
 
 <script>
+import NoConnection from "~/assets/svg/error/no-connection.svg?inline";
+import NotFound from "~/assets/svg/error/not-found.svg?inline";
+import Back from "~/assets/svg/error/back.svg?inline";
+
 export default {
+  components: {
+    NoConnection,
+    NotFound,
+    Back,
+  },
   layout: "error-layout",
   props: {
     error: {
@@ -62,13 +68,25 @@ export default {
   height: 100vh;
 
   .status-code {
-    font-size: 80px;
+    font-size: 100px;
     text-align: center;
+    color: var(--color-error);
     font-weight: 700;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
   }
 
   .message {
     text-align: center;
+    color: var(--color-error);
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
   }
 
   .no-connection,
@@ -78,14 +96,35 @@ export default {
 
     .icon {
       width: 128px;
+      height: 128px;
+
+      path {
+        fill: var(--color-error);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
+      }
     }
   }
+
   .back-button {
     text-align: center;
     padding-top: 30px;
 
     .icon {
-      width: 48px;
+      width: 64px;
+      height: 64px;
+
+      path {
+        fill: var(--color-error);
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
+      }
     }
   }
 }

@@ -24,10 +24,10 @@
 
 <script>
 import { mapState } from "vuex";
-import IconSystem from "@/assets/svg/system.svg?inline";
-import IconLight from "@/assets/svg/light.svg?inline";
-import IconDark from "@/assets/svg/dark.svg?inline";
-import IconSepia from "@/assets/svg/sepia.svg?inline";
+import IconSystem from "@/assets/svg/color-mode/system.svg?inline";
+import IconLight from "@/assets/svg/color-mode/light.svg?inline";
+import IconDark from "@/assets/svg/color-mode/dark.svg?inline";
+import IconSepia from "@/assets/svg/color-mode/sepia.svg?inline";
 
 export default {
   data: () => ({

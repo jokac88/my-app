@@ -2,16 +2,19 @@
   <b-col cols="6" lg="4" class="technical-skill">
     <p
       class="technical-skill-text"
-      :class="'p-' + technologyImage"
+      :class="'p-' + [technology.icon || technology.ikonica]"
       :style="{ color: technology.color || technology.boja }"
     >{{ technology.technology || technology.tehnologija }}</p>
-    <div class="c100" :class="[technologyImage, technology.percentage || technology.procenat]">
+    <div
+      class="c100"
+      :class="[technology.icon || technology.ikonica, technology.percentage || technology.procenat]"
+    >
       <span>
         <img
-          v-if="technologyImage"
-          :src="require('~/assets/icon/' + technologyImage + '.png')"
+          v-if="[technology.icon || technology.ikonica]"
+          :src="require('~/assets/icon/' + [technology.icon || technology.ikonica] + '.png')"
           :title="technology.technology || technology.tehnologija"
-          :alt="require('~/assets/icon/' + technologyImage + '.png')"
+          :alt="require('~/assets/icon/' + [technology.icon || technology.ikonica] + '.png')"
           class="logo"
         />
         <DefaultImage v-else class="default-image" />
@@ -25,12 +28,11 @@
 </template>
 
 <script>
-import DefaultImage from "~/assets/svg/image.svg?inline";
+import DefaultImage from "~/assets/svg/default-image.svg?inline";
 
 export default {
   props: {
     technology: Object,
-    technologyImage: String,
   },
   components: {
     DefaultImage,

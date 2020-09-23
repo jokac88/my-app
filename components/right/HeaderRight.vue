@@ -3,12 +3,7 @@
     <div class="header-shape">
       <div class="shape">
         <div class="header-shape-wrapper">
-          <img
-            :src="require('~/assets/icon/' + property + '.png')"
-            class="icon"
-            :alt="require('~/assets/icon/' + property + '.png')"
-            :title="heading"
-          />
+          <component :is="property" class="icon" />
           <h4>{{ heading }}</h4>
         </div>
       </div>
@@ -19,10 +14,18 @@
 </template>
 
 <script>
+import AboutMe from "@/assets/svg/headers/about-me.svg?inline";
+import Education from "@/assets/svg/headers/education.svg?inline";
+import EmploymentHistory from "@/assets/svg/headers/employment-history.svg?inline";
+import TechnicalSkills from "@/assets/svg/headers/technical-skills.svg?inline";
 import ButtonToggle from "@/components/ButtonToggle.vue";
 
 export default {
   components: {
+    AboutMe,
+    Education,
+    EmploymentHistory,
+    TechnicalSkills,
     ButtonToggle,
   },
   props: {
@@ -63,7 +66,10 @@ export default {
 
       .icon {
         width: 35px;
+        height: 35px;
         margin-right: 10px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
         border-radius: 50%;
         -webkit-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);

@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import DefaultImage from "~/assets/svg/image.svg?inline";
-import EderHotel from "~/assets/svg/eder-hotel.svg?inline";
-import HairSaloon from "~/assets/svg/hair-saloon.svg?inline";
-import Spotter from "~/assets/svg/spotter.svg?inline";
+import EderHotel from "~/assets/svg/projects/eder-hotel.svg?inline";
+import HairSaloon from "~/assets/svg/projects/hair-saloon.svg?inline";
+import Spotter from "~/assets/svg/projects/spotter.svg?inline";
+import DefaultImage from "~/assets/svg/default-image.svg?inline";
 
 export default {
   props: {
@@ -39,10 +39,10 @@ export default {
     projectImage: String,
   },
   components: {
-    DefaultImage,
     EderHotel,
     HairSaloon,
     Spotter,
+    DefaultImage,
   },
 };
 </script>

@@ -7,7 +7,7 @@
 
 <script>
 import Loader from "@/assets/svg/loader.svg?inline";
-import Icon from "@/assets/svg/icon.svg?inline";
+import Icon from "@/assets/svg/ivan-jovkovic.svg?inline";
 import { mapState } from "vuex";
 
 export default {

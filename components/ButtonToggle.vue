@@ -134,6 +134,8 @@ export default {
       left: 0;
       width: 32px;
       height: 19px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
       border-radius: 50%;
       -webkit-transition: $transition-2;
       -moz-transition: $transition-2;
@@ -169,6 +171,8 @@ export default {
         left: 3px;
         height: 13px;
         width: 13px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
         border-radius: 50%;
         -webkit-transition: $transition-2;
         -moz-transition: $transition-2;
