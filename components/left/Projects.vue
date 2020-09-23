@@ -74,6 +74,24 @@ export default {
         .icon {
           width: 64px;
           height: 64px;
+
+          &-svg {
+            width: 64px;
+            height: 64px;
+
+            path {
+              fill: var(--color-svg);
+              -webkit-transition: $transition-2;
+              -moz-transition: $transition-2;
+              -o-transition: $transition-2;
+              -ms-transition: $transition-2;
+              transition: $transition-2;
+            }
+
+            &-spotter {
+              transform: rotateY(180deg);
+            }
+          }
         }
       }
     }
