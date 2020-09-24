@@ -1,5 +1,5 @@
 <template>
-  <section class="nav-bar" :class="{ isToggle : isToggle }">
+  <section class="nav-bar">
     <Hamburger class="d-md-none" />
     <div class="links">
       <nuxt-link
@@ -39,9 +39,6 @@ export default {
   components: {
     Hamburger,
   },
-  computed: mapState({
-    isToggle: (state) => state.store.isToggle,
-  }),
 };
 </script>
 
@@ -84,16 +81,6 @@ export default {
 
   @include media-breakpoint-only(lg) {
     width: 45px;
-  }
-
-  &.isToggle {
-    @include media-breakpoint-down(sm) {
-      transform: translate3d(80%, 0, 0);
-    }
-
-    @include media-breakpoint-only(sm) {
-      transform: translate3d(60%, 0, 0);
-    }
   }
 
   .links {

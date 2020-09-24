@@ -1,9 +1,9 @@
 <template>
-  <section class="pace d-md-none" :class="{ isToggle : isToggle }">
+  <section class="pace d-md-none">
     <div
       class="pace-width"
-      :style="{ width : paceWidth + '%' }"
-      :class="{ 'remove-br' : paceWidth === 100 }"
+      :style="{ width: paceWidth + '%' }"
+      :class="{ 'remove-br': paceWidth === 100 }"
     ></div>
   </section>
 </template>
@@ -14,7 +14,6 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
-      isToggle: (state) => state.store.isToggle,
       paceWidth: (state) => state.store.paceWidth,
     }),
   },
@@ -51,16 +50,6 @@ export default {
   -ms-transition: $transition-2;
   transition: $transition-2;
   z-index: 4;
-
-  &.isToggle {
-    @include media-breakpoint-down(sm) {
-      transform: translate3d(80%, 0, 0);
-    }
-
-    @include media-breakpoint-only(sm) {
-      transform: translate3d(60%, 0, 0);
-    }
-  }
 
   &-width {
     height: inherit;

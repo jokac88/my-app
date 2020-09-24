@@ -1,5 +1,5 @@
 <template>
-  <section class="back-to-top" :class="{ active : active, isToggle : isToggle }">
+  <section class="back-to-top" :class="{ active: active }">
     <b-button
       @click="backToTop"
       class="btn-back-to-top"
@@ -29,9 +29,6 @@ export default {
       });
     },
   },
-  computed: mapState({
-    isToggle: (state) => state.store.isToggle,
-  }),
 };
 </script>
 
@@ -52,12 +49,6 @@ export default {
 
   &.active {
     bottom: 15px;
-  }
-
-  &.isToggle {
-    @include media-breakpoint-down(md) {
-      right: -35px;
-    }
   }
 
   .btn-back-to-top {

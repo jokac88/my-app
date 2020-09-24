@@ -83,9 +83,10 @@ export default {
   @include media-breakpoint-down(sm) {
     top: auto;
     bottom: 0;
-    width: 80%;
+    left: -100%;
+    width: 100%;
     height: 50px;
-    z-index: 2;
+    z-index: 4;
     -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
@@ -94,15 +95,17 @@ export default {
     border-bottom-right-radius: 0;
   }
 
-  @include media-breakpoint-only(sm) {
-    width: 60%;
-  }
-
   @include media-breakpoint-up(xl) {
     &:hover {
       &:after {
         opacity: 1;
       }
+    }
+  }
+
+  &.isToggle {
+    @include media-breakpoint-down(sm) {
+      transform: translate3d(100%, 0, 0);
     }
   }
 

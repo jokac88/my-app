@@ -1,12 +1,7 @@
 <template>
   <b-container class="p-0">
-    <section class="page">
-      <b-col
-        id="page-col"
-        class="page-col border-gradient"
-        lg="10"
-        :class="{ isToggle: isToggle }"
-      >
+    <section class="page" v-touch:swipe.right="swipeRight">
+      <b-col id="page-col" class="page-col border-gradient" lg="10">
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -116,10 +111,10 @@ export default {
     EmploymentHistory,
     TechnicalSkills,
   },
-  computed: {
-    ...mapState({
-      isToggle: (state) => state.store.isToggle,
-    }),
+  methods: {
+    swipeRight(direction) {
+      this.$store.commit("store/SET_TOGGLE");
+    },
   },
   mounted() {
     this.$bus.$on("remove-pb", (value) => {
@@ -137,6 +132,7 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
+  overflow: hidden;
 
   @include media-breakpoint-down(sm) {
     padding: 55px 0 0;
@@ -159,16 +155,6 @@ export default {
         -moz-border-radius: 0;
         -webkit-border-radius: 0;
         border-radius: 0;
-      }
-    }
-
-    &.isToggle {
-      @include media-breakpoint-down(sm) {
-        transform: translate3d(80%, 0, 0);
-      }
-
-      @include media-breakpoint-only(sm) {
-        transform: translate3d(60%, 0, 0);
       }
     }
 

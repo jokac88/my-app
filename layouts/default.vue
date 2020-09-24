@@ -1,12 +1,11 @@
 <template>
   <section class="default-layout">
-    <div class="background"></div>
+    <div class="background" :class="{ isToggle: isToggle }"></div>
     <Pace />
     <NavBar />
     <SideNav :navigation="navigation" />
     <ContactMe :personalInfo="personalInfo" />
     <ColorModePicker />
-    <CloseSideNav />
     <BackToTop :active="isScroll" />
     <Nuxt />
   </section>
@@ -19,7 +18,6 @@ import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
 import ContactMe from "@/components/ContactMe.vue";
 import ColorModePicker from "@/components/ColorModePicker.vue";
-import CloseSideNav from "@/components/CloseSideNav.vue";
 import BackToTop from "@/components/BackToTop.vue";
 
 export default {
@@ -42,7 +40,6 @@ export default {
     SideNav,
     ContactMe,
     ColorModePicker,
-    CloseSideNav,
     BackToTop,
   },
   computed: {
@@ -95,6 +92,17 @@ export default {
     -o-transition: $transition-2;
     -ms-transition: $transition-2;
     transition: $transition-2;
+
+    @include media-breakpoint-down(sm) {
+      left: -100%;
+      z-index: 4;
+    }
+
+    &.isToggle {
+      @include media-breakpoint-down(sm) {
+        transform: translate3d(100%, 0, 0);
+      }
+    }
   }
 }
 </style>

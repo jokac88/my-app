@@ -1,5 +1,9 @@
 <template>
-  <b-button @click="toggle" :class="{ 'is-active': isToggle }" class="hamburger hamburger--spin">
+  <b-button
+    @click="toggle"
+    :class="{ 'is-active': isToggle }"
+    class="hamburger hamburger--spin"
+  >
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>

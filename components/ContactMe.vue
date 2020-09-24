@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-me">
+  <section class="contact-me" :class="{ isToggle: isToggle }">
     <ul>
       <li>
         <a :href="personalInfo.linkedin" title="LinkedIn" target="_blank">
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import LinkedIn from "@/assets/svg/profile/linkedin.svg?inline";
 import GitHub from "@/assets/svg/profile/github.svg?inline";
 import Gmail from "@/assets/svg/profile/gmail.svg?inline";
@@ -34,6 +35,9 @@ export default {
     GitHub,
     Gmail,
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -45,16 +49,24 @@ export default {
   width: 60px;
   height: 180px;
   z-index: 4;
+  -webkit-transition: $transition-2;
+  -moz-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
+  transition: $transition-2;
 
   @include media-breakpoint-down(sm) {
-    top: 0;
-    width: 80%;
-    height: 55px;
-    z-index: 2;
+    top: auto;
+    bottom: 55px;
+    left: -100%;
+    width: 100%;
+    height: 50px;
   }
 
-  @include media-breakpoint-only(sm) {
-    width: 60%;
+  &.isToggle {
+    @include media-breakpoint-down(sm) {
+      transform: translate3d(100%, 0, 0);
+    }
   }
 
   ul {
