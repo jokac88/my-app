@@ -49,7 +49,7 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  z-index: 4;
+  z-index: 5;
 
   &-width {
     height: inherit;

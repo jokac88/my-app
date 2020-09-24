@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   align-items: center;
   background: url("~assets/background.png") var(--bg) center repeat;
-  z-index: 5;
+  z-index: 6;
 
   .loader {
     position: absolute;

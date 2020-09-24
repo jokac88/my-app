@@ -98,15 +98,6 @@ export default {
       .icon {
         width: 36px;
         height: 36px;
-
-        .path {
-          fill: var(--color-svg-profile);
-          -webkit-transition: $transition-2;
-          -moz-transition: $transition-2;
-          -o-transition: $transition-2;
-          -ms-transition: $transition-2;
-          transition: $transition-2;
-        }
       }
     }
   }

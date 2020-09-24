@@ -1,7 +1,7 @@
 <template>
   <b-container class="p-0">
-    <section class="page" v-touch:swipe.right="swipeRight">
-      <b-col id="page-col" class="page-col border-gradient" lg="10">
+    <section id="page" class="page" v-touch:swipe.right="swipeRight">
+      <b-col class="page-col border-gradient" lg="10">
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
@@ -132,7 +132,6 @@ export default {
   -o-transition: $transition-2;
   -ms-transition: $transition-2;
   transition: $transition-2;
-  overflow: hidden;
 
   @include media-breakpoint-down(sm) {
     padding: 55px 0 0;
@@ -140,8 +139,6 @@ export default {
 
   .page-col {
     margin: 0 auto;
-    position: relative;
-    overflow-y: auto;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;

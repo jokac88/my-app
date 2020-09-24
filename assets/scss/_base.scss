@@ -9,15 +9,15 @@ body {
   margin: 0 auto;
 }
 
-body {
-  &.isLoading,
-  &.isToggle {
-    position: fixed;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+// body {
+//   &.isLoading,
+//   &.isToggle {
+//     position: fixed;
+//     height: 100%;
+//     overflow-y: scroll;
+//     -webkit-overflow-scrolling: touch;
+//   }
+// }
 
 :root {
   --bg: #{$concrete};

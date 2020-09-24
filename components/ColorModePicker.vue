@@ -86,7 +86,7 @@ export default {
     left: -100%;
     width: 100%;
     height: 50px;
-    z-index: 4;
+    z-index: 5;
     -webkit-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px -2px 10px -5px rgba(0, 0, 0, 0.75);

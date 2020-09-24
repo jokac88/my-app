@@ -57,7 +57,8 @@ export default {
   plugins: [
     "~plugins/filters.js",
     "~/plugins/bus.js",
-    "~/plugins/touchEvents.js"
+    "~/plugins/touchEvents.js",
+    "~/plugins/scrollActive.js"
   ],
   /*
    ** Auto import components
@@ -78,15 +79,7 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/markdownit",
     "@nuxtjs/pwa",
-    "@nuxtjs/style-resources",
-    [
-      "vue-scrollto/nuxt",
-      {
-        duration: 3000,
-        easing: "ease",
-        offset: -69
-      }
-    ]
+    "@nuxtjs/style-resources"
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`

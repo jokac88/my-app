@@ -1,23 +1,23 @@
 <template>
   <section
-    class="side-nav"
+    class="side-nav d-md-none"
     v-touch:swipe.left="toggle"
     :class="{ isToggle: isToggle }"
   >
-    <div class="side-nav-wrapper">
-      <div class="nav d-md-none">
-        <b-nav v-b-scrollspy:page-col>
-          <b-nav-item
-            v-for="nav in navigation"
-            :key="nav.name || nav.ime"
-            :href="'#' + [nav.url || nav.link]"
-            v-scroll-to="'#' + [nav.url || nav.link]"
-            @click="toggle"
-            >{{ nav.name || nav.ime }}</b-nav-item
-          >
-        </b-nav>
-      </div>
-    </div>
+    <scrollactive
+      :offset="69"
+      :duration="3000"
+      bezier-easing-value=".5, 0, .35, 1"
+    >
+      <a
+        v-for="nav in navigation"
+        @click="toggle"
+        :href="'#' + [nav.url || nav.link]"
+        class="scrollactive-item"
+        :key="nav.name || nav.ime"
+        >{{ nav.name || nav.ime }}</a
+      >
+    </scrollactive>
   </section>
 </template>
 
@@ -53,7 +53,7 @@ export default {
     -o-transition: $transition-2;
     -ms-transition: $transition-2;
     transition: $transition-2;
-    z-index: 4;
+    z-index: 5;
 
     &.isToggle {
       @include media-breakpoint-down(sm) {
@@ -61,16 +61,11 @@ export default {
       }
     }
 
-    .nav {
-      display: block;
-
+    .scrollactive {
       &-item {
-        line-height: 24px;
-      }
-
-      &-link {
         display: block;
         padding: 10px 30px;
+        line-height: 24px;
         font-size: 24px;
         color: var(--color-right) !important;
         font-weight: 700;
@@ -81,7 +76,7 @@ export default {
         -ms-transition: $transition-2;
         transition: $transition-2;
 
-        &.active {
+        &.is-active {
           -moz-background: $gradient-right;
           -webkit-background: $gradient-right;
           background: $gradient-right;
