@@ -7,21 +7,15 @@ body {
   font-size: 14px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
-  -moz-background: url("~assets/background.png") var(--bg) center;
-  -webkit-background: url("~assets/background.png") var(--bg) center;
-  background: url("~assets/background.png") var(--bg) center;
-  -webkit-transition: $transition-2;
-  -moz-transition: $transition-2;
-  -o-transition: $transition-2;
-  -ms-transition: $transition-2;
-  transition: $transition-2;
 }
 
 body {
   &.isLoading,
   &.isToggle {
-    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -37,6 +31,7 @@ body {
   --color-right: #{$lochmara};
   --color-error: #{$black};
   --color-svg: #{$black};
+  --color-svg-profile: #{$black};
   --border-color: #{$white};
 }
 
@@ -51,6 +46,7 @@ body {
   --color-right: #{$white};
   --color-error: #{$white};
   --color-svg: #{$white};
+  --color-svg-profile: #{$white};
   --border-color: #{$pickled-bluewood};
 }
 

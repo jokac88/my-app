@@ -12,7 +12,10 @@
       </div>
       <h3 class="message">{{ message }}</h3>
       <div class="back-button">
-        <b-link @click="goBack" :title="$route.path === '/' ? 'Go back' : 'Idi nazad'">
+        <b-link
+          @click="goBack"
+          :title="$route.path === '/' ? 'Go back' : 'Idi nazad'"
+        >
           <Back class="icon" />
         </b-link>
       </div>
@@ -26,18 +29,18 @@ import NotFound from "~/assets/svg/error/not-found.svg?inline";
 import Back from "~/assets/svg/error/back.svg?inline";
 
 export default {
-  components: {
-    NoConnection,
-    NotFound,
-    Back,
-  },
-  layout: "error-layout",
   props: {
     error: {
       type: Object,
       default: null,
     },
   },
+  components: {
+    NoConnection,
+    NotFound,
+    Back,
+  },
+  layout: "error-layout",
   mounted() {
     if (this.error.statusCode === 404) {
       const path = this.$route.path;

@@ -21,16 +21,16 @@ import TechnicalSkills from "@/assets/svg/headers/technical-skills.svg?inline";
 import ButtonToggle from "@/components/ButtonToggle.vue";
 
 export default {
+  props: {
+    heading: String,
+    property: String,
+  },
   components: {
     AboutMe,
     Education,
     EmploymentHistory,
     TechnicalSkills,
     ButtonToggle,
-  },
-  props: {
-    heading: String,
-    property: String,
   },
 };
 </script>

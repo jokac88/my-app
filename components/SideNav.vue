@@ -1,6 +1,6 @@
 <template>
-  <section class="side-nav d-md-none" :class="{ isToggle : isToggle }">
-    <div class="side-nav-wrapper">
+  <section class="side-nav">
+    <section class="nav d-md-none" :class="{ isToggle: isToggle }">
       <b-nav v-b-scrollspy:page-col>
         <b-nav-item
           v-for="nav in navigation"
@@ -8,9 +8,10 @@
           :href="'#' + [nav.url || nav.link]"
           v-scroll-to="'#' + [nav.url || nav.link]"
           @click="toggle"
-        >{{ nav.name || nav.ime }}</b-nav-item>
+          >{{ nav.name || nav.ime }}</b-nav-item
+        >
       </b-nav>
-    </div>
+    </section>
   </section>
 </template>
 
@@ -36,10 +37,10 @@ export default {
 .side {
   &-nav {
     position: fixed;
-    top: 0;
+    top: 55px;
     left: 0;
+    bottom: 50px;
     width: 80%;
-    height: 100vh;
     overflow-y: auto;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
@@ -51,35 +52,30 @@ export default {
       width: 60%;
     }
 
-    &-wrapper {
-      padding: 55px 0;
+    .nav {
+      display: block;
 
-      .nav {
+      &-item {
+        line-height: 24px;
+      }
+
+      &-link {
         display: block;
+        padding: 10px 30px;
+        font-size: 24px;
+        color: var(--color-right) !important;
+        font-weight: 700;
+        -webkit-transition: $transition-2;
+        -moz-transition: $transition-2;
+        -o-transition: $transition-2;
+        -ms-transition: $transition-2;
+        transition: $transition-2;
 
-        &-item {
-          line-height: 24px;
-          text-align: center;
-        }
-
-        &-link {
-          display: block;
-          padding: 10px 30px;
-          font-size: 24px;
-          color: var(--color-right) !important;
-          font-weight: 700;
-          -webkit-transition: $transition-2;
-          -moz-transition: $transition-2;
-          -o-transition: $transition-2;
-          -ms-transition: $transition-2;
-          transition: $transition-2;
-
-          &.active {
-            -moz-background: $gradient-right;
-            -webkit-background: $gradient-right;
-            background: $gradient-right;
-            color: var(--color-left) !important;
-          }
+        &.active {
+          -moz-background: $gradient-right;
+          -webkit-background: $gradient-right;
+          background: $gradient-right;
+          color: var(--color-left) !important;
         }
       }
     }

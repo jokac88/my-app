@@ -20,6 +20,10 @@ import DrivingLicense from "@/assets/svg/headers/driving-license.svg?inline";
 import ButtonToggle from "@/components/ButtonToggle.vue";
 
 export default {
+  props: {
+    heading: String,
+    property: String,
+  },
   components: {
     PersonalInfo,
     Languages,
@@ -27,10 +31,6 @@ export default {
     Hobbies,
     DrivingLicense,
     ButtonToggle,
-  },
-  props: {
-    heading: String,
-    property: String,
   },
 };
 </script>

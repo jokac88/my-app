@@ -1,5 +1,5 @@
 <template>
-  <section class="color-mode-picker" :class="{ isToggle : isToggle }">
+  <section class="color-mode-picker" :class="{ isToggle: isToggle }">
     <ul class="color-mode-picker-ul">
       <li
         v-for="color of colors"

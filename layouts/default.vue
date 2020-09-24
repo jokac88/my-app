@@ -1,8 +1,10 @@
 <template>
   <section class="default-layout">
+    <div class="background"></div>
     <Pace />
     <NavBar />
     <SideNav :navigation="navigation" />
+    <ContactMe :personalInfo="personalInfo" />
     <ColorModePicker />
     <CloseSideNav />
     <BackToTop :active="isScroll" />
@@ -15,6 +17,7 @@ import { mapState } from "vuex";
 import Pace from "@/components/Pace.vue";
 import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
+import ContactMe from "@/components/ContactMe.vue";
 import ColorModePicker from "@/components/ColorModePicker.vue";
 import CloseSideNav from "@/components/CloseSideNav.vue";
 import BackToTop from "@/components/BackToTop.vue";
@@ -37,12 +40,15 @@ export default {
     Pace,
     NavBar,
     SideNav,
+    ContactMe,
     ColorModePicker,
     CloseSideNav,
     BackToTop,
   },
   computed: {
     ...mapState({
+      personalInfo: (state) =>
+        state.store.data.personalInfo || state.store.data.ličniPodaci,
       navigation: (state) =>
         state.store.data.navigation || state.store.data.navigacija,
       isLoading: (state) => state.store.isLoading,
@@ -73,5 +79,23 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.default-layout {
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    -moz-background: url("~assets/background.png") var(--bg) center;
+    -webkit-background: url("~assets/background.png") var(--bg) center;
+    background: url("~assets/background.png") var(--bg) center;
+    -webkit-transition: $transition-2;
+    -moz-transition: $transition-2;
+    -o-transition: $transition-2;
+    -ms-transition: $transition-2;
+    transition: $transition-2;
+  }
+}
+</style>
 

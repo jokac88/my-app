@@ -1,12 +1,20 @@
 <template>
   <section id="languages" class="languages">
-    <HeaderLeft :heading="$route.path === '/' ? 'Languages' : 'Jezici'" property="languages" />
+    <HeaderLeft
+      :heading="$route.path === '/' ? 'Languages' : 'Jezici'"
+      property="languages"
+    />
     <b-collapse id="languages-collapse" visible>
       <div class="languages-wrapper">
-        <div v-for="language in languages" :key="language.language || language.jezik">
+        <div
+          v-for="language in languages"
+          :key="language.language || language.jezik"
+        >
           <p class="language">{{ language.language || language.jezik }}</p>
           <div class="meter">
-            <span :style="{ width: language.percentage || language.procenat + '%' }"></span>
+            <span
+              :style="{ width: language.percentage || language.procenat + '%' }"
+            ></span>
           </div>
           <p class="level">{{ language.level || language.nivo }}</p>
         </div>
@@ -19,11 +27,11 @@
 import HeaderLeft from "@/components/left/HeaderLeft.vue";
 
 export default {
-  components: {
-    HeaderLeft,
-  },
   props: {
     languages: Array,
+  },
+  components: {
+    HeaderLeft,
   },
 };
 </script>
