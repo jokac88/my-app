@@ -6,9 +6,7 @@
     <ColorModePicker />
     <CloseSideNav />
     <BackToTop :active="isScroll" />
-    <transition name="toggle">
-      <Nuxt />
-    </transition>
+    <Nuxt />
   </section>
 </template>
 

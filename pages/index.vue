@@ -10,17 +10,10 @@ export default {
   components: {
     Page,
   },
-  async fetch({ store, params, error }) {
+  async fetch({ store, error }) {
     try {
-      if (process.env.NODE_ENV === "production") {
-        await store.dispatch("store/fetchData", {
-          url: "/b/5f4bc59a993a2e110d39a747",
-          lang: "en",
-        });
-        return;
-      }
       await store.dispatch("store/fetchData", {
-        url: params.lang || "/en",
+        lang: "/en",
       });
     } catch (e) {
       error({

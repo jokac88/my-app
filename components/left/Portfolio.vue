@@ -5,7 +5,8 @@
         href="https://jokac88.github.io/portfolio"
         class="btn btn-portfolio"
         target="_blank"
-      >Portfolio</a>
+        >Portfolio</a
+      >
     </div>
   </section>
 </template>
@@ -36,9 +37,11 @@ export default {};
       border-radius: 3px;
       z-index: 1;
 
-      &:hover {
-        &:after {
-          opacity: 1;
+      @include media-breakpoint-up(xl) {
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
         }
       }
 

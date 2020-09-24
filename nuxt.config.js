@@ -11,6 +11,9 @@ export default {
   router: {
     base: "/ivan-jovkovic/"
   },
+  server: {
+    host: "0.0.0.0"
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -97,12 +100,6 @@ export default {
       description:
         "HTML5, CSS3, JavaScript, jQuery, SASS, Bootstrap 4, Vue.js, Nuxt.js, React, React Native, WordPress, Photoshop, Laravel"
     }
-  },
-  env: {
-    baseUrl:
-      process.env.NODE_ENV === "production"
-        ? "https://api.jsonbin.io/"
-        : "http://localhost:3000"
   },
   /*
    ** Axios module configuration

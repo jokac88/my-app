@@ -1,17 +1,20 @@
 <template>
   <b-container class="p-0">
-    <section id="page" class="page">
+    <section class="page">
       <b-col
         id="page-col"
         class="page-col border-gradient"
         lg="10"
-        :class="{ isToggle : isToggle }"
+        :class="{ isToggle: isToggle }"
       >
         <b-row no-gutters>
           <!-- Left -->
           <b-col md="5" lg="4" class="left">
             <!-- Picture -->
-            <Picture :picture="data.picture || data.slika" :name="data.name || data.ime" />
+            <Picture
+              :picture="data.picture || data.slika"
+              :name="data.name || data.ime"
+            />
 
             <!-- Name -->
             <Name :name="data.name || data.ime" />
@@ -26,7 +29,9 @@
             <Portfolio />
 
             <!-- Personal Info -->
-            <PersonalInfo :personalInfo="data.personalInfo || data.ličniPodaci" />
+            <PersonalInfo
+              :personalInfo="data.personalInfo || data.ličniPodaci"
+            />
 
             <!-- Languages -->
             <Languages :languages="data.languages || data.jezici" />
@@ -38,12 +43,14 @@
             <Hobbies :hobbies="data.hobbies || data.hobiji" />
 
             <!-- Driving License -->
-            <DrivingLicense :drivingLicense="data.drivingLicense || data.vozačkaDozvola" />
+            <DrivingLicense
+              :drivingLicense="data.drivingLicense || data.vozačkaDozvola"
+            />
           </b-col>
 
           <!-- Right -->
           <b-col md="7" lg="8" class="right">
-            <div class="right-wrapper" :class="{ 'remove-pb' : removePB }">
+            <div class="right-wrapper" :class="{ 'remove-pb': removePB }">
               <!-- About Me -->
               <AboutMe :aboutMe="data.aboutMe || data.oMeni" />
 
@@ -52,10 +59,14 @@
 
               <!-- Employment History -->
               <EmploymentHistory
-                :employmentHistories="data.employmentHistory || data.istorijaZapošljavanja"
+                :employmentHistories="
+                  data.employmentHistory || data.istorijaZapošljavanja
+                "
               />
 
-              <TechnicalSkills :technicalSkills="data.technicalSkills || data.tehničkeVeštine" />
+              <TechnicalSkills
+                :technicalSkills="data.technicalSkills || data.tehničkeVeštine"
+              />
               <!-- Technical Skills -->
             </div>
           </b-col>
@@ -105,9 +116,11 @@ export default {
     EmploymentHistory,
     TechnicalSkills,
   },
-  computed: mapState({
-    isToggle: (state) => state.store.isToggle,
-  }),
+  computed: {
+    ...mapState({
+      isToggle: (state) => state.store.isToggle,
+    }),
+  },
   mounted() {
     this.$bus.$on("remove-pb", (value) => {
       this.removePB = value;
@@ -133,7 +146,6 @@ export default {
     margin: 0 auto;
     position: relative;
     overflow-y: auto;
-    // height: 300px;
     -webkit-transition: $transition-2;
     -moz-transition: $transition-2;
     -o-transition: $transition-2;
