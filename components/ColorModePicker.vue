@@ -80,6 +80,11 @@ export default {
   -ms-transition: $transition-2;
   transition: $transition-2;
 
+  @include media-breakpoint-down(md) {
+    width: 50px;
+    height: 200px;
+  }
+
   @include media-breakpoint-down(sm) {
     top: auto;
     bottom: 0;
@@ -97,7 +102,7 @@ export default {
 
   @include media-breakpoint-up(xl) {
     &:hover {
-      &:after {
+      &::after {
         opacity: 1;
       }
     }
@@ -105,11 +110,16 @@ export default {
 
   &.isToggle {
     @include media-breakpoint-down(sm) {
-      transform: translate3d(100%, 0, 0);
+      left: 0;
+      width: 80%;
+    }
+
+    @include media-breakpoint-only(sm) {
+      width: 60%;
     }
   }
 
-  &:after {
+  &::after {
     content: " ";
     position: absolute;
     top: 0;
@@ -156,7 +166,7 @@ export default {
       -ms-transition: $transition-2;
       transition: $transition-2;
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         height: 50px;
       }
 
@@ -186,7 +196,7 @@ export default {
         -ms-transition: $transition-2;
         transition: $transition-2;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           margin-bottom: 0;
         }
       }

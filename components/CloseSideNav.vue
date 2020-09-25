@@ -1,6 +1,11 @@
 <template>
   <transition name="fade">
-    <section class="close-nav d-md-none" @click="toggle" :class="{ active : isToggle }"></section>
+    <section
+      class="close-nav d-md-none"
+      v-touch:swipe.left="toggle"
+      v-touch="toggle"
+      :class="{ active: isToggle }"
+    ></section>
   </transition>
 </template>
 
@@ -40,12 +45,14 @@ export default {
   transform: translate3d(0, 0, 0);
 
   &.active {
-    transform: translate3d(80%, 0, 0);
-    opacity: 0.6;
-    visibility: visible;
+    @include media-breakpoint-down(sm) {
+      left: 80%;
+      opacity: 0.6;
+      visibility: visible;
+    }
 
     @include media-breakpoint-only(sm) {
-      transform: translate3d(60%, 0, 0);
+      left: 60%;
     }
   }
 }

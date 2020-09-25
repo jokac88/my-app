@@ -55,17 +55,25 @@ export default {
   -ms-transition: $transition-2;
   transition: $transition-2;
 
+  @include media-breakpoint-down(md) {
+    top: 200px;
+  }
+
   @include media-breakpoint-down(sm) {
-    top: auto;
-    bottom: 55px;
+    top: 0;
     left: -100%;
     width: 100%;
-    height: 50px;
+    height: 55px;
   }
 
   &.isToggle {
     @include media-breakpoint-down(sm) {
-      transform: translate3d(100%, 0, 0);
+      left: 0;
+      width: 80%;
+    }
+
+    @include media-breakpoint-only(sm) {
+      width: 60%;
     }
   }
 

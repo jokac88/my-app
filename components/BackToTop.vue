@@ -1,5 +1,5 @@
 <template>
-  <section class="back-to-top" :class="{ active: active }">
+  <section class="back-to-top" :class="{ active: active, isToggle: isToggle }">
     <b-button
       @click="backToTop"
       class="btn-back-to-top"
@@ -29,6 +29,9 @@ export default {
       });
     },
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -51,6 +54,12 @@ export default {
     bottom: 15px;
   }
 
+  &.isToggle {
+    @include media-breakpoint-down(sm) {
+      right: -35px;
+    }
+  }
+
   .btn-back-to-top {
     position: relative;
     width: 45px;
@@ -69,13 +78,13 @@ export default {
 
     @include media-breakpoint-up(xl) {
       &:hover {
-        &:after {
+        &::after {
           opacity: 1;
         }
       }
     }
 
-    &:after {
+    &::after {
       content: " ";
       position: absolute;
       top: 0;

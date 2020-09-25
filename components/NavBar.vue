@@ -1,5 +1,5 @@
 <template>
-  <section class="nav-bar">
+  <section class="nav-bar" :class="{ isToggle: isToggle }">
     <Hamburger class="d-md-none" />
     <div class="links">
       <nuxt-link
@@ -39,6 +39,9 @@ export default {
   components: {
     Hamburger,
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
 };
 </script>
 
@@ -68,10 +71,9 @@ export default {
     -moz-background: $gradient-right;
     -webkit-background: $gradient-right;
     background: $gradient-right;
-    -webkit-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
-    -moz-box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1);
-    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
-      0 3px 1px 0 rgba(20, 23, 28, 0.1);
+    -webkit-box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
     z-index: 5;
   }
 
@@ -82,6 +84,16 @@ export default {
 
   @include media-breakpoint-only(lg) {
     width: 45px;
+  }
+
+  &.isToggle {
+    @include media-breakpoint-down(sm) {
+      left: 80%;
+    }
+
+    @include media-breakpoint-only(sm) {
+      left: 60%;
+    }
   }
 
   .links {

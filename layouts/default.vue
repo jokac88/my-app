@@ -1,11 +1,12 @@
 <template>
   <section class="default-layout">
-    <div class="background" :class="{ isToggle: isToggle }"></div>
+    <Background />
     <Pace />
     <NavBar />
     <SideNav :navigation="navigation" />
     <ContactMe :personalInfo="personalInfo" />
     <ColorModePicker />
+    <CloseSideNav />
     <BackToTop :active="isScroll" />
     <Nuxt />
   </section>
@@ -13,11 +14,13 @@
 
 <script>
 import { mapState } from "vuex";
+import Background from "@/components/Background.vue";
 import Pace from "@/components/Pace.vue";
 import NavBar from "@/components/NavBar.vue";
 import SideNav from "@/components/SideNav.vue";
 import ContactMe from "@/components/ContactMe.vue";
 import ColorModePicker from "@/components/ColorModePicker.vue";
+import CloseSideNav from "@/components/CloseSideNav.vue";
 import BackToTop from "@/components/BackToTop.vue";
 
 export default {
@@ -35,11 +38,13 @@ export default {
     };
   },
   components: {
+    Background,
     Pace,
     NavBar,
     SideNav,
     ContactMe,
     ColorModePicker,
+    CloseSideNav,
     BackToTop,
   },
   computed: {
@@ -77,33 +82,5 @@ export default {
 </script>
 
 <style lang="scss">
-.default-layout {
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    -moz-background: url("~assets/background.png") var(--bg) center;
-    -webkit-background: url("~assets/background.png") var(--bg) center;
-    background: url("~assets/background.png") var(--bg) center;
-    -webkit-transition: $transition-2;
-    -moz-transition: $transition-2;
-    -o-transition: $transition-2;
-    -ms-transition: $transition-2;
-    transition: $transition-2;
-
-    @include media-breakpoint-down(sm) {
-      left: -100%;
-      z-index: 4;
-    }
-
-    &.isToggle {
-      @include media-breakpoint-down(sm) {
-        transform: translate3d(100%, 0, 0);
-      }
-    }
-  }
-}
 </style>
 

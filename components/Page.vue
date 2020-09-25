@@ -1,6 +1,11 @@
 <template>
   <b-container class="p-0">
-    <section id="page" class="page" v-touch:swipe.right="swipeRight">
+    <section
+      id="page"
+      class="page"
+      v-touch:swipe.right="swipeRight"
+      :class="{ isToggle: isToggle }"
+    >
       <b-col class="page-col border-gradient" lg="10">
         <b-row no-gutters>
           <!-- Left -->
@@ -42,7 +47,6 @@
               :drivingLicense="data.drivingLicense || data.vozačkaDozvola"
             />
           </b-col>
-
           <!-- Right -->
           <b-col md="7" lg="8" class="right">
             <div class="right-wrapper" :class="{ 'remove-pb': removePB }">
@@ -116,6 +120,9 @@ export default {
       this.$store.commit("store/SET_TOGGLE");
     },
   },
+  computed: mapState({
+    isToggle: (state) => state.store.isToggle,
+  }),
   mounted() {
     this.$bus.$on("remove-pb", (value) => {
       this.removePB = value;
@@ -135,6 +142,18 @@ export default {
 
   @include media-breakpoint-down(sm) {
     padding: 55px 0 0;
+    position: relative;
+    left: 0;
+  }
+
+  &.isToggle {
+    @include media-breakpoint-down(sm) {
+      left: 80%;
+    }
+
+    @include media-breakpoint-only(sm) {
+      left: 60%;
+    }
   }
 
   .page-col {

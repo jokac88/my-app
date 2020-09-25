@@ -43,8 +43,8 @@ export default {
 .side {
   &-nav {
     position: fixed;
-    top: 65px;
-    bottom: 105px;
+    top: 55px;
+    bottom: 60px;
     left: -100%;
     width: 100%;
     overflow-y: scroll;
@@ -57,12 +57,18 @@ export default {
 
     &.isToggle {
       @include media-breakpoint-down(sm) {
-        transform: translate3d(100%, 0, 0);
+        left: 0;
+        width: 80%;
+      }
+
+      @include media-breakpoint-only(sm) {
+        width: 60%;
       }
     }
 
     .scrollactive {
       &-item {
+        position: relative;
         display: block;
         padding: 10px 30px;
         line-height: 24px;
@@ -76,11 +82,31 @@ export default {
         -ms-transition: $transition-2;
         transition: $transition-2;
 
+        &::before {
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          -moz-background: $gradient-left;
+          -webkit-background: $gradient-left;
+          background: $gradient-left;
+          -webkit-transition: $transition-2;
+          -moz-transition: $transition-2;
+          -o-transition: $transition-2;
+          -ms-transition: $transition-2;
+          transition: $transition-2;
+          z-index: -1;
+        }
+
         &.is-active {
-          -moz-background: $gradient-right;
-          -webkit-background: $gradient-right;
-          background: $gradient-right;
           color: var(--color-left) !important;
+
+          &::before {
+            opacity: 1;
+          }
         }
       }
     }

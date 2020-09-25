@@ -39,8 +39,8 @@ export default {
   }
 
   &-inner,
-  &-inner:before,
-  &-inner:after {
+  &-inner::before,
+  &-inner::after {
     background-color: var(--color-left);
     height: 3px;
     -moz-border-radius: 3px;

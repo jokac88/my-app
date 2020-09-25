@@ -1,6 +1,9 @@
 <template>
   <section id="projects" class="projects">
-    <HeaderLeft :heading="$route.path === '/' ? 'Projects' : 'Projekti'" property="projects" />
+    <HeaderLeft
+      :heading="$route.path === '/' ? 'Projects' : 'Projekti'"
+      property="projects"
+    />
     <b-collapse id="projects-collapse" visible>
       <div class="projects-wrapper">
         <b-row>

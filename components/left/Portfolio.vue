@@ -39,13 +39,13 @@ export default {};
 
       @include media-breakpoint-up(xl) {
         &:hover {
-          &:after {
+          &::after {
             opacity: 1;
           }
         }
       }
 
-      &:after {
+      &::after {
         content: " ";
         position: absolute;
         top: 0;

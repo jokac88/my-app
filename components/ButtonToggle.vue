@@ -64,7 +64,7 @@ export default {
     border-radius: 33px;
     background-color: transparent !important;
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       width: 32px;
@@ -82,7 +82,7 @@ export default {
       opacity: 0;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       width: 32px;
@@ -97,32 +97,32 @@ export default {
 
     &[aria-expanded="false"] {
       .slider {
-        &:before {
+        &::before {
           visibility: visible;
           opacity: 1;
         }
       }
 
-      &:after {
+      &::after {
         background-color: var(--bg-button);
       }
     }
 
     &[aria-expanded="true"] {
-      &:before {
+      &::before {
         visibility: visible;
         opacity: 1;
       }
 
       .slider {
-        &:before,
-        &:after {
+        &::before,
+        &::after {
           -webkit-transform: translateX(13px);
           -ms-transform: translateX(13px);
           transform: translateX(13px);
         }
 
-        &:after {
+        &::after {
           background-color: var(--bg-button-2);
         }
       }
@@ -143,7 +143,7 @@ export default {
       -ms-transition: $transition-2;
       transition: $transition-2;
 
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         top: 3px;
@@ -164,7 +164,7 @@ export default {
         z-index: 1;
       }
 
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         top: 3px;
