@@ -5,9 +5,10 @@
     :class="{ isToggle: isToggle }"
   >
     <scrollactive
+      activeClass="active"
       :offset="69"
       :duration="3000"
-      bezier-easing-value=".5, 0, .35, 1"
+      :modifyUrl="false"
     >
       <a
         v-for="nav in navigation"
@@ -101,7 +102,7 @@ export default {
           z-index: -1;
         }
 
-        &.is-active {
+        &.active {
           color: var(--color-left) !important;
 
           &::before {

@@ -292,12 +292,28 @@
         "url": "page"
       },
       {
-        "name": "About Me",
-        "url": "about-me"
-      },
-      {
         "name": "Personal Info",
         "url": "personal-info"
+      },
+      {
+        "name": "Languages",
+        "url": "languages"
+      },
+      {
+        "name": "Projects",
+        "url": "projects"
+      },
+      {
+        "name": "Hobbies",
+        "url": "hobbies"
+      },
+      {
+        "name": "Driving License",
+        "url": "driving-license"
+      },
+      {
+        "name": "About Me",
+        "url": "about-me"
       },
       {
         "name": "Education",
@@ -310,22 +326,6 @@
       {
         "name": "Technical Skills",
         "url": "technical-skills"
-      },
-      {
-        "name": "Projects",
-        "url": "projects"
-      },
-      {
-        "name": "Languages",
-        "url": "languages"
-      },
-      {
-        "name": "Hobbies",
-        "url": "hobbies"
-      },
-      {
-        "name": "Driving License",
-        "url": "driving-license"
       }
     ]
   },
@@ -621,12 +621,28 @@
         "link": "page"
       },
       {
-        "ime": "O Meni",
-        "link": "about-me"
-      },
-      {
         "ime": "Lični Podaci",
         "link": "personal-info"
+      },
+      {
+        "ime": "Jezici",
+        "link": "languages"
+      },
+      {
+        "ime": "Projekti",
+        "link": "projects"
+      },
+      {
+        "ime": "Hobiji",
+        "link": "hobbies"
+      },
+      {
+        "ime": "Vozačka Dozvola",
+        "link": "driving-license"
+      },
+      {
+        "ime": "O Meni",
+        "link": "about-me"
       },
       {
         "ime": "Obrazovanje",
@@ -639,22 +655,6 @@
       {
         "ime": "Tehničke Veštine",
         "link": "technical-skills"
-      },
-      {
-        "ime": "Projekti",
-        "link": "projects"
-      },
-      {
-        "ime": "Jezici",
-        "link": "languages"
-      },
-      {
-        "ime": "Hobiji",
-        "link": "hobbies"
-      },
-      {
-        "ime": "Vozačka Dozvola",
-        "link": "driving-license"
       }
     ]
   }
