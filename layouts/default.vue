@@ -75,8 +75,8 @@ export default {
     },
   },
   mounted() {
-    document.addEventListener("scroll", this.scroll);
-    window.addEventListener("resize", this.onResize);
+    document.addEventListener("scroll", this.scroll, { passive: true });
+    window.addEventListener("resize", this.onResize, { passive: true });
   },
 };
 </script>

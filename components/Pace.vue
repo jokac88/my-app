@@ -29,7 +29,7 @@ export default {
     },
   },
   mounted() {
-    document.addEventListener("scroll", this.pace);
+    document.addEventListener("scroll", this.pace, { passive: true });
   },
 };
 </script>
