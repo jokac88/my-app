@@ -13,7 +13,11 @@
           <p class="language">{{ language.language || language.jezik }}</p>
           <div class="meter">
             <span
-              :style="{ width: language.percentage || language.procenat + '%' }"
+              :style="{
+                width: language.percentage
+                  ? language.percentage
+                  : language.procenat,
+              }"
             ></span>
           </div>
           <p class="level">{{ language.level || language.nivo }}</p>

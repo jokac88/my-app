@@ -1,9 +1,7 @@
 import axios from "@/services/axios.js";
 
 export const state = () => ({
-  data: {
-    name: "ivan"
-  },
+  data: {},
   isLoading: false,
   isToggle: false,
   paceWidth: 0
